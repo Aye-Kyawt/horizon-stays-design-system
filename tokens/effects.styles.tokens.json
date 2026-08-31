@@ -1,0 +1,97 @@
+{
+  "horizon-semantic-elevation-shadow-level1": {
+    "$type": "shadow",
+    "$description": "Actionable elements that need a subtle but noticeable separation from the ground — primary CTAs, nav bars, sticky headers.   Colour: horizon.semantic.color.shadow — 14% ink on light, 72% on dark.",
+    "$value": [
+      {
+        "color": "{semantic-color-shadow}",
+        "offsetX": {
+          "value": 0,
+          "unit": "px"
+        },
+        "offsetY": "{semantic-elevation-y-level1}",
+        "blur": "{semantic-elevation-blur-level1}",
+        "spread": {
+          "value": 0,
+          "unit": "px"
+        }
+      }
+    ]
+  },
+  "horizon-semantic-elevation-shadow-level2": {
+    "$type": "shadow",
+    "$description": "Elements that temporarily rise during an interaction — a card on hover, an item being dragged.   Colour: horizon.semantic.color.shadow — 14% ink on light, 72% on dark.",
+    "$value": [
+      {
+        "color": "{semantic-color-shadow}",
+        "offsetX": {
+          "value": 0,
+          "unit": "px"
+        },
+        "offsetY": "{semantic-elevation-y-level2}",
+        "blur": "{semantic-elevation-blur-level2}",
+        "spread": {
+          "value": 0,
+          "unit": "px"
+        }
+      }
+    ]
+  },
+  "horizon-semantic-elevation-shadow-level3": {
+    "$type": "shadow",
+    "$description": "Floating elements attached to a layout item — select and dropdown lists, popovers, colour and date pickers, tooltips, FAB. Measured in the master file as 0 4 16 at 10%.   Colour: horizon.semantic.color.shadow — 14% ink on light, 72% on dark.",
+    "$value": [
+      {
+        "color": "{semantic-color-shadow}",
+        "offsetX": {
+          "value": 0,
+          "unit": "px"
+        },
+        "offsetY": "{semantic-elevation-y-level3}",
+        "blur": "{semantic-elevation-blur-level3}",
+        "spread": {
+          "value": 0,
+          "unit": "px"
+        }
+      }
+    ]
+  },
+  "horizon-semantic-elevation-shadow-level4": {
+    "$type": "shadow",
+    "$description": "Modals and dialogs. The most-used shadow in the product — 15 of 21 shadows in the master file are 0 8 24.   Colour: horizon.semantic.color.shadow — 14% ink on light, 72% on dark.",
+    "$value": [
+      {
+        "color": "{semantic-color-shadow}",
+        "offsetX": {
+          "value": 0,
+          "unit": "px"
+        },
+        "offsetY": "{semantic-elevation-y-level4}",
+        "blur": "{semantic-elevation-blur-level4}",
+        "spread": {
+          "value": 0,
+          "unit": "px"
+        }
+      }
+    ]
+  },
+  "horizon-semantic-elevation-shadow-level5": {
+    "$type": "shadow",
+    "$description": "Full-screen overlays, drawers and bottom sheets — the only layer above a modal.   Colour: horizon.semantic.color.shadow — 14% ink on light, 72% on dark.",
+    "$value": [
+      {
+        "color": "{semantic-color-shadow}",
+        "offsetX": {
+          "value": 0,
+          "unit": "px"
+        },
+        "offsetY": "{semantic-elevation-y-level5}",
+        "blur": "{semantic-elevation-blur-level5}",
+        "spread": {
+          "value": 0,
+          "unit": "px"
+        }
+      }
+    ]
+  }
+}

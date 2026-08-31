@@ -1,0 +1,62 @@
+{
+  "semantic-border-radius-none": {
+    "$type": "dimension",
+    "$value": "{core-border-radius-none}",
+    "$description": "Tables, full-bleed media, dividers"
+  },
+  "semantic-border-radius-xs": {
+    "$type": "dimension",
+    "$value": "{core-border-radius-2xs}",
+    "$description": "Table cells, dense chips, checkboxes"
+  },
+  "semantic-border-radius-sm": {
+    "$type": "dimension",
+    "$value": "{core-border-radius-2xs}",
+    "$description": "Inputs, small buttons, tags"
+  },
+  "semantic-border-radius-md": {
+    "$type": "dimension",
+    "$value": "{core-border-radius-xs}",
+    "$description": "Buttons and badges"
+  },
+  "semantic-border-radius-lg": {
+    "$type": "dimension",
+    "$value": "{core-border-radius-sm}",
+    "$description": "Cards and panels. 2px is 84% of every corner in the back office, so it squares off."
+  },
+  "semantic-border-radius-xl": {
+    "$type": "dimension",
+    "$value": "{core-border-radius-md}",
+    "$description": "Sheets and modals"
+  },
+  "semantic-border-radius-full": {
+    "$type": "dimension",
+    "$value": "{core-border-radius-full}",
+    "$description": "Avatars, toggles, filter chips"
+  },
+  "semantic-border-width-none": {
+    "$type": "dimension",
+    "$value": "{core-border-width-none}",
+    "$description": "No stroke"
+  },
+  "semantic-border-width-hairline": {
+    "$type": "dimension",
+    "$value": "{core-border-width-05}",
+    "$description": "Retina dividers"
+  },
+  "semantic-border-width-base": {
+    "$type": "dimension",
+    "$value": "{core-border-width-1}",
+    "$description": "The default edge"
+  },
+  "semantic-border-width-strong": {
+    "$type": "dimension",
+    "$value": "{core-border-width-2}",
+    "$description": "Focus rings, selected states"
+  },
+  "semantic-border-width-emphasis": {
+    "$type": "dimension",
+    "$value": "{core-border-width-4}",
+    "$description": "Active tab underline"
+  }
+}

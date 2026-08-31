@@ -1,0 +1,1130 @@
+{
+  "foundation-blue-light": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.9215686321258545,
+        0.9529411792755127,
+        0.9960784316062927
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-blue-light-:hover": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.886274516582489,
+        0.9254902005195618,
+        0.9960784316062927
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-blue-light-:active": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.7607843279838562,
+        0.8470588326454163,
+        0.9882352948188782
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-blue-normal": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.23137255012989044,
+        0.5098039507865906,
+        0.9647058844566345
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-blue-normal-:hover": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.2078431397676468,
+        0.4588235318660736,
+        0.8666666746139526
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-blue-normal-:active": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.18431372940540314,
+        0.40784314274787903,
+        0.772549033164978
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-blue-dark": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.1725490242242813,
+        0.3843137323856354,
+        0.7254902124404907
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-blue-dark-:hover": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.13725490868091583,
+        0.30588236451148987,
+        0.5803921818733215
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-blue-dark-:active": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.10588235408067703,
+        0.22745098173618317,
+        0.43529412150382996
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-blue-darker": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.08235294371843338,
+        0.18039216101169586,
+        0.33725491166114807
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-blue-blue-50": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.9215686321258545,
+        0.9529411792755127,
+        0.9960784316062927
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-blue-blue-100": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.7607843279838562,
+        0.8470588326454163,
+        0.9882352948188782
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-blue-blue-200": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.6470588445663452,
+        0.7764706015586853,
+        0.9843137264251709
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-blue-blue-300": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.48627451062202454,
+        0.6705882549285889,
+        0.9764705896377563
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-blue-blue-400": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.3843137323856354,
+        0.6078431606292725,
+        0.9725490212440491
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-blue-blue-500": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.23137255012989044,
+        0.5098039507865906,
+        0.9647058844566345
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-blue-blue-600": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.21176470816135406,
+        0.4627451002597809,
+        0.8784313797950745
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-blue-blue-700": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.16470588743686676,
+        0.3607843220233917,
+        0.686274528503418
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-blue-blue-800": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.125490203499794,
+        0.2823529541492462,
+        0.529411792755127
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-blue-blue-900": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.09803921729326248,
+        0.21568627655506134,
+        0.40392157435417175
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation--blue-light": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.9098039269447327,
+        0.929411768913269,
+        0.9843137264251709
+      ]
+    }
+  },
+  "foundation--blue-light-:hover": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.8666666746139526,
+        0.8941176533699036,
+        0.9764705896377563
+      ]
+    }
+  },
+  "foundation--blue-light-:active": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.7254902124404907,
+        0.7843137383460999,
+        0.9529411792755127
+      ]
+    }
+  },
+  "foundation--blue-normal": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.11372549086809158,
+        0.30588236451148987,
+        0.8470588326454163
+      ]
+    }
+  },
+  "foundation--blue-normal-:hover": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.10196078568696976,
+        0.27450981736183167,
+        0.7607843279838562
+      ]
+    }
+  },
+  "foundation--blue-normal-:active": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.09019608050584793,
+        0.24313725531101227,
+        0.6784313917160034
+      ]
+    }
+  },
+  "foundation--blue-dark": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.08627451211214066,
+        0.23137255012989044,
+        0.6352941393852234
+      ]
+    }
+  },
+  "foundation--blue-dark-:hover": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.06666667014360428,
+        0.18431372940540314,
+        0.5098039507865906
+      ]
+    }
+  },
+  "foundation--blue-dark-:active": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.05098039284348488,
+        0.13725490868091583,
+        0.3803921639919281
+      ]
+    }
+  },
+  "foundation--blue-darker": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.03921568766236305,
+        0.10588235408067703,
+        0.2980392277240753
+      ]
+    }
+  },
+  "foundation-slate-lighter": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.6980392336845398,
+        0.7333333492279053,
+        0.7764706015586853
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-slate-light-:hover": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.6392157077789307,
+        0.6784313917160034,
+        0.7333333492279053
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-slate-light-:active": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.5647059082984924,
+        0.615686297416687,
+        0.6784313917160034
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-slate-normal": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.3294117748737335,
+        0.40784314274787903,
+        0.5058823823928833
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-slate-normal-:hover": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.27843138575553894,
+        0.3450980484485626,
+        0.4313725531101227
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-slate-normal-:active": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.239215686917305,
+        0.2980392277240753,
+        0.3686274588108063
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-slate-dark": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.11372549086809158,
+        0.1411764770746231,
+        0.1764705926179886
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-slate-dark-:hover": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.08235294371843338,
+        0.10196078568696976,
+        0.125490203499794
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-slate-dark-:active": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.03529411926865578,
+        0.04313725605607033,
+        0.054901961237192154
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-white-white": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        1,
+        1,
+        1
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-white-white-:hover": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.9882352948188782,
+        0.9921568632125854,
+        0.9921568632125854
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-white-white-:active": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.9607843160629272,
+        0.9686274528503418,
+        0.9764705896377563
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-white-light": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.9882352948188782,
+        0.9921568632125854,
+        0.9921568632125854
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-white-light-:hover": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.9607843160629272,
+        0.9686274528503418,
+        0.9764705896377563
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-white-light-:active": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.9411764740943909,
+        0.9529411792755127,
+        0.9647058844566345
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-white-normal": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.9764705896377563,
+        0.9803921580314636,
+        0.9843137264251709
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-white-normal-:hover": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.9490196108818054,
+        0.95686274766922,
+        0.9686274528503418
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-white-normal-:active": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.9215686321258545,
+        0.9333333373069763,
+        0.9490196108818054
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-white-dark": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.9647058844566345,
+        0.9725490212440491,
+        0.9764705896377563
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-sky-light": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.9176470637321472,
+        0.9490196108818054,
+        0.9764705896377563
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-sky-light-:hover": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.8784313797950745,
+        0.9215686321258545,
+        0.9647058844566345
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-sky-light-:active": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.7450980544090271,
+        0.8392156958580017,
+        0.929411768913269
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-sky-normal": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.18039216101169586,
+        0.48627451062202454,
+        0.7686274647712708
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-sky-normal-:hover": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.16078431904315948,
+        0.43921568989753723,
+        0.6901960968971252
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-sky-normal-:active": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.14509804546833038,
+        0.38823530077934265,
+        0.615686297416687
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-sky-dark": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.13725490868091583,
+        0.364705890417099,
+        0.5764706134796143
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-sky-dark-:hover": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.10980392247438431,
+        0.29019609093666077,
+        0.4627451002597809
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-sky-dark-:active": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.08235294371843338,
+        0.21960784494876862,
+        0.3450980484485626
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-sky-darker": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.062745101749897,
+        0.16862745583057404,
+        0.2705882489681244
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-grey-light": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.9803921580314636,
+        0.9843137264251709,
+        0.9882352948188782
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-grey-light-:hover": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.9686274528503418,
+        0.9725490212440491,
+        0.9803921580314636
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-grey-light-:active": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.9333333373069763,
+        0.9450980424880981,
+        0.95686274766922
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-grey-normal": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.7882353067398071,
+        0.8274509906768799,
+        0.8627451062202454
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-grey-normal-:hover": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.7098039388656616,
+        0.7450980544090271,
+        0.7764706015586853
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-grey-normal-:active": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.6313725709915161,
+        0.6627451181411743,
+        0.6901960968971252
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-grey-dark": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.5921568870544434,
+        0.6196078658103943,
+        0.6470588445663452
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-grey-dark-:hover": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.4745098054409027,
+        0.49803921580314636,
+        0.5176470875740051
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-grey-dark-:active": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.3529411852359772,
+        0.37254902720451355,
+        0.38823530077934265
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "foundation-grey-darker": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.27450981736183167,
+        0.29019609093666077,
+        0.3019607961177826
+      ]
+    },
+    "$description": "Legacy foundation ramp. Superseded by the Primitives variable collection — use a Semantic token instead."
+  },
+  "semantic-text-primary": {
+    "$type": "color",
+    "$value": "{semantic-color-text-base}",
+    "$description": "Body copy, headings, table keys  ·  → neutral/neutral-950"
+  },
+  "semantic-text-secondary": {
+    "$type": "color",
+    "$value": "{semantic-color-text-secondary}",
+    "$description": "Supporting copy, table values  ·  → neutral/neutral-800"
+  },
+  "semantic-text-muted": {
+    "$type": "color",
+    "$value": "{semantic-color-text-subtle}",
+    "$description": "Meta, captions, placeholders — passes AA on every surface  ·  → neutral/neutral-700"
+  },
+  "semantic-text-inverse": {
+    "$type": "color",
+    "$value": "{semantic-color-text-inverse}",
+    "$description": "Type on brand, navy or image grounds  ·  → base/white"
+  },
+  "semantic-text-link": {
+    "$type": "color",
+    "$value": "{semantic-color-text-link}",
+    "$description": "Inline links and text buttons  ·  → blue/blue-700"
+  },
+  "semantic-text-success": {
+    "$type": "color",
+    "$value": "{semantic-color-text-positive}",
+    "$description": "Free cancellation, discounts, confirmed  ·  → green/green-600"
+  },
+  "semantic-text-danger": {
+    "$type": "color",
+    "$value": "{semantic-color-text-negative}",
+    "$description": "Cancel, delete, sold out  ·  → red/red-600"
+  },
+  "semantic-text-warning": {
+    "$type": "color",
+    "$value": "{semantic-color-text-warning}",
+    "$description": "Time-limited notices  ·  → amber/amber-800"
+  },
+  "semantic-surface-page": {
+    "$type": "color",
+    "$value": "{semantic-color-bg-base}",
+    "$description": "Default page ground, web and back office  ·  → neutral/neutral-50"
+  },
+  "semantic-surface-raised": {
+    "$type": "color",
+    "$value": "{semantic-color-bg-surfaceprimary}",
+    "$description": "Cards, panels, header bar, table rows  ·  → base/white"
+  },
+  "semantic-surface-sunken": {
+    "$type": "color",
+    "$value": "{semantic-color-bg-surfacesecondary}",
+    "$description": "Table headers, filled inputs, wells  ·  → neutral/neutral-100"
+  },
+  "semantic-surface-inverse": {
+    "$type": "color",
+    "$value": "{semantic-color-bg-inverse}",
+    "$description": "Hero grounds, sidebar, app splash  ·  → navy/navy-800"
+  },
+  "semantic-surface-brand": {
+    "$type": "color",
+    "$value": "{semantic-color-bg-brand}",
+    "$description": "Primary button and brand blocks  ·  → blue/blue-700"
+  },
+  "semantic-surface-brand-subtle": {
+    "$type": "color",
+    "$value": "{semantic-color-bg-primary-subtle}",
+    "$description": "Tags, icon tiles, selected rows  ·  → blue/blue-50"
+  },
+  "semantic-surface-success-subtle": {
+    "$type": "color",
+    "$value": "{semantic-color-bg-positive-subtle}",
+    "$description": "Confirmation banners  ·  → green/green-50"
+  },
+  "semantic-surface-danger-subtle": {
+    "$type": "color",
+    "$value": "{semantic-color-bg-negative-subtle}",
+    "$description": "Destructive banners and nav  ·  → red/red-50"
+  },
+  "semantic-surface-warning-subtle": {
+    "$type": "color",
+    "$value": "{semantic-color-bg-warning-subtle}",
+    "$description": "Warning banners  ·  → amber/amber-50"
+  },
+  "semantic-surface-disabled": {
+    "$type": "color",
+    "$value": "{semantic-color-bg-disabled}",
+    "$description": "Disabled controls  ·  → neutral/neutral-100"
+  },
+  "semantic-border-default": {
+    "$type": "color",
+    "$value": "{semantic-color-border-base}",
+    "$description": "Card edges, dividers, header rule  ·  → neutral/neutral-200"
+  },
+  "semantic-border-strong": {
+    "$type": "color",
+    "$value": "{semantic-color-border-strong}",
+    "$description": "Inputs, secondary buttons  ·  → neutral/neutral-300"
+  },
+  "semantic-border-focus": {
+    "$type": "color",
+    "$value": "{semantic-color-border-primary-focused}",
+    "$description": "Keyboard focus and active field  ·  → blue/blue-700"
+  },
+  "semantic-border-success": {
+    "$type": "color",
+    "$value": "{semantic-color-border-positive}",
+    "$description": "Success banner edge  ·  → green/green-500"
+  },
+  "semantic-border-danger": {
+    "$type": "color",
+    "$value": "{semantic-color-border-negative}",
+    "$description": "Field error, destructive button edge  ·  → red/red-500"
+  },
+  "semantic-border-warning": {
+    "$type": "color",
+    "$value": "{semantic-color-border-warning}",
+    "$description": "Warning banner edge  ·  → amber/amber-200"
+  },
+  "semantic-action-primary": {
+    "$type": "color",
+    "$value": "{semantic-color-bg-primary}",
+    "$description": "Every primary button, all four surfaces  ·  → blue/blue-700"
+  },
+  "semantic-action-primary-hover": {
+    "$type": "color",
+    "$value": "{semantic-color-bg-primary-hovered}",
+    "$description": "Primary button hover  ·  → blue/blue-800"
+  },
+  "semantic-action-primary-active": {
+    "$type": "color",
+    "$value": "{semantic-color-bg-primary-pressed}",
+    "$description": "Primary button pressed  ·  → blue/blue-900"
+  },
+  "semantic-action-primary-label": {
+    "$type": "color",
+    "$value": "{semantic-color-text-onprimary}",
+    "$description": "Label on a primary button  ·  → base/white"
+  },
+  "semantic-action-secondary": {
+    "$type": "color",
+    "$value": "{semantic-color-bg-secondary}",
+    "$description": "Secondary button fill  ·  → base/white"
+  },
+  "semantic-action-secondary-border": {
+    "$type": "color",
+    "$value": "{semantic-color-border-secondary}",
+    "$description": "Secondary button edge  ·  → neutral/neutral-300"
+  },
+  "semantic-action-secondary-label": {
+    "$type": "color",
+    "$value": "{semantic-color-text-onsecondary}",
+    "$description": "Label on a secondary button  ·  → neutral/neutral-950"
+  },
+  "semantic-action-danger": {
+    "$type": "color",
+    "$value": "{semantic-color-bg-negative}",
+    "$description": "Destructive button and link  ·  → red/red-600"
+  },
+  "semantic-action-danger-hover": {
+    "$type": "color",
+    "$value": "{semantic-color-bg-negative-hovered}",
+    "$description": "Destructive hover  ·  → red/red-700"
+  },
+  "semantic-action-disabled": {
+    "$type": "color",
+    "$value": "{semantic-color-bg-disabled-idle}",
+    "$description": "Disabled button fill  ·  → neutral/neutral-100"
+  },
+  "semantic-action-disabled-label": {
+    "$type": "color",
+    "$value": "{semantic-color-text-disabled}",
+    "$description": "Disabled button label  ·  → neutral/neutral-600"
+  },
+  "semantic-accent-rating": {
+    "$type": "color",
+    "$value": "{semantic-color-icon-rating}",
+    "$description": "Star ratings, everywhere  ·  → amber/amber-400"
+  },
+  "semantic-accent-wordmark": {
+    "$type": "color",
+    "$value": "{semantic-color-icon-brand}",
+    "$description": "Horizon Stays wordmark only  ·  → sky/sky-500"
+  },
+  "semantic-accent-placeholder": {
+    "$type": "color",
+    "$value": "{semantic-color-bg-placeholder}",
+    "$description": "Image placeholders before load  ·  → neutral/neutral-400"
+  },
+  "semantic-decorative-violet-subtle": {
+    "$type": "color",
+    "$value": "{semantic-color-decorative-violet-subtle}",
+    "$description": "Decorative fill — avatars, category chips, illustration  ·  → violet/violet-100"
+  },
+  "semantic-decorative-violet": {
+    "$type": "color",
+    "$value": "{semantic-color-decorative-violet-base}",
+    "$description": "Decorative mark — validated for colour-vision separation  ·  → violet/violet-500"
+  },
+  "semantic-decorative-violet-strong": {
+    "$type": "color",
+    "$value": "{semantic-color-decorative-violet-strong}",
+    "$description": "Decorative foreground — text and icons on the subtle fill  ·  → violet/violet-700"
+  },
+  "semantic-decorative-teal-subtle": {
+    "$type": "color",
+    "$value": "{semantic-color-decorative-teal-subtle}",
+    "$description": "Decorative fill — avatars, category chips, illustration  ·  → teal/teal-100"
+  },
+  "semantic-decorative-teal": {
+    "$type": "color",
+    "$value": "{semantic-color-decorative-teal-base}",
+    "$description": "Decorative mark — validated for colour-vision separation  ·  → teal/teal-500"
+  },
+  "semantic-decorative-teal-strong": {
+    "$type": "color",
+    "$value": "{semantic-color-decorative-teal-strong}",
+    "$description": "Decorative foreground — text and icons on the subtle fill  ·  → teal/teal-700"
+  },
+  "semantic-decorative-gold-subtle": {
+    "$type": "color",
+    "$value": "{semantic-color-decorative-gold-subtle}",
+    "$description": "Decorative fill — avatars, category chips, illustration  ·  → gold/gold-100"
+  },
+  "semantic-decorative-gold": {
+    "$type": "color",
+    "$value": "{semantic-color-decorative-gold-base}",
+    "$description": "Decorative mark — validated for colour-vision separation  ·  → gold/gold-500"
+  },
+  "semantic-decorative-gold-strong": {
+    "$type": "color",
+    "$value": "{semantic-color-decorative-gold-strong}",
+    "$description": "Decorative foreground — text and icons on the subtle fill  ·  → gold/gold-700"
+  },
+  "semantic-decorative-magenta-subtle": {
+    "$type": "color",
+    "$value": "{semantic-color-decorative-magenta-subtle}",
+    "$description": "Decorative fill — avatars, category chips, illustration  ·  → magenta/magenta-100"
+  },
+  "semantic-decorative-magenta": {
+    "$type": "color",
+    "$value": "{semantic-color-decorative-magenta-base}",
+    "$description": "Decorative mark — validated for colour-vision separation  ·  → magenta/magenta-500"
+  },
+  "semantic-decorative-magenta-strong": {
+    "$type": "color",
+    "$value": "{semantic-color-decorative-magenta-strong}",
+    "$description": "Decorative foreground — text and icons on the subtle fill  ·  → magenta/magenta-700"
+  },
+  "semantic-decorative-coral-subtle": {
+    "$type": "color",
+    "$value": "{semantic-color-decorative-coral-subtle}",
+    "$description": "Pickable fill — rate plans, channels, saved lists, trip tags  ·  → coral/coral-100"
+  },
+  "semantic-decorative-coral": {
+    "$type": "color",
+    "$value": "{semantic-color-decorative-coral-base}",
+    "$description": "Pickable mark — always shipped beside the name the user gave it  ·  → coral/coral-500"
+  },
+  "semantic-decorative-coral-strong": {
+    "$type": "color",
+    "$value": "{semantic-color-decorative-coral-strong}",
+    "$description": "Pickable foreground — text and icons on the subtle fill  ·  → coral/coral-700"
+  },
+  "semantic-decorative-indigo-subtle": {
+    "$type": "color",
+    "$value": "{semantic-color-decorative-indigo-subtle}",
+    "$description": "Pickable fill — rate plans, channels, saved lists, trip tags  ·  → indigo/indigo-100"
+  },
+  "semantic-decorative-indigo": {
+    "$type": "color",
+    "$value": "{semantic-color-decorative-indigo-base}",
+    "$description": "Pickable mark — always shipped beside the name the user gave it  ·  → indigo/indigo-500"
+  },
+  "semantic-decorative-indigo-strong": {
+    "$type": "color",
+    "$value": "{semantic-color-decorative-indigo-strong}",
+    "$description": "Pickable foreground — text and icons on the subtle fill  ·  → indigo/indigo-700"
+  },
+  "semantic-decorative-lime-subtle": {
+    "$type": "color",
+    "$value": "{semantic-color-decorative-lime-subtle}",
+    "$description": "Pickable fill — rate plans, channels, saved lists, trip tags  ·  → lime/lime-100"
+  },
+  "semantic-decorative-lime": {
+    "$type": "color",
+    "$value": "{semantic-color-decorative-lime-base}",
+    "$description": "Pickable mark — always shipped beside the name the user gave it  ·  → lime/lime-500"
+  },
+  "semantic-decorative-lime-strong": {
+    "$type": "color",
+    "$value": "{semantic-color-decorative-lime-strong}",
+    "$description": "Pickable foreground — text and icons on the subtle fill  ·  → lime/lime-700"
+  },
+  "semantic-decorative-cyan-subtle": {
+    "$type": "color",
+    "$value": "{semantic-color-decorative-cyan-subtle}",
+    "$description": "Pickable fill — rate plans, channels, saved lists, trip tags  ·  → cyan/cyan-100"
+  },
+  "semantic-decorative-cyan": {
+    "$type": "color",
+    "$value": "{semantic-color-decorative-cyan-base}",
+    "$description": "Pickable mark — always shipped beside the name the user gave it  ·  → cyan/cyan-500"
+  },
+  "semantic-decorative-cyan-strong": {
+    "$type": "color",
+    "$value": "{semantic-color-decorative-cyan-strong}",
+    "$description": "Pickable foreground — text and icons on the subtle fill  ·  → cyan/cyan-700"
+  }
+}

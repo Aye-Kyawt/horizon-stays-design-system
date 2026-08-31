@@ -1,0 +1,522 @@
+{
+  "semantic-color-text-base": {
+    "$type": "color",
+    "$value": "{core-color-neutral-950}",
+    "$description": "Body copy, headings, table keys  ·  → neutral/neutral-950"
+  },
+  "semantic-color-text-secondary": {
+    "$type": "color",
+    "$value": "{core-color-neutral-800}",
+    "$description": "Supporting copy, table values  ·  → neutral/neutral-800"
+  },
+  "semantic-color-text-subtle": {
+    "$type": "color",
+    "$value": "{core-color-neutral-700}",
+    "$description": "Meta, captions, placeholders — passes AA on every surface  ·  → neutral/neutral-700"
+  },
+  "semantic-color-text-inverse": {
+    "$type": "color",
+    "$value": "{core-color-base-white}",
+    "$description": "Type on brand, navy or image grounds  ·  → base/white"
+  },
+  "semantic-color-text-link": {
+    "$type": "color",
+    "$value": "{core-color-blue-700}",
+    "$description": "Inline links and text buttons  ·  → blue/blue-700"
+  },
+  "semantic-color-text-positive": {
+    "$type": "color",
+    "$value": "{core-color-green-600}",
+    "$description": "Free cancellation, discounts, confirmed  ·  → green/green-600"
+  },
+  "semantic-color-text-negative": {
+    "$type": "color",
+    "$value": "{core-color-red-600}",
+    "$description": "Cancel, delete, sold out  ·  → red/red-600"
+  },
+  "semantic-color-text-warning": {
+    "$type": "color",
+    "$value": "{core-color-amber-800}",
+    "$description": "Time-limited notices  ·  → amber/amber-800"
+  },
+  "semantic-color-bg-base": {
+    "$type": "color",
+    "$value": "{core-color-neutral-50}",
+    "$description": "Default page ground, web and back office  ·  → neutral/neutral-50"
+  },
+  "semantic-color-bg-surfaceprimary": {
+    "$type": "color",
+    "$value": "{core-color-base-white}",
+    "$description": "Cards, panels, header bar, table rows  ·  → base/white"
+  },
+  "semantic-color-bg-surfacesecondary": {
+    "$type": "color",
+    "$value": "{core-color-neutral-100}",
+    "$description": "Table headers, filled inputs, wells  ·  → neutral/neutral-100"
+  },
+  "semantic-color-bg-inverse": {
+    "$type": "color",
+    "$value": "{core-color-navy-800}",
+    "$description": "Hero grounds, sidebar, app splash  ·  → navy/navy-800"
+  },
+  "semantic-color-bg-brand": {
+    "$type": "color",
+    "$value": "{semantic-color-bg-primary}",
+    "$description": "Duplicate of bg/primary (both blue-700). Aliased; retire once nothing references it."
+  },
+  "semantic-color-bg-primary-subtle": {
+    "$type": "color",
+    "$value": "{core-color-blue-50}",
+    "$description": "Tags, icon tiles, selected rows  ·  → blue/blue-50"
+  },
+  "semantic-color-bg-positive-subtle": {
+    "$type": "color",
+    "$value": "{core-color-green-50}",
+    "$description": "Confirmation banners  ·  → green/green-50"
+  },
+  "semantic-color-bg-negative-subtle": {
+    "$type": "color",
+    "$value": "{core-color-red-50}",
+    "$description": "Destructive banners and nav  ·  → red/red-50"
+  },
+  "semantic-color-bg-warning-subtle": {
+    "$type": "color",
+    "$value": "{core-color-amber-50}",
+    "$description": "Warning banners  ·  → amber/amber-50"
+  },
+  "semantic-color-bg-disabled": {
+    "$type": "color",
+    "$value": "{core-color-neutral-100}",
+    "$description": "Disabled controls  ·  → neutral/neutral-100"
+  },
+  "semantic-color-border-base": {
+    "$type": "color",
+    "$value": "{core-color-neutral-200}",
+    "$description": "Card edges, dividers, header rule  ·  → neutral/neutral-200"
+  },
+  "semantic-color-border-strong": {
+    "$type": "color",
+    "$value": "{core-color-neutral-300}",
+    "$description": "Inputs, secondary buttons  ·  → neutral/neutral-300"
+  },
+  "semantic-color-border-primary-focused": {
+    "$type": "color",
+    "$value": "{core-color-blue-700}",
+    "$description": "Keyboard focus and active field  ·  → blue/blue-700"
+  },
+  "semantic-color-border-positive": {
+    "$type": "color",
+    "$value": "{core-color-green-500}",
+    "$description": "Success banner edge  ·  → green/green-500"
+  },
+  "semantic-color-border-negative": {
+    "$type": "color",
+    "$value": "{core-color-red-500}",
+    "$description": "Field error, destructive button edge  ·  → red/red-500"
+  },
+  "semantic-color-border-warning": {
+    "$type": "color",
+    "$value": "{core-color-amber-200}",
+    "$description": "Warning banner edge  ·  → amber/amber-200"
+  },
+  "semantic-color-bg-primary": {
+    "$type": "color",
+    "$value": "{core-color-blue-700}",
+    "$description": "Every primary button, all four surfaces  ·  → blue/blue-700"
+  },
+  "semantic-color-bg-primary-hovered": {
+    "$type": "color",
+    "$value": "{core-color-blue-800}",
+    "$description": "Primary button hover  ·  → blue/blue-800"
+  },
+  "semantic-color-bg-primary-pressed": {
+    "$type": "color",
+    "$value": "{core-color-blue-900}",
+    "$description": "Primary button pressed  ·  → blue/blue-900"
+  },
+  "semantic-color-text-onprimary": {
+    "$type": "color",
+    "$value": "{semantic-color-text-inverse}",
+    "$description": "Label on a primary button. Aliases text/inverse."
+  },
+  "semantic-color-bg-secondary": {
+    "$type": "color",
+    "$value": "{semantic-color-bg-surfaceprimary}",
+    "$description": "Secondary button fill. Aliases bg/surfacePrimary (both white)."
+  },
+  "semantic-color-border-secondary": {
+    "$type": "color",
+    "$value": "{core-color-neutral-300}",
+    "$description": "Secondary button edge  ·  → neutral/neutral-300"
+  },
+  "semantic-color-text-onsecondary": {
+    "$type": "color",
+    "$value": "{semantic-color-text-base}",
+    "$description": "Label on a secondary button. Aliases text/base."
+  },
+  "semantic-color-bg-negative": {
+    "$type": "color",
+    "$value": "{core-color-red-600}",
+    "$description": "Destructive button and link  ·  → red/red-600"
+  },
+  "semantic-color-bg-negative-hovered": {
+    "$type": "color",
+    "$value": "{core-color-red-700}",
+    "$description": "Destructive hover  ·  → red/red-700"
+  },
+  "semantic-color-bg-disabled-idle": {
+    "$type": "color",
+    "$value": "{semantic-color-bg-disabled}",
+    "$description": "Duplicate of bg/disabled. Aliased; retire once nothing references it."
+  },
+  "semantic-color-text-disabled": {
+    "$type": "color",
+    "$value": "{core-color-neutral-600}",
+    "$description": "Disabled button label  ·  → neutral/neutral-600"
+  },
+  "semantic-color-icon-rating": {
+    "$type": "color",
+    "$value": "{core-color-amber-400}",
+    "$description": "Star ratings, everywhere  ·  → amber/amber-400"
+  },
+  "semantic-color-icon-brand": {
+    "$type": "color",
+    "$value": "{core-color-sky-500}",
+    "$description": "Horizon Stays wordmark only  ·  → sky/sky-500"
+  },
+  "semantic-color-bg-placeholder": {
+    "$type": "color",
+    "$value": "{core-color-neutral-400}",
+    "$description": "Image placeholders before load  ·  → neutral/neutral-400"
+  },
+  "semantic-color-decorative-violet-subtle": {
+    "$type": "color",
+    "$value": "{core-color-violet-100}",
+    "$description": "User-pickable violet. Light and dark swap the subtle and strong ends so the quiet one is always the ground."
+  },
+  "semantic-color-decorative-violet-base": {
+    "$type": "color",
+    "$value": "{core-color-violet-500}",
+    "$description": "User-pickable violet. Light and dark swap the subtle and strong ends so the quiet one is always the ground."
+  },
+  "semantic-color-decorative-violet-strong": {
+    "$type": "color",
+    "$value": "{core-color-violet-700}",
+    "$description": "User-pickable violet. Light and dark swap the subtle and strong ends so the quiet one is always the ground."
+  },
+  "semantic-color-decorative-teal-subtle": {
+    "$type": "color",
+    "$value": "{core-color-teal-100}",
+    "$description": "User-pickable teal. Light and dark swap the subtle and strong ends so the quiet one is always the ground."
+  },
+  "semantic-color-decorative-teal-base": {
+    "$type": "color",
+    "$value": "{core-color-teal-500}",
+    "$description": "User-pickable teal. Light and dark swap the subtle and strong ends so the quiet one is always the ground."
+  },
+  "semantic-color-decorative-teal-strong": {
+    "$type": "color",
+    "$value": "{core-color-teal-700}",
+    "$description": "User-pickable teal. Light and dark swap the subtle and strong ends so the quiet one is always the ground."
+  },
+  "semantic-color-decorative-gold-subtle": {
+    "$type": "color",
+    "$value": "{core-color-gold-100}",
+    "$description": "User-pickable gold. Light and dark swap the subtle and strong ends so the quiet one is always the ground."
+  },
+  "semantic-color-decorative-gold-base": {
+    "$type": "color",
+    "$value": "{core-color-gold-500}",
+    "$description": "User-pickable gold. Light and dark swap the subtle and strong ends so the quiet one is always the ground."
+  },
+  "semantic-color-decorative-gold-strong": {
+    "$type": "color",
+    "$value": "{core-color-gold-700}",
+    "$description": "User-pickable gold. Light and dark swap the subtle and strong ends so the quiet one is always the ground."
+  },
+  "semantic-color-decorative-magenta-subtle": {
+    "$type": "color",
+    "$value": "{core-color-magenta-100}",
+    "$description": "User-pickable magenta. Light and dark swap the subtle and strong ends so the quiet one is always the ground."
+  },
+  "semantic-color-decorative-magenta-base": {
+    "$type": "color",
+    "$value": "{core-color-magenta-500}",
+    "$description": "User-pickable magenta. Light and dark swap the subtle and strong ends so the quiet one is always the ground."
+  },
+  "semantic-color-decorative-magenta-strong": {
+    "$type": "color",
+    "$value": "{core-color-magenta-700}",
+    "$description": "User-pickable magenta. Light and dark swap the subtle and strong ends so the quiet one is always the ground."
+  },
+  "semantic-color-decorative-coral-subtle": {
+    "$type": "color",
+    "$value": "{core-color-coral-100}",
+    "$description": "User-pickable coral. Light and dark swap the subtle and strong ends so the quiet one is always the ground."
+  },
+  "semantic-color-decorative-coral-base": {
+    "$type": "color",
+    "$value": "{core-color-coral-500}",
+    "$description": "User-pickable coral. Light and dark swap the subtle and strong ends so the quiet one is always the ground."
+  },
+  "semantic-color-decorative-coral-strong": {
+    "$type": "color",
+    "$value": "{core-color-coral-700}",
+    "$description": "User-pickable coral. Light and dark swap the subtle and strong ends so the quiet one is always the ground."
+  },
+  "semantic-color-decorative-indigo-subtle": {
+    "$type": "color",
+    "$value": "{core-color-indigo-100}",
+    "$description": "User-pickable indigo. Light and dark swap the subtle and strong ends so the quiet one is always the ground."
+  },
+  "semantic-color-decorative-indigo-base": {
+    "$type": "color",
+    "$value": "{core-color-indigo-500}",
+    "$description": "User-pickable indigo. Light and dark swap the subtle and strong ends so the quiet one is always the ground."
+  },
+  "semantic-color-decorative-indigo-strong": {
+    "$type": "color",
+    "$value": "{core-color-indigo-700}",
+    "$description": "User-pickable indigo. Light and dark swap the subtle and strong ends so the quiet one is always the ground."
+  },
+  "semantic-color-decorative-lime-subtle": {
+    "$type": "color",
+    "$value": "{core-color-lime-100}",
+    "$description": "User-pickable lime. Light and dark swap the subtle and strong ends so the quiet one is always the ground."
+  },
+  "semantic-color-decorative-lime-base": {
+    "$type": "color",
+    "$value": "{core-color-lime-500}",
+    "$description": "User-pickable lime. Light and dark swap the subtle and strong ends so the quiet one is always the ground."
+  },
+  "semantic-color-decorative-lime-strong": {
+    "$type": "color",
+    "$value": "{core-color-lime-700}",
+    "$description": "User-pickable lime. Light and dark swap the subtle and strong ends so the quiet one is always the ground."
+  },
+  "semantic-color-decorative-cyan-subtle": {
+    "$type": "color",
+    "$value": "{core-color-cyan-100}",
+    "$description": "User-pickable cyan. Light and dark swap the subtle and strong ends so the quiet one is always the ground."
+  },
+  "semantic-color-decorative-cyan-base": {
+    "$type": "color",
+    "$value": "{core-color-cyan-500}",
+    "$description": "User-pickable cyan. Light and dark swap the subtle and strong ends so the quiet one is always the ground."
+  },
+  "semantic-color-decorative-cyan-strong": {
+    "$type": "color",
+    "$value": "{core-color-cyan-700}",
+    "$description": "User-pickable cyan. Light and dark swap the subtle and strong ends so the quiet one is always the ground."
+  },
+  "semantic-color-bg-base-hovered": {
+    "$type": "color",
+    "$value": "{core-color-neutral-100}",
+    "$description": "Page ground on hover — list rows, table rows."
+  },
+  "semantic-color-bg-surfaceprimary-hovered": {
+    "$type": "color",
+    "$value": "{core-color-neutral-50}",
+    "$description": "Card and row hover."
+  },
+  "semantic-color-bg-surfaceprimary-selected": {
+    "$type": "color",
+    "$value": "{core-color-blue-50}",
+    "$description": "Selected row or card."
+  },
+  "semantic-color-bg-positive": {
+    "$type": "color",
+    "$value": "{core-color-green-600}",
+    "$description": "Confirmed badge fill."
+  },
+  "semantic-color-bg-warning": {
+    "$type": "color",
+    "$value": "{core-color-amber-600}",
+    "$description": "Warning badge fill."
+  },
+  "semantic-color-bg-info": {
+    "$type": "color",
+    "$value": "{core-color-sky-500}",
+    "$description": "Informational badge fill. Sky, not action blue — an info notice is not a button."
+  },
+  "semantic-color-bg-info-subtle": {
+    "$type": "color",
+    "$value": "{core-color-sky-50}",
+    "$description": "Informational banner ground."
+  },
+  "semantic-color-bg-overlay": {
+    "$type": "color",
+    "$value": "{core-color-neutral-500a}",
+    "$description": "Scrim behind modals and drawers. Ink at 32%."
+  },
+  "semantic-color-text-link-hovered": {
+    "$type": "color",
+    "$value": "{core-color-blue-800}",
+    "$description": "Link hover."
+  },
+  "semantic-color-text-link-visited": {
+    "$type": "color",
+    "$value": "{core-color-blue-900}",
+    "$description": "Visited link."
+  },
+  "semantic-color-text-placeholder": {
+    "$type": "color",
+    "$value": "{core-color-neutral-600}",
+    "$description": "Input placeholder only — never body copy."
+  },
+  "semantic-color-text-info": {
+    "$type": "color",
+    "$value": "{core-color-sky-700}",
+    "$description": "Informational copy."
+  },
+  "semantic-color-border-subtle": {
+    "$type": "color",
+    "$value": "{core-color-neutral-100}",
+    "$description": "The quietest rule — inside cards, between table rows."
+  },
+  "semantic-color-border-disabled": {
+    "$type": "color",
+    "$value": "{core-color-neutral-200}",
+    "$description": "Disabled control edge."
+  },
+  "semantic-color-border-info": {
+    "$type": "color",
+    "$value": "{core-color-sky-500}",
+    "$description": "Informational banner edge."
+  },
+  "semantic-color-border-inverse": {
+    "$type": "color",
+    "$value": "{core-color-neutral-700}",
+    "$description": "Divider on a navy or dark ground."
+  },
+  "semantic-color-icon-base": {
+    "$type": "color",
+    "$value": "{core-color-neutral-800}",
+    "$description": "Default icon."
+  },
+  "semantic-color-icon-subtle": {
+    "$type": "color",
+    "$value": "{core-color-neutral-700}",
+    "$description": "Secondary and meta icons."
+  },
+  "semantic-color-icon-inverse": {
+    "$type": "color",
+    "$value": "{core-color-base-white}",
+    "$description": "Icon on brand, navy or image grounds."
+  },
+  "semantic-color-icon-primary": {
+    "$type": "color",
+    "$value": "{core-color-blue-700}",
+    "$description": "Icon inside a primary action."
+  },
+  "semantic-color-icon-positive": {
+    "$type": "color",
+    "$value": "{core-color-green-600}",
+    "$description": "Confirmed, available, included."
+  },
+  "semantic-color-icon-negative": {
+    "$type": "color",
+    "$value": "{core-color-red-600}",
+    "$description": "Cancel, delete, sold out."
+  },
+  "semantic-color-icon-warning": {
+    "$type": "color",
+    "$value": "{core-color-amber-800}",
+    "$description": "Time-limited notices."
+  },
+  "semantic-color-icon-info": {
+    "$type": "color",
+    "$value": "{core-color-sky-600}",
+    "$description": "Informational icon."
+  },
+  "semantic-color-icon-disabled": {
+    "$type": "color",
+    "$value": "{core-color-neutral-500}",
+    "$description": "Disabled icon."
+  },
+  "semantic-elevation-y-level1": {
+    "$type": "dimension",
+    "$value": {
+      "value": 1,
+      "unit": "px"
+    },
+    "$description": "Vertical offset for level1."
+  },
+  "semantic-elevation-blur-level1": {
+    "$type": "dimension",
+    "$value": {
+      "value": 2,
+      "unit": "px"
+    },
+    "$description": "Blur radius for level1."
+  },
+  "semantic-elevation-y-level2": {
+    "$type": "dimension",
+    "$value": {
+      "value": 2,
+      "unit": "px"
+    },
+    "$description": "Vertical offset for level2."
+  },
+  "semantic-elevation-blur-level2": {
+    "$type": "dimension",
+    "$value": {
+      "value": 8,
+      "unit": "px"
+    },
+    "$description": "Blur radius for level2."
+  },
+  "semantic-elevation-y-level3": {
+    "$type": "dimension",
+    "$value": {
+      "value": 4,
+      "unit": "px"
+    },
+    "$description": "Vertical offset for level3."
+  },
+  "semantic-elevation-blur-level3": {
+    "$type": "dimension",
+    "$value": {
+      "value": 16,
+      "unit": "px"
+    },
+    "$description": "Blur radius for level3."
+  },
+  "semantic-elevation-y-level4": {
+    "$type": "dimension",
+    "$value": {
+      "value": 8,
+      "unit": "px"
+    },
+    "$description": "Vertical offset for level4."
+  },
+  "semantic-elevation-blur-level4": {
+    "$type": "dimension",
+    "$value": {
+      "value": 24,
+      "unit": "px"
+    },
+    "$description": "Blur radius for level4."
+  },
+  "semantic-elevation-y-level5": {
+    "$type": "dimension",
+    "$value": {
+      "value": 16,
+      "unit": "px"
+    },
+    "$description": "Vertical offset for level5."
+  },
+  "semantic-elevation-blur-level5": {
+    "$type": "dimension",
+    "$value": {
+      "value": 40,
+      "unit": "px"
+    },
+    "$description": "Blur radius for level5."
+  },
+  "semantic-color-shadow": {
+    "$type": "color",
+    "$value": "{core-color-neutral-300a}",
+    "$description": "Shadow ink. 14% on light, 72% on dark — a soft shadow vanishes against a dark ground."
+  }
+}

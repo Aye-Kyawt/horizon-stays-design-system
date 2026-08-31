@@ -1,0 +1,819 @@
+{
+  "core-type-fontfamily-brand": {
+    "$type": "fontFamily",
+    "$value": "Inter",
+    "$description": "The only typeface in Horizon Stays. Material 3 ships on Roboto; this system keeps Inter, which every one of the 227 screens already uses."
+  },
+  "core-type-size-display-lg": {
+    "$type": "dimension",
+    "$value": {
+      "value": 28,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.display-large.size"
+  },
+  "core-type-lineheight-display-lg": {
+    "$type": "dimension",
+    "$value": {
+      "value": 32,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.display-large.line-height"
+  },
+  "core-type-tracking-display-lg": {
+    "$type": "dimension",
+    "$value": {
+      "value": -0.25,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.display-large.tracking"
+  },
+  "core-type-fontweight-display-lg": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-regular}",
+    "$description": "md.sys.typescale.display-large.weight"
+  },
+  "core-type-fontweight-display-semibold-lg": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-semibold}",
+    "$description": "Semibold emphasis for display lg. Aliases fontWeight/semibold (600)."
+  },
+  "core-type-size-display-md": {
+    "$type": "dimension",
+    "$value": {
+      "value": 24,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.display-medium.size"
+  },
+  "core-type-lineheight-display-md": {
+    "$type": "dimension",
+    "$value": {
+      "value": 28,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.display-medium.line-height"
+  },
+  "core-type-tracking-display-md": {
+    "$type": "dimension",
+    "$value": {
+      "value": 0,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.display-medium.tracking"
+  },
+  "core-type-fontweight-display-md": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-regular}",
+    "$description": "md.sys.typescale.display-medium.weight"
+  },
+  "core-type-fontweight-display-semibold-md": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-semibold}",
+    "$description": "Semibold emphasis for display md. Aliases fontWeight/semibold (600)."
+  },
+  "core-type-size-display-sm": {
+    "$type": "dimension",
+    "$value": {
+      "value": 22,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.display-small.size"
+  },
+  "core-type-lineheight-display-sm": {
+    "$type": "dimension",
+    "$value": {
+      "value": 26,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.display-small.line-height"
+  },
+  "core-type-tracking-display-sm": {
+    "$type": "dimension",
+    "$value": {
+      "value": 0,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.display-small.tracking"
+  },
+  "core-type-fontweight-display-sm": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-regular}",
+    "$description": "md.sys.typescale.display-small.weight"
+  },
+  "core-type-fontweight-display-semibold-sm": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-semibold}",
+    "$description": "Semibold emphasis for display sm. Aliases fontWeight/semibold (600)."
+  },
+  "core-type-size-headline-lg": {
+    "$type": "dimension",
+    "$value": {
+      "value": 24,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.headline-large.size"
+  },
+  "core-type-lineheight-headline-lg": {
+    "$type": "dimension",
+    "$value": {
+      "value": 30,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.headline-large.line-height"
+  },
+  "core-type-tracking-headline-lg": {
+    "$type": "dimension",
+    "$value": {
+      "value": 0,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.headline-large.tracking"
+  },
+  "core-type-fontweight-headline-lg": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-regular}",
+    "$description": "md.sys.typescale.headline-large.weight"
+  },
+  "core-type-fontweight-headline-semibold-lg": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-semibold}",
+    "$description": "Semibold emphasis for headline lg. Aliases fontWeight/semibold (600)."
+  },
+  "core-type-size-headline-md": {
+    "$type": "dimension",
+    "$value": {
+      "value": 22,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.headline-medium.size"
+  },
+  "core-type-lineheight-headline-md": {
+    "$type": "dimension",
+    "$value": {
+      "value": 28,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.headline-medium.line-height"
+  },
+  "core-type-tracking-headline-md": {
+    "$type": "dimension",
+    "$value": {
+      "value": 0,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.headline-medium.tracking"
+  },
+  "core-type-fontweight-headline-md": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-regular}",
+    "$description": "md.sys.typescale.headline-medium.weight"
+  },
+  "core-type-fontweight-headline-semibold-md": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-semibold}",
+    "$description": "Semibold emphasis for headline md. Aliases fontWeight/semibold (600)."
+  },
+  "core-type-size-headline-sm": {
+    "$type": "dimension",
+    "$value": {
+      "value": 20,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.headline-small.size"
+  },
+  "core-type-lineheight-headline-sm": {
+    "$type": "dimension",
+    "$value": {
+      "value": 26,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.headline-small.line-height"
+  },
+  "core-type-tracking-headline-sm": {
+    "$type": "dimension",
+    "$value": {
+      "value": 0,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.headline-small.tracking"
+  },
+  "core-type-fontweight-headline-sm": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-regular}",
+    "$description": "md.sys.typescale.headline-small.weight"
+  },
+  "core-type-fontweight-headline-semibold-sm": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-semibold}",
+    "$description": "Semibold emphasis for headline sm. Aliases fontWeight/semibold (600)."
+  },
+  "core-type-size-title-lg": {
+    "$type": "dimension",
+    "$value": {
+      "value": 18,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.title-large.size"
+  },
+  "core-type-lineheight-title-lg": {
+    "$type": "dimension",
+    "$value": {
+      "value": 22,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.title-large.line-height"
+  },
+  "core-type-tracking-title-lg": {
+    "$type": "dimension",
+    "$value": {
+      "value": 0,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.title-large.tracking"
+  },
+  "core-type-fontweight-title-lg": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-regular}",
+    "$description": "md.sys.typescale.title-large.weight"
+  },
+  "core-type-fontweight-title-semibold-lg": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-semibold}",
+    "$description": "Semibold emphasis for title lg. Aliases fontWeight/semibold (600)."
+  },
+  "core-type-size-title-md": {
+    "$type": "dimension",
+    "$value": {
+      "value": 16,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.title-medium.size"
+  },
+  "core-type-lineheight-title-md": {
+    "$type": "dimension",
+    "$value": {
+      "value": 24,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.title-medium.line-height"
+  },
+  "core-type-tracking-title-md": {
+    "$type": "dimension",
+    "$value": {
+      "value": 0.15000000596046448,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.title-medium.tracking"
+  },
+  "core-type-fontweight-title-md": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-medium}",
+    "$description": "md.sys.typescale.title-medium.weight"
+  },
+  "core-type-fontweight-title-semibold-md": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-semibold}",
+    "$description": "Semibold emphasis for title md. Aliases fontWeight/semibold (600)."
+  },
+  "core-type-size-title-sm": {
+    "$type": "dimension",
+    "$value": {
+      "value": 14,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.title-small.size"
+  },
+  "core-type-lineheight-title-sm": {
+    "$type": "dimension",
+    "$value": {
+      "value": 20,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.title-small.line-height"
+  },
+  "core-type-tracking-title-sm": {
+    "$type": "dimension",
+    "$value": {
+      "value": 0.10000000149011612,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.title-small.tracking"
+  },
+  "core-type-fontweight-title-sm": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-medium}",
+    "$description": "md.sys.typescale.title-small.weight"
+  },
+  "core-type-fontweight-title-semibold-sm": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-semibold}",
+    "$description": "Semibold emphasis for title sm. Aliases fontWeight/semibold (600)."
+  },
+  "core-type-size-body-lg": {
+    "$type": "dimension",
+    "$value": {
+      "value": 14,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.body-large.size"
+  },
+  "core-type-lineheight-body-lg": {
+    "$type": "dimension",
+    "$value": {
+      "value": 20,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.body-large.line-height"
+  },
+  "core-type-tracking-body-lg": {
+    "$type": "dimension",
+    "$value": {
+      "value": 0.5,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.body-large.tracking"
+  },
+  "core-type-fontweight-body-lg": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-regular}",
+    "$description": "md.sys.typescale.body-large.weight"
+  },
+  "core-type-fontweight-body-semibold-lg": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-semibold}",
+    "$description": "Semibold emphasis for body lg. Aliases fontWeight/semibold (600)."
+  },
+  "core-type-size-body-md": {
+    "$type": "dimension",
+    "$value": {
+      "value": 13,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.body-medium.size"
+  },
+  "core-type-lineheight-body-md": {
+    "$type": "dimension",
+    "$value": {
+      "value": 18,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.body-medium.line-height"
+  },
+  "core-type-tracking-body-md": {
+    "$type": "dimension",
+    "$value": {
+      "value": 0.25,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.body-medium.tracking"
+  },
+  "core-type-fontweight-body-md": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-regular}",
+    "$description": "md.sys.typescale.body-medium.weight"
+  },
+  "core-type-fontweight-body-semibold-md": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-semibold}",
+    "$description": "Semibold emphasis for body md. Aliases fontWeight/semibold (600)."
+  },
+  "core-type-size-body-sm": {
+    "$type": "dimension",
+    "$value": {
+      "value": 12,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.body-small.size"
+  },
+  "core-type-lineheight-body-sm": {
+    "$type": "dimension",
+    "$value": {
+      "value": 16,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.body-small.line-height"
+  },
+  "core-type-tracking-body-sm": {
+    "$type": "dimension",
+    "$value": {
+      "value": 0.4000000059604645,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.body-small.tracking"
+  },
+  "core-type-fontweight-body-sm": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-regular}",
+    "$description": "md.sys.typescale.body-small.weight"
+  },
+  "core-type-fontweight-body-semibold-sm": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-semibold}",
+    "$description": "Semibold emphasis for body sm. Aliases fontWeight/semibold (600)."
+  },
+  "core-type-size-label-lg": {
+    "$type": "dimension",
+    "$value": {
+      "value": 13,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.label-large.size"
+  },
+  "core-type-lineheight-label-lg": {
+    "$type": "dimension",
+    "$value": {
+      "value": 18,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.label-large.line-height"
+  },
+  "core-type-tracking-label-lg": {
+    "$type": "dimension",
+    "$value": {
+      "value": 0.10000000149011612,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.label-large.tracking"
+  },
+  "core-type-fontweight-label-lg": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-medium}",
+    "$description": "md.sys.typescale.label-large.weight"
+  },
+  "core-type-fontweight-label-semibold-lg": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-semibold}",
+    "$description": "Semibold emphasis for label lg. Aliases fontWeight/semibold (600)."
+  },
+  "core-type-size-label-md": {
+    "$type": "dimension",
+    "$value": {
+      "value": 12,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.label-medium.size"
+  },
+  "core-type-lineheight-label-md": {
+    "$type": "dimension",
+    "$value": {
+      "value": 16,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.label-medium.line-height"
+  },
+  "core-type-tracking-label-md": {
+    "$type": "dimension",
+    "$value": {
+      "value": 0.5,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.label-medium.tracking"
+  },
+  "core-type-fontweight-label-md": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-medium}",
+    "$description": "md.sys.typescale.label-medium.weight"
+  },
+  "core-type-fontweight-label-semibold-md": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-semibold}",
+    "$description": "Semibold emphasis for label md. Aliases fontWeight/semibold (600)."
+  },
+  "core-type-size-label-sm": {
+    "$type": "dimension",
+    "$value": {
+      "value": 11,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.label-small.size"
+  },
+  "core-type-lineheight-label-sm": {
+    "$type": "dimension",
+    "$value": {
+      "value": 16,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.label-small.line-height"
+  },
+  "core-type-tracking-label-sm": {
+    "$type": "dimension",
+    "$value": {
+      "value": 0.5,
+      "unit": "px"
+    },
+    "$description": "md.sys.typescale.label-small.tracking"
+  },
+  "core-type-fontweight-label-sm": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-medium}",
+    "$description": "md.sys.typescale.label-small.weight"
+  },
+  "core-type-fontweight-label-semibold-sm": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-semibold}",
+    "$description": "Semibold emphasis for label sm. Aliases fontWeight/semibold (600)."
+  },
+  "core-type-fontfamily-myanmar": {
+    "$type": "fontFamily",
+    "$value": "Padauk",
+    "$description": "Burmese / Myanmar script. Padauk (SIL, Unicode) is the only Myanmar family in this file with two weights, which is what makes an emphasis rule possible."
+  },
+  "core-type-lineheight-display-lg-myanmar": {
+    "$type": "dimension",
+    "$value": {
+      "value": 44,
+      "unit": "px"
+    },
+    "$description": "Burmese line height. Padauk needs at least 84 px at this size (measured); Latin uses 64."
+  },
+  "core-type-lineheight-display-md-myanmar": {
+    "$type": "dimension",
+    "$value": {
+      "value": 36,
+      "unit": "px"
+    },
+    "$description": "Burmese line height. Padauk needs at least 66 px at this size (measured); Latin uses 52."
+  },
+  "core-type-lineheight-display-sm-myanmar": {
+    "$type": "dimension",
+    "$value": {
+      "value": 34,
+      "unit": "px"
+    },
+    "$description": "Burmese line height. Padauk needs at least 53 px at this size (measured); Latin uses 44."
+  },
+  "core-type-lineheight-headline-lg-myanmar": {
+    "$type": "dimension",
+    "$value": {
+      "value": 36,
+      "unit": "px"
+    },
+    "$description": "Burmese line height. Padauk needs at least 47 px at this size (measured); Latin uses 40."
+  },
+  "core-type-lineheight-headline-md-myanmar": {
+    "$type": "dimension",
+    "$value": {
+      "value": 34,
+      "unit": "px"
+    },
+    "$description": "Burmese line height. Padauk needs at least 41 px at this size (measured); Latin uses 36."
+  },
+  "core-type-lineheight-headline-sm-myanmar": {
+    "$type": "dimension",
+    "$value": {
+      "value": 32,
+      "unit": "px"
+    },
+    "$description": "Burmese line height. Padauk needs at least 35 px at this size (measured); Latin uses 32."
+  },
+  "core-type-lineheight-title-lg-myanmar": {
+    "$type": "dimension",
+    "$value": {
+      "value": 28,
+      "unit": "px"
+    },
+    "$description": "Burmese line height. Padauk needs at least 32 px at this size (measured); Latin uses 28."
+  },
+  "core-type-lineheight-title-md-myanmar": {
+    "$type": "dimension",
+    "$value": {
+      "value": 26,
+      "unit": "px"
+    },
+    "$description": "Burmese line height. Padauk needs at least 24 px at this size (measured); Latin uses 24."
+  },
+  "core-type-lineheight-title-sm-myanmar": {
+    "$type": "dimension",
+    "$value": {
+      "value": 22,
+      "unit": "px"
+    },
+    "$description": "Burmese line height. Padauk needs at least 21 px at this size (measured); Latin uses 20."
+  },
+  "core-type-lineheight-body-lg-myanmar": {
+    "$type": "dimension",
+    "$value": {
+      "value": 24,
+      "unit": "px"
+    },
+    "$description": "Burmese line height. Padauk needs at least 24 px at this size (measured); Latin uses 24."
+  },
+  "core-type-lineheight-body-md-myanmar": {
+    "$type": "dimension",
+    "$value": {
+      "value": 22,
+      "unit": "px"
+    },
+    "$description": "Burmese line height. Padauk needs at least 21 px at this size (measured); Latin uses 20."
+  },
+  "core-type-lineheight-body-sm-myanmar": {
+    "$type": "dimension",
+    "$value": {
+      "value": 20,
+      "unit": "px"
+    },
+    "$description": "Burmese line height. Padauk needs at least 18 px at this size (measured); Latin uses 16."
+  },
+  "core-type-lineheight-label-lg-myanmar": {
+    "$type": "dimension",
+    "$value": {
+      "value": 20,
+      "unit": "px"
+    },
+    "$description": "Burmese line height. Padauk needs at least 21 px at this size (measured); Latin uses 20."
+  },
+  "core-type-lineheight-label-md-myanmar": {
+    "$type": "dimension",
+    "$value": {
+      "value": 18,
+      "unit": "px"
+    },
+    "$description": "Burmese line height. Padauk needs at least 18 px at this size (measured); Latin uses 16."
+  },
+  "core-type-lineheight-label-sm-myanmar": {
+    "$type": "dimension",
+    "$value": {
+      "value": 18,
+      "unit": "px"
+    },
+    "$description": "Burmese line height. Padauk needs at least 16 px at this size (measured); Latin uses 16."
+  },
+  "core-type-fontweight-myanmar-base": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-regular}",
+    "$description": "Padauk Regular. Myanmar has two weights only, so the Latin 400/500/600 ladder does not apply."
+  },
+  "core-type-fontweight-myanmar-bold": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-bold}",
+    "$description": "Padauk Bold. The only emphasis weight Padauk ships — there is no Myanmar semibold."
+  },
+  "core-type-paragraphspacing-0": {
+    "$type": "dimension",
+    "$value": {
+      "value": 0,
+      "unit": "px"
+    },
+    "$description": "Space between paragraphs inside one text block."
+  },
+  "core-type-paragraphspacing-8": {
+    "$type": "dimension",
+    "$value": {
+      "value": 8,
+      "unit": "px"
+    },
+    "$description": "Space between paragraphs inside one text block."
+  },
+  "core-type-paragraphspacing-12": {
+    "$type": "dimension",
+    "$value": {
+      "value": 12,
+      "unit": "px"
+    },
+    "$description": "Space between paragraphs inside one text block."
+  },
+  "core-type-paragraphspacing-16": {
+    "$type": "dimension",
+    "$value": {
+      "value": 16,
+      "unit": "px"
+    },
+    "$description": "Space between paragraphs inside one text block."
+  },
+  "core-type-paragraphindent-0": {
+    "$type": "dimension",
+    "$value": {
+      "value": 0,
+      "unit": "px"
+    },
+    "$description": "First-line indent. Zero everywhere — UI prose is separated by space, never by indent."
+  },
+  "core-type-size-legacy-10": {
+    "$type": "dimension",
+    "$value": {
+      "value": 10,
+      "unit": "px"
+    },
+    "$description": "LEGACY. 10 px is below this system’s readable floor of 11. It exists only so body5 can describe text that already ships in the back office."
+  },
+  "core-type-lineheight-legacy-10": {
+    "$type": "dimension",
+    "$value": {
+      "value": 14,
+      "unit": "px"
+    },
+    "$description": "LEGACY. 1.4x on 10 px — the minimum that keeps Inter from colliding."
+  },
+  "core-type-lineheight-legacy-10-myanmar": {
+    "$type": "dimension",
+    "$value": {
+      "value": 16,
+      "unit": "px"
+    },
+    "$description": "LEGACY. Padauk needs 15 px at 10 px size (measured); 16 is the safe step."
+  },
+  "core-type-tracking-legacy-10": {
+    "$type": "dimension",
+    "$value": {
+      "value": 0.5,
+      "unit": "px"
+    },
+    "$description": "LEGACY."
+  },
+  "core-type-fontweight-regular": {
+    "$type": "fontWeight",
+    "$value": 400,
+    "$description": "Inter Regular / Padauk Regular. Base weight for display, headline and body."
+  },
+  "core-type-fontweight-medium": {
+    "$type": "fontWeight",
+    "$value": 500,
+    "$description": "Inter Medium. Base weight for titles and labels."
+  },
+  "core-type-fontweight-semibold": {
+    "$type": "fontWeight",
+    "$value": 600,
+    "$description": "Inter Semi Bold. The first emphasis step. Latin only — Padauk has no semibold."
+  },
+  "core-type-fontweight-bold": {
+    "$type": "fontWeight",
+    "$value": 700,
+    "$description": "Inter Bold / Padauk Bold. The second emphasis step, and the only emphasis Burmese has."
+  },
+  "core-type-fontweight-display-bold-lg": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-bold}",
+    "$description": "Bold emphasis for display lg. Aliases fontWeight/bold (700)."
+  },
+  "core-type-fontweight-display-bold-md": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-bold}",
+    "$description": "Bold emphasis for display md. Aliases fontWeight/bold (700)."
+  },
+  "core-type-fontweight-display-bold-sm": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-bold}",
+    "$description": "Bold emphasis for display sm. Aliases fontWeight/bold (700)."
+  },
+  "core-type-fontweight-headline-bold-lg": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-bold}",
+    "$description": "Bold emphasis for headline lg. Aliases fontWeight/bold (700)."
+  },
+  "core-type-fontweight-headline-bold-md": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-bold}",
+    "$description": "Bold emphasis for headline md. Aliases fontWeight/bold (700)."
+  },
+  "core-type-fontweight-headline-bold-sm": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-bold}",
+    "$description": "Bold emphasis for headline sm. Aliases fontWeight/bold (700)."
+  },
+  "core-type-fontweight-title-bold-lg": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-bold}",
+    "$description": "Bold emphasis for title lg. Aliases fontWeight/bold (700)."
+  },
+  "core-type-fontweight-title-bold-md": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-bold}",
+    "$description": "Bold emphasis for title md. Aliases fontWeight/bold (700)."
+  },
+  "core-type-fontweight-title-bold-sm": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-bold}",
+    "$description": "Bold emphasis for title sm. Aliases fontWeight/bold (700)."
+  },
+  "core-type-fontweight-body-bold-lg": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-bold}",
+    "$description": "Bold emphasis for body lg. Aliases fontWeight/bold (700)."
+  },
+  "core-type-fontweight-body-bold-md": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-bold}",
+    "$description": "Bold emphasis for body md. Aliases fontWeight/bold (700)."
+  },
+  "core-type-fontweight-body-bold-sm": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-bold}",
+    "$description": "Bold emphasis for body sm. Aliases fontWeight/bold (700)."
+  },
+  "core-type-fontweight-label-bold-lg": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-bold}",
+    "$description": "Bold emphasis for label lg. Aliases fontWeight/bold (700)."
+  },
+  "core-type-fontweight-label-bold-md": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-bold}",
+    "$description": "Bold emphasis for label md. Aliases fontWeight/bold (700)."
+  },
+  "core-type-fontweight-label-bold-sm": {
+    "$type": "fontWeight",
+    "$value": "{core-type-fontweight-bold}",
+    "$description": "Bold emphasis for label sm. Aliases fontWeight/bold (700)."
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "core-spacing-0": {
+    "$type": "dimension",
+    "$value": {
+      "value": 0,
+      "unit": "px"
+    },
+    "$description": "Core step, 0 px. Nothing. Use it deliberately — a zero gap should be a decision, not an omission.  ·  Do not use directly — reference a semantic spacing token."
+  },
+  "core-spacing-2": {
+    "$type": "dimension",
+    "$value": {
+      "value": 2,
+      "unit": "px"
+    },
+    "$description": "Core step, 2 px. Micro nudge. Only inside a control, between an icon and its label. Never between components.  ·  Do not use directly — reference a semantic spacing token."
+  },
+  "core-spacing-4": {
+    "$type": "dimension",
+    "$value": {
+      "value": 4,
+      "unit": "px"
+    },
+    "$description": "Core step, 4 px. Tightest real gap. Chip and badge padding, icon-to-label.  ·  Do not use directly — reference a semantic spacing token."
+  },
+  "core-spacing-8": {
+    "$type": "dimension",
+    "$value": {
+      "value": 8,
+      "unit": "px"
+    },
+    "$description": "Core step, 8 px. Small button padding, label to field, list-row inset.  ·  Do not use directly — reference a semantic spacing token."
+  },
+  "core-spacing-12": {
+    "$type": "dimension",
+    "$value": {
+      "value": 12,
+      "unit": "px"
+    },
+    "$description": "Core step, 12 px. Input padding, form-row gap, compact card inset.  ·  Do not use directly — reference a semantic spacing token."
+  },
+  "core-spacing-16": {
+    "$type": "dimension",
+    "$value": {
+      "value": 16,
+      "unit": "px"
+    },
+    "$description": "Core step, 16 px. The default. The most-used value in the master file — 1,102 insets and 684 gaps.  ·  Do not use directly — reference a semantic spacing token."
+  },
+  "core-spacing-20": {
+    "$type": "dimension",
+    "$value": {
+      "value": 20,
+      "unit": "px"
+    },
+    "$description": "Core step, 20 px. Between 16 and 24 when 16 crowds and 24 breaks the grid.  ·  Do not use directly — reference a semantic spacing token."
+  },
+  "core-spacing-24": {
+    "$type": "dimension",
+    "$value": {
+      "value": 24,
+      "unit": "px"
+    },
+    "$description": "Core step, 24 px. Card and dialog inset, gap between blocks. Second most used.  ·  Do not use directly — reference a semantic spacing token."
+  },
+  "core-spacing-32": {
+    "$type": "dimension",
+    "$value": {
+      "value": 32,
+      "unit": "px"
+    },
+    "$description": "Core step, 32 px. Sub-section separation, generous card inset.  ·  Do not use directly — reference a semantic spacing token."
+  },
+  "core-spacing-40": {
+    "$type": "dimension",
+    "$value": {
+      "value": 40,
+      "unit": "px"
+    },
+    "$description": "Core step, 40 px. Large block separation.  ·  Do not use directly — reference a semantic spacing token."
+  },
+  "core-spacing-48": {
+    "$type": "dimension",
+    "$value": {
+      "value": 48,
+      "unit": "px"
+    },
+    "$description": "Core step, 48 px. Page gutter on web, and the gap between page sections.  ·  Do not use directly — reference a semantic spacing token."
+  },
+  "core-spacing-64": {
+    "$type": "dimension",
+    "$value": {
+      "value": 64,
+      "unit": "px"
+    },
+    "$description": "Core step, 64 px. Major section break.  ·  Do not use directly — reference a semantic spacing token."
+  },
+  "core-spacing-80": {
+    "$type": "dimension",
+    "$value": {
+      "value": 80,
+      "unit": "px"
+    },
+    "$description": "Core step, 80 px. Hero padding.  ·  Do not use directly — reference a semantic spacing token."
+  },
+  "core-spacing-96": {
+    "$type": "dimension",
+    "$value": {
+      "value": 96,
+      "unit": "px"
+    },
+    "$description": "Core step, 96 px. Full-bleed section padding.  ·  Do not use directly — reference a semantic spacing token."
+  },
+  "core-spacing-128": {
+    "$type": "dimension",
+    "$value": {
+      "value": 128,
+      "unit": "px"
+    },
+    "$description": "Core step, 128 px. Largest step. Marketing pages only.  ·  Do not use directly — reference a semantic spacing token."
+  },
+  "semantic-spacing-padding-2xs": {
+    "$type": "dimension",
+    "$value": "{core-spacing-4}",
+    "$description": "Chips, tags, badges"
+  },
+  "semantic-spacing-padding-xs": {
+    "$type": "dimension",
+    "$value": "{core-spacing-8}",
+    "$description": "Dense table cells, icon buttons"
+  },
+  "semantic-spacing-padding-sm": {
+    "$type": "dimension",
+    "$value": "{core-spacing-12}",
+    "$description": "Inputs, list rows, compact buttons"
+  },
+  "semantic-spacing-padding-md": {
+    "$type": "dimension",
+    "$value": "{core-spacing-16}",
+    "$description": "Default component padding"
+  },
+  "semantic-spacing-padding-lg": {
+    "$type": "dimension",
+    "$value": "{core-spacing-24}",
+    "$description": "Card and panel padding. The back office measured 1,028 insets at 16, so it tightens."
+  },
+  "semantic-spacing-padding-xl": {
+    "$type": "dimension",
+    "$value": "{core-spacing-32}",
+    "$description": "Modal and large panel padding"
+  },
+  "semantic-spacing-gap-2xs": {
+    "$type": "dimension",
+    "$value": "{core-spacing-4}",
+    "$description": "Icon to label"
+  },
+  "semantic-spacing-gap-xs": {
+    "$type": "dimension",
+    "$value": "{core-spacing-8}",
+    "$description": "Items inside one control"
+  },
+  "semantic-spacing-gap-sm": {
+    "$type": "dimension",
+    "$value": "{core-spacing-12}",
+    "$description": "List item to list item"
+  },
+  "semantic-spacing-gap-md": {
+    "$type": "dimension",
+    "$value": "{core-spacing-16}",
+    "$description": "Default gap between siblings"
+  },
+  "semantic-spacing-gap-lg": {
+    "$type": "dimension",
+    "$value": "{core-spacing-24}",
+    "$description": "Card to card. The back office measured 2,071 gaps at 16 — its ladder compresses around that."
+  },
+  "semantic-spacing-gap-xl": {
+    "$type": "dimension",
+    "$value": "{core-spacing-32}",
+    "$description": "Group to group"
+  },
+  "semantic-spacing-gap-2xl": {
+    "$type": "dimension",
+    "$value": "{core-spacing-48}",
+    "$description": "Section to section"
+  },
+  "semantic-spacing-margin-sm": {
+    "$type": "dimension",
+    "$value": "{core-spacing-16}",
+    "$description": "Block margin inside a section"
+  },
+  "semantic-spacing-margin-md": {
+    "$type": "dimension",
+    "$value": "{core-spacing-24}",
+    "$description": "Between blocks"
+  },
+  "semantic-spacing-margin-lg": {
+    "$type": "dimension",
+    "$value": "{core-spacing-48}",
+    "$description": "Between sections"
+  },
+  "semantic-layout-gutter-page": {
+    "$type": "dimension",
+    "$value": "{core-spacing-48}",
+    "$description": "Page left and right margin. Web 48; back office 24 from the 220px sidebar edge; mobile 24."
+  }
+}

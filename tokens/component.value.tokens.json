@@ -1,0 +1,227 @@
+{
+  "component-button-bg-primary-idle": {
+    "$type": "color",
+    "$value": "{semantic-color-bg-primary}",
+    "$description": "Aliases horizon.semantic.color.bg.primary"
+  },
+  "component-button-bg-primary-hovered": {
+    "$type": "color",
+    "$value": "{semantic-color-bg-primary-hovered}",
+    "$description": "Aliases horizon.semantic.color.bg.primary.hovered"
+  },
+  "component-button-bg-primary-pressed": {
+    "$type": "color",
+    "$value": "{semantic-color-bg-primary-pressed}",
+    "$description": "Aliases horizon.semantic.color.bg.primary.pressed"
+  },
+  "component-button-bg-primary-disabled": {
+    "$type": "color",
+    "$value": "{semantic-color-bg-disabled}",
+    "$description": "Aliases horizon.semantic.color.bg.disabled"
+  },
+  "component-button-bg-secondary-idle": {
+    "$type": "color",
+    "$value": "{semantic-color-bg-secondary}",
+    "$description": "Aliases horizon.semantic.color.bg.secondary"
+  },
+  "component-button-bg-secondary-hovered": {
+    "$type": "color",
+    "$value": "{semantic-color-bg-surfaceprimary-hovered}",
+    "$description": "Aliases horizon.semantic.color.bg.surfacePrimary.hovered"
+  },
+  "component-button-bg-negative-idle": {
+    "$type": "color",
+    "$value": "{semantic-color-bg-negative}",
+    "$description": "Aliases horizon.semantic.color.bg.negative"
+  },
+  "component-button-bg-negative-hovered": {
+    "$type": "color",
+    "$value": "{semantic-color-bg-negative-hovered}",
+    "$description": "Aliases horizon.semantic.color.bg.negative.hovered"
+  },
+  "component-button-text-primary": {
+    "$type": "color",
+    "$value": "{semantic-color-text-onprimary}",
+    "$description": "Aliases horizon.semantic.color.text.onPrimary"
+  },
+  "component-button-text-secondary": {
+    "$type": "color",
+    "$value": "{semantic-color-text-onsecondary}",
+    "$description": "Aliases horizon.semantic.color.text.onSecondary"
+  },
+  "component-button-text-disabled": {
+    "$type": "color",
+    "$value": "{semantic-color-text-disabled}",
+    "$description": "Aliases horizon.semantic.color.text.disabled"
+  },
+  "component-button-border-secondary": {
+    "$type": "color",
+    "$value": "{semantic-color-border-secondary}",
+    "$description": "Aliases horizon.semantic.color.border.secondary"
+  },
+  "component-button-border-focused": {
+    "$type": "color",
+    "$value": "{semantic-color-border-primary-focused}",
+    "$description": "Aliases horizon.semantic.color.border.primary.focused"
+  },
+  "component-button-radius-md": {
+    "$type": "dimension",
+    "$value": "{semantic-border-radius-md}",
+    "$description": "Aliases horizon.semantic.border.radius.md"
+  },
+  "component-button-padding-x-sm": {
+    "$type": "dimension",
+    "$value": "{semantic-spacing-padding-sm}",
+    "$description": "Aliases horizon.semantic.spacing.padding.sm"
+  },
+  "component-button-padding-x-md": {
+    "$type": "dimension",
+    "$value": "{semantic-spacing-padding-lg}",
+    "$description": "Aliases horizon.semantic.spacing.padding.lg"
+  },
+  "component-button-padding-y-sm": {
+    "$type": "dimension",
+    "$value": "{semantic-spacing-padding-xs}",
+    "$description": "Aliases horizon.semantic.spacing.padding.xs"
+  },
+  "component-button-padding-y-md": {
+    "$type": "dimension",
+    "$value": "{semantic-spacing-padding-sm}",
+    "$description": "Aliases horizon.semantic.spacing.padding.sm"
+  },
+  "component-button-gap-md": {
+    "$type": "dimension",
+    "$value": "{semantic-spacing-gap-xs}",
+    "$description": "Aliases horizon.semantic.spacing.gap.xs"
+  },
+  "component-button-height-sm": {
+    "$type": "dimension",
+    "$value": "{core-size-control-sm}",
+    "$description": "Aliases horizon.core.size.control.sm"
+  },
+  "component-button-height-md": {
+    "$type": "dimension",
+    "$value": "{core-size-control-md}",
+    "$description": "Aliases horizon.core.size.control.md"
+  },
+  "component-button-height-lg": {
+    "$type": "dimension",
+    "$value": "{core-size-control-lg}",
+    "$description": "Aliases horizon.core.size.control.lg"
+  },
+  "component-card-bg-idle": {
+    "$type": "color",
+    "$value": "{semantic-color-bg-surfaceprimary}",
+    "$description": "Aliases horizon.semantic.color.bg.surfacePrimary"
+  },
+  "component-card-bg-hovered": {
+    "$type": "color",
+    "$value": "{semantic-color-bg-surfaceprimary-hovered}",
+    "$description": "Aliases horizon.semantic.color.bg.surfacePrimary.hovered"
+  },
+  "component-card-bg-selected": {
+    "$type": "color",
+    "$value": "{semantic-color-bg-surfaceprimary-selected}",
+    "$description": "Aliases horizon.semantic.color.bg.surfacePrimary.selected"
+  },
+  "component-card-border-base": {
+    "$type": "color",
+    "$value": "{semantic-color-border-base}",
+    "$description": "Aliases horizon.semantic.color.border.base"
+  },
+  "component-card-borderwidth-base": {
+    "$type": "dimension",
+    "$value": "{semantic-border-width-base}",
+    "$description": "Aliases horizon.semantic.border.width.base"
+  },
+  "component-card-radius-lg": {
+    "$type": "dimension",
+    "$value": "{semantic-border-radius-lg}",
+    "$description": "Aliases horizon.semantic.border.radius.lg"
+  },
+  "component-card-padding-lg": {
+    "$type": "dimension",
+    "$value": "{semantic-spacing-padding-lg}",
+    "$description": "Aliases horizon.semantic.spacing.padding.lg"
+  },
+  "component-card-gap-sm": {
+    "$type": "dimension",
+    "$value": "{semantic-spacing-gap-sm}",
+    "$description": "Aliases horizon.semantic.spacing.gap.sm"
+  },
+  "component-card-title-base": {
+    "$type": "color",
+    "$value": "{semantic-color-text-base}",
+    "$description": "Aliases horizon.semantic.color.text.base"
+  },
+  "component-card-body-base": {
+    "$type": "color",
+    "$value": "{semantic-color-text-secondary}",
+    "$description": "Aliases horizon.semantic.color.text.secondary"
+  },
+  "component-input-bg-idle": {
+    "$type": "color",
+    "$value": "{semantic-color-bg-surfaceprimary}",
+    "$description": "Aliases horizon.semantic.color.bg.surfacePrimary"
+  },
+  "component-input-bg-disabled": {
+    "$type": "color",
+    "$value": "{semantic-color-bg-disabled}",
+    "$description": "Aliases horizon.semantic.color.bg.disabled"
+  },
+  "component-input-border-idle": {
+    "$type": "color",
+    "$value": "{semantic-color-border-strong}",
+    "$description": "Aliases horizon.semantic.color.border.strong"
+  },
+  "component-input-border-focused": {
+    "$type": "color",
+    "$value": "{semantic-color-border-primary-focused}",
+    "$description": "Aliases horizon.semantic.color.border.primary.focused"
+  },
+  "component-input-border-negative": {
+    "$type": "color",
+    "$value": "{semantic-color-border-negative}",
+    "$description": "Aliases horizon.semantic.color.border.negative"
+  },
+  "component-input-border-disabled": {
+    "$type": "color",
+    "$value": "{semantic-color-border-disabled}",
+    "$description": "Aliases horizon.semantic.color.border.disabled"
+  },
+  "component-input-text-base": {
+    "$type": "color",
+    "$value": "{semantic-color-text-base}",
+    "$description": "Aliases horizon.semantic.color.text.base"
+  },
+  "component-input-text-placeholder": {
+    "$type": "color",
+    "$value": "{semantic-color-text-placeholder}",
+    "$description": "Aliases horizon.semantic.color.text.placeholder"
+  },
+  "component-input-radius-sm": {
+    "$type": "dimension",
+    "$value": "{semantic-border-radius-sm}",
+    "$description": "Aliases horizon.semantic.border.radius.sm"
+  },
+  "component-input-padding-x-sm": {
+    "$type": "dimension",
+    "$value": "{semantic-spacing-padding-sm}",
+    "$description": "Aliases horizon.semantic.spacing.padding.sm"
+  },
+  "component-input-padding-y-sm": {
+    "$type": "dimension",
+    "$value": "{semantic-spacing-padding-sm}",
+    "$description": "Aliases horizon.semantic.spacing.padding.sm"
+  },
+  "component-input-height-sm": {
+    "$type": "dimension",
+    "$value": "{core-size-control-sm}",
+    "$description": "Aliases horizon.core.size.control.sm"
+  },
+  "component-input-gap-xs": {
+    "$type": "dimension",
+    "$value": "{semantic-spacing-gap-xs}",
+    "$description": "Aliases horizon.semantic.spacing.gap.xs"
+  }
+}

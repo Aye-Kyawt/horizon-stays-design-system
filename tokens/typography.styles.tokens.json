@@ -1,0 +1,1723 @@
+{
+  "display-large": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.display-large  ·  Inter Regular 57/64, tracking -0.25  ·  Marketing hero headline. Web only, and rarely.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-display-lg}",
+      "fontSize": "{core-type-size-display-lg}",
+      "lineHeight": "{core-type-lineheight-display-lg}",
+      "letterSpacing": "{core-type-tracking-display-lg}"
+    }
+  },
+  "display-large-semibold": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.display-large-emphasized  ·  Inter Medium 57/64, tracking -0.25  ·  Marketing hero headline. Web only, and rarely. Emphasized variant — one weight step up.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-display-semibold-lg}",
+      "fontSize": "{core-type-size-display-lg}",
+      "lineHeight": "{core-type-lineheight-display-lg}",
+      "letterSpacing": "{core-type-tracking-display-lg}"
+    }
+  },
+  "display-medium": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.display-medium  ·  Inter Regular 45/52, tracking 0  ·  Campaign and landing headlines.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-display-md}",
+      "fontSize": "{core-type-size-display-md}",
+      "lineHeight": "{core-type-lineheight-display-md}",
+      "letterSpacing": "{core-type-tracking-display-md}"
+    }
+  },
+  "display-medium-semibold": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.display-medium-emphasized  ·  Inter Medium 45/52, tracking 0  ·  Campaign and landing headlines. Emphasized variant — one weight step up.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-display-semibold-md}",
+      "fontSize": "{core-type-size-display-md}",
+      "lineHeight": "{core-type-lineheight-display-md}",
+      "letterSpacing": "{core-type-tracking-display-md}"
+    }
+  },
+  "display-small": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.display-small  ·  Inter Regular 36/44, tracking 0  ·  Discovery hero headline.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-display-sm}",
+      "fontSize": "{core-type-size-display-sm}",
+      "lineHeight": "{core-type-lineheight-display-sm}",
+      "letterSpacing": "{core-type-tracking-display-sm}"
+    }
+  },
+  "display-small-semibold": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.display-small-emphasized  ·  Inter Medium 36/44, tracking 0  ·  Discovery hero headline. Emphasized variant — one weight step up.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-display-semibold-sm}",
+      "fontSize": "{core-type-size-display-sm}",
+      "lineHeight": "{core-type-lineheight-display-sm}",
+      "letterSpacing": "{core-type-tracking-display-sm}"
+    }
+  },
+  "display-large-bold": {
+    "$type": "typography",
+    "$description": "Bold emphasis. Pairs with Myanmar/Display/Large Bold.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-display-bold-lg}",
+      "fontSize": "{core-type-size-display-lg}",
+      "lineHeight": "{core-type-lineheight-display-lg}",
+      "letterSpacing": "{core-type-tracking-display-lg}"
+    }
+  },
+  "display-medium-bold": {
+    "$type": "typography",
+    "$description": "Bold emphasis. Pairs with Myanmar/Display/Medium Bold.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-display-bold-md}",
+      "fontSize": "{core-type-size-display-md}",
+      "lineHeight": "{core-type-lineheight-display-md}",
+      "letterSpacing": "{core-type-tracking-display-md}"
+    }
+  },
+  "display-small-bold": {
+    "$type": "typography",
+    "$description": "Bold emphasis. Pairs with Myanmar/Display/Small Bold.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-display-bold-sm}",
+      "fontSize": "{core-type-size-display-sm}",
+      "lineHeight": "{core-type-lineheight-display-sm}",
+      "letterSpacing": "{core-type-tracking-display-sm}"
+    }
+  },
+  "headline-large": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.headline-large  ·  Inter Regular 32/40, tracking 0  ·  Page title on web.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-headline-lg}",
+      "fontSize": "{core-type-size-headline-lg}",
+      "lineHeight": "{core-type-lineheight-headline-lg}",
+      "letterSpacing": "{core-type-tracking-headline-lg}"
+    }
+  },
+  "headline-large-semibold": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.headline-large-emphasized  ·  Inter Medium 32/40, tracking 0  ·  Page title on web. Emphasized variant — one weight step up.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-headline-semibold-lg}",
+      "fontSize": "{core-type-size-headline-lg}",
+      "lineHeight": "{core-type-lineheight-headline-lg}",
+      "letterSpacing": "{core-type-tracking-headline-lg}"
+    }
+  },
+  "headline-medium": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.headline-medium  ·  Inter Regular 28/36, tracking 0  ·  Account and app page titles, large stat values.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-headline-md}",
+      "fontSize": "{core-type-size-headline-md}",
+      "lineHeight": "{core-type-lineheight-headline-md}",
+      "letterSpacing": "{core-type-tracking-headline-md}"
+    }
+  },
+  "headline-medium-semibold": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.headline-medium-emphasized  ·  Inter Medium 28/36, tracking 0  ·  Account and app page titles, large stat values. Emphasized variant — one weight step up.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-headline-semibold-md}",
+      "fontSize": "{core-type-size-headline-md}",
+      "lineHeight": "{core-type-lineheight-headline-md}",
+      "letterSpacing": "{core-type-tracking-headline-md}"
+    }
+  },
+  "headline-small": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.headline-small  ·  Inter Regular 24/32, tracking 0  ·  Confirmation headings, review editor, back-office stat values.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-headline-sm}",
+      "fontSize": "{core-type-size-headline-sm}",
+      "lineHeight": "{core-type-lineheight-headline-sm}",
+      "letterSpacing": "{core-type-tracking-headline-sm}"
+    }
+  },
+  "headline-small-semibold": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.headline-small-emphasized  ·  Inter Medium 24/32, tracking 0  ·  Confirmation headings, review editor, back-office stat values. Emphasized variant — one weight step up.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-headline-semibold-sm}",
+      "fontSize": "{core-type-size-headline-sm}",
+      "lineHeight": "{core-type-lineheight-headline-sm}",
+      "letterSpacing": "{core-type-tracking-headline-sm}"
+    }
+  },
+  "headline-large-bold": {
+    "$type": "typography",
+    "$description": "Bold emphasis. Pairs with Myanmar/Headline/Large Bold.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-headline-bold-lg}",
+      "fontSize": "{core-type-size-headline-lg}",
+      "lineHeight": "{core-type-lineheight-headline-lg}",
+      "letterSpacing": "{core-type-tracking-headline-lg}"
+    }
+  },
+  "headline-medium-bold": {
+    "$type": "typography",
+    "$description": "Bold emphasis. Pairs with Myanmar/Headline/Medium Bold.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-headline-bold-md}",
+      "fontSize": "{core-type-size-headline-md}",
+      "lineHeight": "{core-type-lineheight-headline-md}",
+      "letterSpacing": "{core-type-tracking-headline-md}"
+    }
+  },
+  "headline-small-bold": {
+    "$type": "typography",
+    "$description": "Bold emphasis. Pairs with Myanmar/Headline/Small Bold.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-headline-bold-sm}",
+      "fontSize": "{core-type-size-headline-sm}",
+      "lineHeight": "{core-type-lineheight-headline-sm}",
+      "letterSpacing": "{core-type-tracking-headline-sm}"
+    }
+  },
+  "title-large": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.title-large  ·  Inter Regular 22/28, tracking 0  ·  Section headings, dialog titles, the wordmark.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-title-lg}",
+      "fontSize": "{core-type-size-title-lg}",
+      "lineHeight": "{core-type-lineheight-title-lg}",
+      "letterSpacing": "{core-type-tracking-title-lg}"
+    }
+  },
+  "title-large-semibold": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.title-large-emphasized  ·  Inter Medium 22/28, tracking 0  ·  Section headings, dialog titles, the wordmark. Emphasized variant — one weight step up.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-title-semibold-lg}",
+      "fontSize": "{core-type-size-title-lg}",
+      "lineHeight": "{core-type-lineheight-title-lg}",
+      "letterSpacing": "{core-type-tracking-title-lg}"
+    }
+  },
+  "title-medium": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.title-medium  ·  Inter Medium 16/24, tracking 0.15  ·  Card titles, panel headings, sidebar brand.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-title-md}",
+      "fontSize": "{core-type-size-title-md}",
+      "lineHeight": "{core-type-lineheight-title-md}",
+      "letterSpacing": "{core-type-tracking-title-md}"
+    }
+  },
+  "title-medium-semibold": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.title-medium-emphasized  ·  Inter Semi Bold 16/24, tracking 0.15  ·  Card titles, panel headings, sidebar brand. Emphasized variant — one weight step up.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-title-semibold-md}",
+      "fontSize": "{core-type-size-title-md}",
+      "lineHeight": "{core-type-lineheight-title-md}",
+      "letterSpacing": "{core-type-tracking-title-md}"
+    }
+  },
+  "title-small": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.title-small  ·  Inter Medium 14/20, tracking 0.1  ·  Sub-headings inside cards and table groups.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-title-sm}",
+      "fontSize": "{core-type-size-title-sm}",
+      "lineHeight": "{core-type-lineheight-title-sm}",
+      "letterSpacing": "{core-type-tracking-title-sm}"
+    }
+  },
+  "title-small-semibold": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.title-small-emphasized  ·  Inter Semi Bold 14/20, tracking 0.1  ·  Sub-headings inside cards and table groups. Emphasized variant — one weight step up.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-title-semibold-sm}",
+      "fontSize": "{core-type-size-title-sm}",
+      "lineHeight": "{core-type-lineheight-title-sm}",
+      "letterSpacing": "{core-type-tracking-title-sm}"
+    }
+  },
+  "title-large-bold": {
+    "$type": "typography",
+    "$description": "Bold emphasis. Pairs with Myanmar/Title/Large Bold.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-title-bold-lg}",
+      "fontSize": "{core-type-size-title-lg}",
+      "lineHeight": "{core-type-lineheight-title-lg}",
+      "letterSpacing": "{core-type-tracking-title-lg}"
+    }
+  },
+  "title-medium-bold": {
+    "$type": "typography",
+    "$description": "Bold emphasis. Pairs with Myanmar/Title/Medium Bold.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-title-bold-md}",
+      "fontSize": "{core-type-size-title-md}",
+      "lineHeight": "{core-type-lineheight-title-md}",
+      "letterSpacing": "{core-type-tracking-title-md}"
+    }
+  },
+  "title-small-bold": {
+    "$type": "typography",
+    "$description": "Bold emphasis. Pairs with Myanmar/Title/Small Bold.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-title-bold-sm}",
+      "fontSize": "{core-type-size-title-sm}",
+      "lineHeight": "{core-type-lineheight-title-sm}",
+      "letterSpacing": "{core-type-tracking-title-sm}"
+    }
+  },
+  "body-large": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.body-large  ·  Inter Regular 16/24, tracking 0.5  ·  Lead paragraphs, mobile field values.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-body-lg}",
+      "fontSize": "{core-type-size-body-lg}",
+      "lineHeight": "{core-type-lineheight-body-lg}",
+      "letterSpacing": "{core-type-tracking-body-lg}"
+    }
+  },
+  "body-large-semibold": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.body-large-emphasized  ·  Inter Medium 16/24, tracking 0.5  ·  Lead paragraphs, mobile field values. Emphasized variant — one weight step up.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-body-semibold-lg}",
+      "fontSize": "{core-type-size-body-lg}",
+      "lineHeight": "{core-type-lineheight-body-lg}",
+      "letterSpacing": "{core-type-tracking-body-lg}"
+    }
+  },
+  "body-medium": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.body-medium  ·  Inter Regular 14/20, tracking 0.25  ·  Default body copy, nav links, input values, table cells.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-body-md}",
+      "fontSize": "{core-type-size-body-md}",
+      "lineHeight": "{core-type-lineheight-body-md}",
+      "letterSpacing": "{core-type-tracking-body-md}"
+    }
+  },
+  "body-medium-semibold": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.body-medium-emphasized  ·  Inter Medium 14/20, tracking 0.25  ·  Default body copy, nav links, input values, table cells. Emphasized variant — one weight step up.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-body-semibold-md}",
+      "fontSize": "{core-type-size-body-md}",
+      "lineHeight": "{core-type-lineheight-body-md}",
+      "letterSpacing": "{core-type-tracking-body-md}"
+    }
+  },
+  "body-small": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.body-small  ·  Inter Regular 12/16, tracking 0.4  ·  Card meta, helper copy, footnotes.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-body-sm}",
+      "fontSize": "{core-type-size-body-sm}",
+      "lineHeight": "{core-type-lineheight-body-sm}",
+      "letterSpacing": "{core-type-tracking-body-sm}"
+    }
+  },
+  "body-small-semibold": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.body-small-emphasized  ·  Inter Medium 12/16, tracking 0.4  ·  Card meta, helper copy, footnotes. Emphasized variant — one weight step up.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-body-semibold-sm}",
+      "fontSize": "{core-type-size-body-sm}",
+      "lineHeight": "{core-type-lineheight-body-sm}",
+      "letterSpacing": "{core-type-tracking-body-sm}"
+    }
+  },
+  "body-large-bold": {
+    "$type": "typography",
+    "$description": "Bold emphasis. Pairs with Myanmar/Body/Large Bold.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-body-bold-lg}",
+      "fontSize": "{core-type-size-body-lg}",
+      "lineHeight": "{core-type-lineheight-body-lg}",
+      "letterSpacing": "{core-type-tracking-body-lg}"
+    }
+  },
+  "body-medium-bold": {
+    "$type": "typography",
+    "$description": "Bold emphasis. Pairs with Myanmar/Body/Medium Bold.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-body-bold-md}",
+      "fontSize": "{core-type-size-body-md}",
+      "lineHeight": "{core-type-lineheight-body-md}",
+      "letterSpacing": "{core-type-tracking-body-md}"
+    }
+  },
+  "body-small-bold": {
+    "$type": "typography",
+    "$description": "Bold emphasis. Pairs with Myanmar/Body/Small Bold.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-body-bold-sm}",
+      "fontSize": "{core-type-size-body-sm}",
+      "lineHeight": "{core-type-lineheight-body-sm}",
+      "letterSpacing": "{core-type-tracking-body-sm}"
+    }
+  },
+  "label-large": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.label-large  ·  Inter Medium 14/20, tracking 0.1  ·  Button labels, tabs, links that act as buttons.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-label-lg}",
+      "fontSize": "{core-type-size-label-lg}",
+      "lineHeight": "{core-type-lineheight-label-lg}",
+      "letterSpacing": "{core-type-tracking-label-lg}"
+    }
+  },
+  "label-large-semibold": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.label-large-emphasized  ·  Inter Semi Bold 14/20, tracking 0.1  ·  Button labels, tabs, links that act as buttons. Emphasized variant — one weight step up.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-label-semibold-lg}",
+      "fontSize": "{core-type-size-label-lg}",
+      "lineHeight": "{core-type-lineheight-label-lg}",
+      "letterSpacing": "{core-type-tracking-label-lg}"
+    }
+  },
+  "label-medium": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.label-medium  ·  Inter Medium 12/16, tracking 0.5  ·  Field labels, ratings, filter chips.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-label-md}",
+      "fontSize": "{core-type-size-label-md}",
+      "lineHeight": "{core-type-lineheight-label-md}",
+      "letterSpacing": "{core-type-tracking-label-md}"
+    }
+  },
+  "label-medium-semibold": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.label-medium-emphasized  ·  Inter Semi Bold 12/16, tracking 0.5  ·  Field labels, ratings, filter chips. Emphasized variant — one weight step up.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-label-semibold-md}",
+      "fontSize": "{core-type-size-label-md}",
+      "lineHeight": "{core-type-lineheight-label-md}",
+      "letterSpacing": "{core-type-tracking-label-md}"
+    }
+  },
+  "label-small": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.label-small  ·  Inter Medium 11/16, tracking 0.5  ·  Tags, stat-card labels, timestamps, field helper text.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-label-sm}",
+      "fontSize": "{core-type-size-label-sm}",
+      "lineHeight": "{core-type-lineheight-label-sm}",
+      "letterSpacing": "{core-type-tracking-label-sm}"
+    }
+  },
+  "label-small-semibold": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.label-small-emphasized  ·  Inter Semi Bold 11/16, tracking 0.5  ·  Tags, stat-card labels, timestamps, field helper text. Emphasized variant — one weight step up.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-label-semibold-sm}",
+      "fontSize": "{core-type-size-label-sm}",
+      "lineHeight": "{core-type-lineheight-label-sm}",
+      "letterSpacing": "{core-type-tracking-label-sm}"
+    }
+  },
+  "label-large-bold": {
+    "$type": "typography",
+    "$description": "Bold emphasis. Pairs with Myanmar/Label/Large Bold.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-label-bold-lg}",
+      "fontSize": "{core-type-size-label-lg}",
+      "lineHeight": "{core-type-lineheight-label-lg}",
+      "letterSpacing": "{core-type-tracking-label-lg}"
+    }
+  },
+  "label-medium-bold": {
+    "$type": "typography",
+    "$description": "Bold emphasis. Pairs with Myanmar/Label/Medium Bold.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-label-bold-md}",
+      "fontSize": "{core-type-size-label-md}",
+      "lineHeight": "{core-type-lineheight-label-md}",
+      "letterSpacing": "{core-type-tracking-label-md}"
+    }
+  },
+  "label-small-bold": {
+    "$type": "typography",
+    "$description": "Bold emphasis. Pairs with Myanmar/Label/Small Bold.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-label-bold-sm}",
+      "fontSize": "{core-type-size-label-sm}",
+      "lineHeight": "{core-type-lineheight-label-sm}",
+      "letterSpacing": "{core-type-tracking-label-sm}"
+    }
+  },
+  "myanmar-display-large": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.display-large  ·  Padauk Regular 57/88  ·  Latin runs 57/64; Burmese needs 84 px minimum at this size, measured in this file. Tracking is 0 — Myanmar shaping must not be letter-spaced.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-base}",
+      "fontSize": "{core-type-size-display-lg}",
+      "lineHeight": "{core-type-lineheight-display-lg-myanmar}",
+      "letterSpacing": "{core-type-tracking-display-lg}"
+    }
+  },
+  "myanmar-display-large-bold": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.display-large-emphasized  ·  Padauk Bold 57/88  ·  Latin runs 57/64; Burmese needs 84 px minimum at this size, measured in this file. Tracking is 0 — Myanmar shaping must not be letter-spaced.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-bold}",
+      "fontSize": "{core-type-size-display-lg}",
+      "lineHeight": "{core-type-lineheight-display-lg-myanmar}",
+      "letterSpacing": "{core-type-tracking-display-lg}"
+    }
+  },
+  "myanmar-display-medium": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.display-medium  ·  Padauk Regular 45/68  ·  Latin runs 45/52; Burmese needs 66 px minimum at this size, measured in this file. Tracking is 0 — Myanmar shaping must not be letter-spaced.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-base}",
+      "fontSize": "{core-type-size-display-md}",
+      "lineHeight": "{core-type-lineheight-display-md-myanmar}",
+      "letterSpacing": "{core-type-tracking-display-md}"
+    }
+  },
+  "myanmar-display-medium-bold": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.display-medium-emphasized  ·  Padauk Bold 45/68  ·  Latin runs 45/52; Burmese needs 66 px minimum at this size, measured in this file. Tracking is 0 — Myanmar shaping must not be letter-spaced.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-bold}",
+      "fontSize": "{core-type-size-display-md}",
+      "lineHeight": "{core-type-lineheight-display-md-myanmar}",
+      "letterSpacing": "{core-type-tracking-display-md}"
+    }
+  },
+  "myanmar-display-small": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.display-small  ·  Padauk Regular 36/56  ·  Latin runs 36/44; Burmese needs 53 px minimum at this size, measured in this file. Tracking is 0 — Myanmar shaping must not be letter-spaced.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-base}",
+      "fontSize": "{core-type-size-display-sm}",
+      "lineHeight": "{core-type-lineheight-display-sm-myanmar}",
+      "letterSpacing": "{core-type-tracking-display-sm}"
+    }
+  },
+  "myanmar-display-small-bold": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.display-small-emphasized  ·  Padauk Bold 36/56  ·  Latin runs 36/44; Burmese needs 53 px minimum at this size, measured in this file. Tracking is 0 — Myanmar shaping must not be letter-spaced.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-bold}",
+      "fontSize": "{core-type-size-display-sm}",
+      "lineHeight": "{core-type-lineheight-display-sm-myanmar}",
+      "letterSpacing": "{core-type-tracking-display-sm}"
+    }
+  },
+  "myanmar-headline-large": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.headline-large  ·  Padauk Regular 32/48  ·  Latin runs 32/40; Burmese needs 47 px minimum at this size, measured in this file. Tracking is 0 — Myanmar shaping must not be letter-spaced.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-base}",
+      "fontSize": "{core-type-size-headline-lg}",
+      "lineHeight": "{core-type-lineheight-headline-lg-myanmar}",
+      "letterSpacing": "{core-type-tracking-headline-lg}"
+    }
+  },
+  "myanmar-headline-large-bold": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.headline-large-emphasized  ·  Padauk Bold 32/48  ·  Latin runs 32/40; Burmese needs 47 px minimum at this size, measured in this file. Tracking is 0 — Myanmar shaping must not be letter-spaced.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-bold}",
+      "fontSize": "{core-type-size-headline-lg}",
+      "lineHeight": "{core-type-lineheight-headline-lg-myanmar}",
+      "letterSpacing": "{core-type-tracking-headline-lg}"
+    }
+  },
+  "myanmar-headline-medium": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.headline-medium  ·  Padauk Regular 28/44  ·  Latin runs 28/36; Burmese needs 41 px minimum at this size, measured in this file. Tracking is 0 — Myanmar shaping must not be letter-spaced.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-base}",
+      "fontSize": "{core-type-size-headline-md}",
+      "lineHeight": "{core-type-lineheight-headline-md-myanmar}",
+      "letterSpacing": "{core-type-tracking-headline-md}"
+    }
+  },
+  "myanmar-headline-medium-bold": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.headline-medium-emphasized  ·  Padauk Bold 28/44  ·  Latin runs 28/36; Burmese needs 41 px minimum at this size, measured in this file. Tracking is 0 — Myanmar shaping must not be letter-spaced.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-bold}",
+      "fontSize": "{core-type-size-headline-md}",
+      "lineHeight": "{core-type-lineheight-headline-md-myanmar}",
+      "letterSpacing": "{core-type-tracking-headline-md}"
+    }
+  },
+  "myanmar-headline-small": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.headline-small  ·  Padauk Regular 24/38  ·  Latin runs 24/32; Burmese needs 35 px minimum at this size, measured in this file. Tracking is 0 — Myanmar shaping must not be letter-spaced.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-base}",
+      "fontSize": "{core-type-size-headline-sm}",
+      "lineHeight": "{core-type-lineheight-headline-sm-myanmar}",
+      "letterSpacing": "{core-type-tracking-headline-sm}"
+    }
+  },
+  "myanmar-headline-small-bold": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.headline-small-emphasized  ·  Padauk Bold 24/38  ·  Latin runs 24/32; Burmese needs 35 px minimum at this size, measured in this file. Tracking is 0 — Myanmar shaping must not be letter-spaced.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-bold}",
+      "fontSize": "{core-type-size-headline-sm}",
+      "lineHeight": "{core-type-lineheight-headline-sm-myanmar}",
+      "letterSpacing": "{core-type-tracking-headline-sm}"
+    }
+  },
+  "myanmar-title-large": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.title-large  ·  Padauk Regular 22/34  ·  Latin runs 22/28; Burmese needs 32 px minimum at this size, measured in this file. Tracking is 0 — Myanmar shaping must not be letter-spaced.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-base}",
+      "fontSize": "{core-type-size-title-lg}",
+      "lineHeight": "{core-type-lineheight-title-lg-myanmar}",
+      "letterSpacing": "{core-type-tracking-title-lg}"
+    }
+  },
+  "myanmar-title-large-bold": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.title-large-emphasized  ·  Padauk Bold 22/34  ·  Latin runs 22/28; Burmese needs 32 px minimum at this size, measured in this file. Tracking is 0 — Myanmar shaping must not be letter-spaced.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-bold}",
+      "fontSize": "{core-type-size-title-lg}",
+      "lineHeight": "{core-type-lineheight-title-lg-myanmar}",
+      "letterSpacing": "{core-type-tracking-title-lg}"
+    }
+  },
+  "myanmar-title-medium": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.title-medium  ·  Padauk Regular 16/26  ·  Latin runs 16/24; Burmese needs 24 px minimum at this size, measured in this file. Tracking is 0 — Myanmar shaping must not be letter-spaced.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-base}",
+      "fontSize": "{core-type-size-title-md}",
+      "lineHeight": "{core-type-lineheight-title-md-myanmar}",
+      "letterSpacing": "{core-type-tracking-title-md}"
+    }
+  },
+  "myanmar-title-medium-bold": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.title-medium-emphasized  ·  Padauk Bold 16/26  ·  Latin runs 16/24; Burmese needs 24 px minimum at this size, measured in this file. Tracking is 0 — Myanmar shaping must not be letter-spaced.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-bold}",
+      "fontSize": "{core-type-size-title-md}",
+      "lineHeight": "{core-type-lineheight-title-md-myanmar}",
+      "letterSpacing": "{core-type-tracking-title-md}"
+    }
+  },
+  "myanmar-title-small": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.title-small  ·  Padauk Regular 14/22  ·  Latin runs 14/20; Burmese needs 21 px minimum at this size, measured in this file. Tracking is 0 — Myanmar shaping must not be letter-spaced.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-base}",
+      "fontSize": "{core-type-size-title-sm}",
+      "lineHeight": "{core-type-lineheight-title-sm-myanmar}",
+      "letterSpacing": "{core-type-tracking-title-sm}"
+    }
+  },
+  "myanmar-title-small-bold": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.title-small-emphasized  ·  Padauk Bold 14/22  ·  Latin runs 14/20; Burmese needs 21 px minimum at this size, measured in this file. Tracking is 0 — Myanmar shaping must not be letter-spaced.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-bold}",
+      "fontSize": "{core-type-size-title-sm}",
+      "lineHeight": "{core-type-lineheight-title-sm-myanmar}",
+      "letterSpacing": "{core-type-tracking-title-sm}"
+    }
+  },
+  "myanmar-body-large": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.body-large  ·  Padauk Regular 16/28  ·  Latin runs 16/24; Burmese needs 24 px minimum at this size, measured in this file. Tracking is 0 — Myanmar shaping must not be letter-spaced.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-base}",
+      "fontSize": "{core-type-size-body-lg}",
+      "lineHeight": "{core-type-lineheight-body-lg-myanmar}",
+      "letterSpacing": "{core-type-tracking-body-lg}"
+    }
+  },
+  "myanmar-body-large-bold": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.body-large-emphasized  ·  Padauk Bold 16/28  ·  Latin runs 16/24; Burmese needs 24 px minimum at this size, measured in this file. Tracking is 0 — Myanmar shaping must not be letter-spaced.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-bold}",
+      "fontSize": "{core-type-size-body-lg}",
+      "lineHeight": "{core-type-lineheight-body-lg-myanmar}",
+      "letterSpacing": "{core-type-tracking-body-lg}"
+    }
+  },
+  "myanmar-body-medium": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.body-medium  ·  Padauk Regular 14/24  ·  Latin runs 14/20; Burmese needs 21 px minimum at this size, measured in this file. Tracking is 0 — Myanmar shaping must not be letter-spaced.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-base}",
+      "fontSize": "{core-type-size-body-md}",
+      "lineHeight": "{core-type-lineheight-body-md-myanmar}",
+      "letterSpacing": "{core-type-tracking-body-md}"
+    }
+  },
+  "myanmar-body-medium-bold": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.body-medium-emphasized  ·  Padauk Bold 14/24  ·  Latin runs 14/20; Burmese needs 21 px minimum at this size, measured in this file. Tracking is 0 — Myanmar shaping must not be letter-spaced.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-bold}",
+      "fontSize": "{core-type-size-body-md}",
+      "lineHeight": "{core-type-lineheight-body-md-myanmar}",
+      "letterSpacing": "{core-type-tracking-body-md}"
+    }
+  },
+  "myanmar-body-small": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.body-small  ·  Padauk Regular 12/20  ·  Latin runs 12/16; Burmese needs 18 px minimum at this size, measured in this file. Tracking is 0 — Myanmar shaping must not be letter-spaced.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-base}",
+      "fontSize": "{core-type-size-body-sm}",
+      "lineHeight": "{core-type-lineheight-body-sm-myanmar}",
+      "letterSpacing": "{core-type-tracking-body-sm}"
+    }
+  },
+  "myanmar-body-small-bold": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.body-small-emphasized  ·  Padauk Bold 12/20  ·  Latin runs 12/16; Burmese needs 18 px minimum at this size, measured in this file. Tracking is 0 — Myanmar shaping must not be letter-spaced.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-bold}",
+      "fontSize": "{core-type-size-body-sm}",
+      "lineHeight": "{core-type-lineheight-body-sm-myanmar}",
+      "letterSpacing": "{core-type-tracking-body-sm}"
+    }
+  },
+  "myanmar-label-large": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.label-large  ·  Padauk Regular 14/22  ·  Latin runs 14/20; Burmese needs 21 px minimum at this size, measured in this file. Tracking is 0 — Myanmar shaping must not be letter-spaced.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-base}",
+      "fontSize": "{core-type-size-label-lg}",
+      "lineHeight": "{core-type-lineheight-label-lg-myanmar}",
+      "letterSpacing": "{core-type-tracking-label-lg}"
+    }
+  },
+  "myanmar-label-large-bold": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.label-large-emphasized  ·  Padauk Bold 14/22  ·  Latin runs 14/20; Burmese needs 21 px minimum at this size, measured in this file. Tracking is 0 — Myanmar shaping must not be letter-spaced.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-bold}",
+      "fontSize": "{core-type-size-label-lg}",
+      "lineHeight": "{core-type-lineheight-label-lg-myanmar}",
+      "letterSpacing": "{core-type-tracking-label-lg}"
+    }
+  },
+  "myanmar-label-medium": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.label-medium  ·  Padauk Regular 12/18  ·  Latin runs 12/16; Burmese needs 18 px minimum at this size, measured in this file. Tracking is 0 — Myanmar shaping must not be letter-spaced.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-base}",
+      "fontSize": "{core-type-size-label-md}",
+      "lineHeight": "{core-type-lineheight-label-md-myanmar}",
+      "letterSpacing": "{core-type-tracking-label-md}"
+    }
+  },
+  "myanmar-label-medium-bold": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.label-medium-emphasized  ·  Padauk Bold 12/18  ·  Latin runs 12/16; Burmese needs 18 px minimum at this size, measured in this file. Tracking is 0 — Myanmar shaping must not be letter-spaced.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-bold}",
+      "fontSize": "{core-type-size-label-md}",
+      "lineHeight": "{core-type-lineheight-label-md-myanmar}",
+      "letterSpacing": "{core-type-tracking-label-md}"
+    }
+  },
+  "myanmar-label-small": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.label-small  ·  Padauk Regular 11/18  ·  Latin runs 11/16; Burmese needs 16 px minimum at this size, measured in this file. Tracking is 0 — Myanmar shaping must not be letter-spaced.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-base}",
+      "fontSize": "{core-type-size-label-sm}",
+      "lineHeight": "{core-type-lineheight-label-sm-myanmar}",
+      "letterSpacing": "{core-type-tracking-label-sm}"
+    }
+  },
+  "myanmar-label-small-bold": {
+    "$type": "typography",
+    "$description": "md.sys.typescale.label-small-emphasized  ·  Padauk Bold 11/18  ·  Latin runs 11/16; Burmese needs 16 px minimum at this size, measured in this file. Tracking is 0 — Myanmar shaping must not be letter-spaced.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-bold}",
+      "fontSize": "{core-type-size-label-sm}",
+      "lineHeight": "{core-type-lineheight-label-sm-myanmar}",
+      "letterSpacing": "{core-type-tracking-label-sm}"
+    }
+  },
+  "semantic-type-latin-hero": {
+    "$type": "typography",
+    "$description": "type/hero  ·  Marketing hero headline. Web only, and rarely.  ·  → display-small emphasized (Latin)  ·  aliased to the typescale variables, not copied.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-display-semibold-sm}",
+      "fontSize": "{core-type-size-display-sm}",
+      "lineHeight": "{core-type-lineheight-display-sm}",
+      "letterSpacing": "{core-type-tracking-display-sm}"
+    }
+  },
+  "semantic-type-latin-page-title": {
+    "$type": "typography",
+    "$description": "type/page-title  ·  The title of a page or a full-screen view.  ·  → headline-medium emphasized (Latin)  ·  aliased to the typescale variables, not copied.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-headline-semibold-md}",
+      "fontSize": "{core-type-size-headline-md}",
+      "lineHeight": "{core-type-lineheight-headline-md}",
+      "letterSpacing": "{core-type-tracking-headline-md}"
+    }
+  },
+  "semantic-type-latin-section-title": {
+    "$type": "typography",
+    "$description": "type/section-title  ·  A block heading inside a page.  ·  → title-large emphasized (Latin)  ·  aliased to the typescale variables, not copied.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-title-semibold-lg}",
+      "fontSize": "{core-type-size-title-lg}",
+      "lineHeight": "{core-type-lineheight-title-lg}",
+      "letterSpacing": "{core-type-tracking-title-lg}"
+    }
+  },
+  "semantic-type-latin-card-title": {
+    "$type": "typography",
+    "$description": "type/card-title  ·  The name of a property, a card, a panel.  ·  → title-medium emphasized (Latin)  ·  aliased to the typescale variables, not copied.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-title-semibold-md}",
+      "fontSize": "{core-type-size-title-md}",
+      "lineHeight": "{core-type-lineheight-title-md}",
+      "letterSpacing": "{core-type-tracking-title-md}"
+    }
+  },
+  "semantic-type-latin-subtitle": {
+    "$type": "typography",
+    "$description": "type/subtitle  ·  A sub-heading inside a card or a table group.  ·  → title-small (Latin)  ·  aliased to the typescale variables, not copied.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-title-sm}",
+      "fontSize": "{core-type-size-title-sm}",
+      "lineHeight": "{core-type-lineheight-title-sm}",
+      "letterSpacing": "{core-type-tracking-title-sm}"
+    }
+  },
+  "semantic-type-latin-body-lead": {
+    "$type": "typography",
+    "$description": "type/body-lead  ·  The opening paragraph of a page or a dialog.  ·  → body-large (Latin)  ·  aliased to the typescale variables, not copied.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-body-lg}",
+      "fontSize": "{core-type-size-body-lg}",
+      "lineHeight": "{core-type-lineheight-body-lg}",
+      "letterSpacing": "{core-type-tracking-body-lg}"
+    }
+  },
+  "semantic-type-latin-body": {
+    "$type": "typography",
+    "$description": "type/body  ·  Default running text, everywhere.  ·  → body-medium (Latin)  ·  aliased to the typescale variables, not copied.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-body-md}",
+      "fontSize": "{core-type-size-body-md}",
+      "lineHeight": "{core-type-lineheight-body-md}",
+      "letterSpacing": "{core-type-tracking-body-md}"
+    }
+  },
+  "semantic-type-latin-meta": {
+    "$type": "typography",
+    "$description": "type/meta  ·  Card meta, timestamps, secondary detail.  ·  → body-small (Latin)  ·  aliased to the typescale variables, not copied.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-body-sm}",
+      "fontSize": "{core-type-size-body-sm}",
+      "lineHeight": "{core-type-lineheight-body-sm}",
+      "letterSpacing": "{core-type-tracking-body-sm}"
+    }
+  },
+  "semantic-type-latin-button": {
+    "$type": "typography",
+    "$description": "type/button  ·  Every button label, on every surface.  ·  → label-large emphasized (Latin)  ·  aliased to the typescale variables, not copied.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-label-semibold-lg}",
+      "fontSize": "{core-type-size-label-lg}",
+      "lineHeight": "{core-type-lineheight-label-lg}",
+      "letterSpacing": "{core-type-tracking-label-lg}"
+    }
+  },
+  "semantic-type-latin-link": {
+    "$type": "typography",
+    "$description": "type/link  ·  An inline link that behaves like a button.  ·  → label-large (Latin)  ·  aliased to the typescale variables, not copied.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-label-lg}",
+      "fontSize": "{core-type-size-label-lg}",
+      "lineHeight": "{core-type-lineheight-label-lg}",
+      "letterSpacing": "{core-type-tracking-label-lg}"
+    }
+  },
+  "semantic-type-latin-field-label": {
+    "$type": "typography",
+    "$description": "type/field-label  ·  The label above an input.  ·  → label-medium (Latin)  ·  aliased to the typescale variables, not copied.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-label-md}",
+      "fontSize": "{core-type-size-label-md}",
+      "lineHeight": "{core-type-lineheight-label-md}",
+      "letterSpacing": "{core-type-tracking-label-md}"
+    }
+  },
+  "semantic-type-latin-field-value": {
+    "$type": "typography",
+    "$description": "type/field-value  ·  The value typed into an input.  ·  → body-medium (Latin)  ·  aliased to the typescale variables, not copied.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-body-md}",
+      "fontSize": "{core-type-size-body-md}",
+      "lineHeight": "{core-type-lineheight-body-md}",
+      "letterSpacing": "{core-type-tracking-body-md}"
+    }
+  },
+  "semantic-type-latin-field-helper": {
+    "$type": "typography",
+    "$description": "type/field-helper  ·  Helper and error text under a field.  ·  → label-small (Latin)  ·  aliased to the typescale variables, not copied.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-label-sm}",
+      "fontSize": "{core-type-size-label-sm}",
+      "lineHeight": "{core-type-lineheight-label-sm}",
+      "letterSpacing": "{core-type-tracking-label-sm}"
+    }
+  },
+  "semantic-type-latin-table-header": {
+    "$type": "typography",
+    "$description": "type/table-header  ·  Column headers in the back office.  ·  → label-small emphasized (Latin)  ·  aliased to the typescale variables, not copied.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-label-semibold-sm}",
+      "fontSize": "{core-type-size-label-sm}",
+      "lineHeight": "{core-type-lineheight-label-sm}",
+      "letterSpacing": "{core-type-tracking-label-sm}"
+    }
+  },
+  "semantic-type-latin-table-cell": {
+    "$type": "typography",
+    "$description": "type/table-cell  ·  Table body cells.  ·  → body-small (Latin)  ·  aliased to the typescale variables, not copied.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-body-sm}",
+      "fontSize": "{core-type-size-body-sm}",
+      "lineHeight": "{core-type-lineheight-body-sm}",
+      "letterSpacing": "{core-type-tracking-body-sm}"
+    }
+  },
+  "semantic-type-latin-badge": {
+    "$type": "typography",
+    "$description": "type/badge  ·  Tags, chips and status badges.  ·  → label-small emphasized (Latin)  ·  aliased to the typescale variables, not copied.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-label-semibold-sm}",
+      "fontSize": "{core-type-size-label-sm}",
+      "lineHeight": "{core-type-lineheight-label-sm}",
+      "letterSpacing": "{core-type-tracking-label-sm}"
+    }
+  },
+  "semantic-type-latin-price": {
+    "$type": "typography",
+    "$description": "type/price  ·  A price, a total, a nightly rate.  ·  → title-medium emphasized (Latin)  ·  aliased to the typescale variables, not copied.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-title-semibold-md}",
+      "fontSize": "{core-type-size-title-md}",
+      "lineHeight": "{core-type-lineheight-title-md}",
+      "letterSpacing": "{core-type-tracking-title-md}"
+    }
+  },
+  "semantic-type-latin-stat-value": {
+    "$type": "typography",
+    "$description": "type/stat-value  ·  The big number on a stat card.  ·  → headline-medium emphasized (Latin)  ·  aliased to the typescale variables, not copied.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-headline-semibold-md}",
+      "fontSize": "{core-type-size-headline-md}",
+      "lineHeight": "{core-type-lineheight-headline-md}",
+      "letterSpacing": "{core-type-tracking-headline-md}"
+    }
+  },
+  "semantic-type-myanmar-hero": {
+    "$type": "typography",
+    "$description": "type/hero  ·  Marketing hero headline. Web only, and rarely.  ·  → display-small emphasized (Myanmar)  ·  aliased to the typescale variables, not copied.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-bold}",
+      "fontSize": "{core-type-size-display-sm}",
+      "lineHeight": "{core-type-lineheight-display-sm-myanmar}",
+      "letterSpacing": "{core-type-tracking-display-sm}"
+    }
+  },
+  "semantic-type-myanmar-page-title": {
+    "$type": "typography",
+    "$description": "type/page-title  ·  The title of a page or a full-screen view.  ·  → headline-medium emphasized (Myanmar)  ·  aliased to the typescale variables, not copied.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-bold}",
+      "fontSize": "{core-type-size-headline-md}",
+      "lineHeight": "{core-type-lineheight-headline-md-myanmar}",
+      "letterSpacing": "{core-type-tracking-headline-md}"
+    }
+  },
+  "semantic-type-myanmar-section-title": {
+    "$type": "typography",
+    "$description": "type/section-title  ·  A block heading inside a page.  ·  → title-large emphasized (Myanmar)  ·  aliased to the typescale variables, not copied.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-bold}",
+      "fontSize": "{core-type-size-title-lg}",
+      "lineHeight": "{core-type-lineheight-title-lg-myanmar}",
+      "letterSpacing": "{core-type-tracking-title-lg}"
+    }
+  },
+  "semantic-type-myanmar-card-title": {
+    "$type": "typography",
+    "$description": "type/card-title  ·  The name of a property, a card, a panel.  ·  → title-medium emphasized (Myanmar)  ·  aliased to the typescale variables, not copied.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-bold}",
+      "fontSize": "{core-type-size-title-md}",
+      "lineHeight": "{core-type-lineheight-title-md-myanmar}",
+      "letterSpacing": "{core-type-tracking-title-md}"
+    }
+  },
+  "semantic-type-myanmar-subtitle": {
+    "$type": "typography",
+    "$description": "type/subtitle  ·  A sub-heading inside a card or a table group.  ·  → title-small (Myanmar)  ·  aliased to the typescale variables, not copied.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-base}",
+      "fontSize": "{core-type-size-title-sm}",
+      "lineHeight": "{core-type-lineheight-title-sm-myanmar}",
+      "letterSpacing": "{core-type-tracking-title-sm}"
+    }
+  },
+  "semantic-type-myanmar-body-lead": {
+    "$type": "typography",
+    "$description": "type/body-lead  ·  The opening paragraph of a page or a dialog.  ·  → body-large (Myanmar)  ·  aliased to the typescale variables, not copied.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-base}",
+      "fontSize": "{core-type-size-body-lg}",
+      "lineHeight": "{core-type-lineheight-body-lg-myanmar}",
+      "letterSpacing": "{core-type-tracking-body-lg}"
+    }
+  },
+  "semantic-type-myanmar-body": {
+    "$type": "typography",
+    "$description": "type/body  ·  Default running text, everywhere.  ·  → body-medium (Myanmar)  ·  aliased to the typescale variables, not copied.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-base}",
+      "fontSize": "{core-type-size-body-md}",
+      "lineHeight": "{core-type-lineheight-body-md-myanmar}",
+      "letterSpacing": "{core-type-tracking-body-md}"
+    }
+  },
+  "semantic-type-myanmar-meta": {
+    "$type": "typography",
+    "$description": "type/meta  ·  Card meta, timestamps, secondary detail.  ·  → body-small (Myanmar)  ·  aliased to the typescale variables, not copied.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-base}",
+      "fontSize": "{core-type-size-body-sm}",
+      "lineHeight": "{core-type-lineheight-body-sm-myanmar}",
+      "letterSpacing": "{core-type-tracking-body-sm}"
+    }
+  },
+  "semantic-type-myanmar-button": {
+    "$type": "typography",
+    "$description": "type/button  ·  Every button label, on every surface.  ·  → label-large emphasized (Myanmar)  ·  aliased to the typescale variables, not copied.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-bold}",
+      "fontSize": "{core-type-size-label-lg}",
+      "lineHeight": "{core-type-lineheight-label-lg-myanmar}",
+      "letterSpacing": "{core-type-tracking-label-lg}"
+    }
+  },
+  "semantic-type-myanmar-link": {
+    "$type": "typography",
+    "$description": "type/link  ·  An inline link that behaves like a button.  ·  → label-large (Myanmar)  ·  aliased to the typescale variables, not copied.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-base}",
+      "fontSize": "{core-type-size-label-lg}",
+      "lineHeight": "{core-type-lineheight-label-lg-myanmar}",
+      "letterSpacing": "{core-type-tracking-label-lg}"
+    }
+  },
+  "semantic-type-myanmar-field-label": {
+    "$type": "typography",
+    "$description": "type/field-label  ·  The label above an input.  ·  → label-medium (Myanmar)  ·  aliased to the typescale variables, not copied.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-base}",
+      "fontSize": "{core-type-size-label-md}",
+      "lineHeight": "{core-type-lineheight-label-md-myanmar}",
+      "letterSpacing": "{core-type-tracking-label-md}"
+    }
+  },
+  "semantic-type-myanmar-field-value": {
+    "$type": "typography",
+    "$description": "type/field-value  ·  The value typed into an input.  ·  → body-medium (Myanmar)  ·  aliased to the typescale variables, not copied.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-base}",
+      "fontSize": "{core-type-size-body-md}",
+      "lineHeight": "{core-type-lineheight-body-md-myanmar}",
+      "letterSpacing": "{core-type-tracking-body-md}"
+    }
+  },
+  "semantic-type-myanmar-field-helper": {
+    "$type": "typography",
+    "$description": "type/field-helper  ·  Helper and error text under a field.  ·  → label-small (Myanmar)  ·  aliased to the typescale variables, not copied.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-base}",
+      "fontSize": "{core-type-size-label-sm}",
+      "lineHeight": "{core-type-lineheight-label-sm-myanmar}",
+      "letterSpacing": "{core-type-tracking-label-sm}"
+    }
+  },
+  "semantic-type-myanmar-table-header": {
+    "$type": "typography",
+    "$description": "type/table-header  ·  Column headers in the back office.  ·  → label-small emphasized (Myanmar)  ·  aliased to the typescale variables, not copied.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-bold}",
+      "fontSize": "{core-type-size-label-sm}",
+      "lineHeight": "{core-type-lineheight-label-sm-myanmar}",
+      "letterSpacing": "{core-type-tracking-label-sm}"
+    }
+  },
+  "semantic-type-myanmar-table-cell": {
+    "$type": "typography",
+    "$description": "type/table-cell  ·  Table body cells.  ·  → body-small (Myanmar)  ·  aliased to the typescale variables, not copied.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-base}",
+      "fontSize": "{core-type-size-body-sm}",
+      "lineHeight": "{core-type-lineheight-body-sm-myanmar}",
+      "letterSpacing": "{core-type-tracking-body-sm}"
+    }
+  },
+  "semantic-type-myanmar-badge": {
+    "$type": "typography",
+    "$description": "type/badge  ·  Tags, chips and status badges.  ·  → label-small emphasized (Myanmar)  ·  aliased to the typescale variables, not copied.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-bold}",
+      "fontSize": "{core-type-size-label-sm}",
+      "lineHeight": "{core-type-lineheight-label-sm-myanmar}",
+      "letterSpacing": "{core-type-tracking-label-sm}"
+    }
+  },
+  "semantic-type-myanmar-price": {
+    "$type": "typography",
+    "$description": "type/price  ·  A price, a total, a nightly rate.  ·  → title-medium emphasized (Myanmar)  ·  aliased to the typescale variables, not copied.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-bold}",
+      "fontSize": "{core-type-size-title-md}",
+      "lineHeight": "{core-type-lineheight-title-md-myanmar}",
+      "letterSpacing": "{core-type-tracking-title-md}"
+    }
+  },
+  "semantic-type-myanmar-stat-value": {
+    "$type": "typography",
+    "$description": "type/stat-value  ·  The big number on a stat card.  ·  → headline-medium emphasized (Myanmar)  ·  aliased to the typescale variables, not copied.",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-bold}",
+      "fontSize": "{core-type-size-headline-md}",
+      "lineHeight": "{core-type-lineheight-headline-md-myanmar}",
+      "letterSpacing": "{core-type-tracking-headline-md}"
+    }
+  },
+  "text-latin-h1": {
+    "$type": "typography",
+    "$description": "H1  ·  Page hero. One per screen, web only.  ·  → display-small (Latin)  ·  paragraph spacing 0, indent 0",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-display-sm}",
+      "fontSize": "{core-type-size-display-sm}",
+      "lineHeight": "{core-type-lineheight-display-sm}",
+      "letterSpacing": "{core-type-tracking-display-sm}"
+    }
+  },
+  "text-latin-h2": {
+    "$type": "typography",
+    "$description": "H2  ·  Primary page title.  ·  → headline-large (Latin)  ·  paragraph spacing 0, indent 0",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-headline-lg}",
+      "fontSize": "{core-type-size-headline-lg}",
+      "lineHeight": "{core-type-lineheight-headline-lg}",
+      "letterSpacing": "{core-type-tracking-headline-lg}"
+    }
+  },
+  "text-latin-h3": {
+    "$type": "typography",
+    "$description": "H3  ·  Section heading, stat headline.  ·  → headline-medium (Latin)  ·  paragraph spacing 0, indent 0",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-headline-md}",
+      "fontSize": "{core-type-size-headline-md}",
+      "lineHeight": "{core-type-lineheight-headline-md}",
+      "letterSpacing": "{core-type-tracking-headline-md}"
+    }
+  },
+  "text-latin-h4": {
+    "$type": "typography",
+    "$description": "H4  ·  Sub-section heading, dialog title.  ·  → headline-small (Latin)  ·  paragraph spacing 0, indent 0",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-headline-sm}",
+      "fontSize": "{core-type-size-headline-sm}",
+      "lineHeight": "{core-type-lineheight-headline-sm}",
+      "letterSpacing": "{core-type-tracking-headline-sm}"
+    }
+  },
+  "text-latin-h5": {
+    "$type": "typography",
+    "$description": "H5  ·  Block heading inside a page.  ·  → title-large (Latin)  ·  paragraph spacing 0, indent 0",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-title-lg}",
+      "fontSize": "{core-type-size-title-lg}",
+      "lineHeight": "{core-type-lineheight-title-lg}",
+      "letterSpacing": "{core-type-tracking-title-lg}"
+    }
+  },
+  "text-latin-h6": {
+    "$type": "typography",
+    "$description": "H6  ·  Card title, panel heading. Note the jump from H5 — 22 to 16 — inherited from the Material scale.  ·  → title-medium (Latin)  ·  paragraph spacing 0, indent 0",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-title-semibold-md}",
+      "fontSize": "{core-type-size-title-md}",
+      "lineHeight": "{core-type-lineheight-title-md}",
+      "letterSpacing": "{core-type-tracking-title-md}"
+    }
+  },
+  "text-latin-caption1": {
+    "$type": "typography",
+    "$description": "CAPTION1  ·  Caption under an image or a figure.  ·  → body-small (Latin)  ·  paragraph spacing 0, indent 0",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-body-sm}",
+      "fontSize": "{core-type-size-body-sm}",
+      "lineHeight": "{core-type-lineheight-body-sm}",
+      "letterSpacing": "{core-type-tracking-body-sm}"
+    }
+  },
+  "text-latin-caption2": {
+    "$type": "typography",
+    "$description": "CAPTION2  ·  Smallest caption. Timestamps, attributions.  ·  → label-small (Latin)  ·  paragraph spacing 0, indent 0",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-label-sm}",
+      "fontSize": "{core-type-size-label-sm}",
+      "lineHeight": "{core-type-lineheight-label-sm}",
+      "letterSpacing": "{core-type-tracking-label-sm}"
+    }
+  },
+  "text-latin-body1": {
+    "$type": "typography",
+    "$description": "body1  ·  Lead paragraph. The largest running text.  ·  → body-large (Latin)  ·  paragraph spacing 16, indent 0",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-body-lg}",
+      "fontSize": "{core-type-size-body-lg}",
+      "lineHeight": "{core-type-lineheight-body-lg}",
+      "letterSpacing": "{core-type-tracking-body-lg}"
+    }
+  },
+  "text-latin-body2": {
+    "$type": "typography",
+    "$description": "body2  ·  Default running text. The workhorse.  ·  → body-medium (Latin)  ·  paragraph spacing 12, indent 0",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-body-md}",
+      "fontSize": "{core-type-size-body-md}",
+      "lineHeight": "{core-type-lineheight-body-md}",
+      "letterSpacing": "{core-type-tracking-body-md}"
+    }
+  },
+  "text-latin-body2_intense": {
+    "$type": "typography",
+    "$description": "body2_intense  ·  body2 with emphasis. For a phrase that must carry weight inside a paragraph.  ·  → body-medium (Latin)  ·  paragraph spacing 12, indent 0",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-body-semibold-md}",
+      "fontSize": "{core-type-size-body-md}",
+      "lineHeight": "{core-type-lineheight-body-md}",
+      "letterSpacing": "{core-type-tracking-body-md}"
+    }
+  },
+  "text-latin-body2_underlined": {
+    "$type": "typography",
+    "$description": "body2_underlined  ·  body2 as an inline link inside running text.  ·  → body-medium (Latin)  ·  paragraph spacing 12, indent 0, underlined",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-body-md}",
+      "fontSize": "{core-type-size-body-md}",
+      "lineHeight": "{core-type-lineheight-body-md}",
+      "letterSpacing": "{core-type-tracking-body-md}"
+    }
+  },
+  "text-latin-body3": {
+    "$type": "typography",
+    "$description": "body3  ·  Dense running text — table cells, card meta.  ·  → body-small (Latin)  ·  paragraph spacing 8, indent 0",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-body-sm}",
+      "fontSize": "{core-type-size-body-sm}",
+      "lineHeight": "{core-type-lineheight-body-sm}",
+      "letterSpacing": "{core-type-tracking-body-sm}"
+    }
+  },
+  "text-latin-body3_intense": {
+    "$type": "typography",
+    "$description": "body3_intense  ·  body3 with emphasis.  ·  → body-small (Latin)  ·  paragraph spacing 8, indent 0",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-body-semibold-sm}",
+      "fontSize": "{core-type-size-body-sm}",
+      "lineHeight": "{core-type-lineheight-body-sm}",
+      "letterSpacing": "{core-type-tracking-body-sm}"
+    }
+  },
+  "text-latin-body3_underlined": {
+    "$type": "typography",
+    "$description": "body3_underlined  ·  body3 as an inline link.  ·  → body-small (Latin)  ·  paragraph spacing 8, indent 0, underlined",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-body-sm}",
+      "fontSize": "{core-type-size-body-sm}",
+      "lineHeight": "{core-type-lineheight-body-sm}",
+      "letterSpacing": "{core-type-tracking-body-sm}"
+    }
+  },
+  "text-latin-body4": {
+    "$type": "typography",
+    "$description": "body4  ·  Smallest supported running text. 11 px is the readable floor of this system.  ·  → label-small (Latin)  ·  paragraph spacing 8, indent 0",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-label-sm}",
+      "fontSize": "{core-type-size-label-sm}",
+      "lineHeight": "{core-type-lineheight-label-sm}",
+      "letterSpacing": "{core-type-tracking-label-sm}"
+    }
+  },
+  "text-latin-body5": {
+    "$type": "typography",
+    "$description": "body5  ·  LEGACY ONLY — 10 px, below the 11 px floor this system sets. It exists to describe back-office text that already ships, not to be chosen for new work. Retire it once those tables are reworked.  ·  paragraph spacing 8, indent 0",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-label-sm}",
+      "fontSize": "{core-type-size-legacy-10}",
+      "lineHeight": "{core-type-lineheight-legacy-10}",
+      "letterSpacing": "{core-type-tracking-legacy-10}"
+    }
+  },
+  "text-latin-label": {
+    "$type": "typography",
+    "$description": "label  ·  Field labels, chips, small UI labels.  ·  → label-medium (Latin)  ·  paragraph spacing 0, indent 0",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-label-md}",
+      "fontSize": "{core-type-size-label-md}",
+      "lineHeight": "{core-type-lineheight-label-md}",
+      "letterSpacing": "{core-type-tracking-label-md}"
+    }
+  },
+  "text-latin-button_sm": {
+    "$type": "typography",
+    "$description": "button_sm  ·  Small button label. 12 / 16.  ·  → label-medium (Latin)  ·  paragraph spacing 0, indent 0",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-label-semibold-md}",
+      "fontSize": "{core-type-size-label-md}",
+      "lineHeight": "{core-type-lineheight-label-md}",
+      "letterSpacing": "{core-type-tracking-label-md}"
+    }
+  },
+  "text-latin-button_md": {
+    "$type": "typography",
+    "$description": "button_md  ·  Default button label. 14 / 20.  ·  → label-large (Latin)  ·  paragraph spacing 0, indent 0",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-brand}",
+      "fontWeight": "{core-type-fontweight-label-semibold-lg}",
+      "fontSize": "{core-type-size-label-lg}",
+      "lineHeight": "{core-type-lineheight-label-lg}",
+      "letterSpacing": "{core-type-tracking-label-lg}"
+    }
+  },
+  "text-myanmar-h1": {
+    "$type": "typography",
+    "$description": "H1  ·  Page hero. One per screen, web only.  ·  → display-small (Myanmar)  ·  paragraph spacing 0, indent 0",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-base}",
+      "fontSize": "{core-type-size-display-sm}",
+      "lineHeight": "{core-type-lineheight-display-sm-myanmar}",
+      "letterSpacing": {
+        "value": 0,
+        "unit": "px"
+      }
+    }
+  },
+  "text-myanmar-h2": {
+    "$type": "typography",
+    "$description": "H2  ·  Primary page title.  ·  → headline-large (Myanmar)  ·  paragraph spacing 0, indent 0",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-base}",
+      "fontSize": "{core-type-size-headline-lg}",
+      "lineHeight": "{core-type-lineheight-headline-lg-myanmar}",
+      "letterSpacing": {
+        "value": 0,
+        "unit": "px"
+      }
+    }
+  },
+  "text-myanmar-h3": {
+    "$type": "typography",
+    "$description": "H3  ·  Section heading, stat headline.  ·  → headline-medium (Myanmar)  ·  paragraph spacing 0, indent 0",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-base}",
+      "fontSize": "{core-type-size-headline-md}",
+      "lineHeight": "{core-type-lineheight-headline-md-myanmar}",
+      "letterSpacing": {
+        "value": 0,
+        "unit": "px"
+      }
+    }
+  },
+  "text-myanmar-h4": {
+    "$type": "typography",
+    "$description": "H4  ·  Sub-section heading, dialog title.  ·  → headline-small (Myanmar)  ·  paragraph spacing 0, indent 0",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-base}",
+      "fontSize": "{core-type-size-headline-sm}",
+      "lineHeight": "{core-type-lineheight-headline-sm-myanmar}",
+      "letterSpacing": {
+        "value": 0,
+        "unit": "px"
+      }
+    }
+  },
+  "text-myanmar-h5": {
+    "$type": "typography",
+    "$description": "H5  ·  Block heading inside a page.  ·  → title-large (Myanmar)  ·  paragraph spacing 0, indent 0",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-base}",
+      "fontSize": "{core-type-size-title-lg}",
+      "lineHeight": "{core-type-lineheight-title-lg-myanmar}",
+      "letterSpacing": {
+        "value": 0,
+        "unit": "px"
+      }
+    }
+  },
+  "text-myanmar-h6": {
+    "$type": "typography",
+    "$description": "H6  ·  Card title, panel heading. Note the jump from H5 — 22 to 16 — inherited from the Material scale.  ·  → title-medium (Myanmar)  ·  paragraph spacing 0, indent 0",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-bold}",
+      "fontSize": "{core-type-size-title-md}",
+      "lineHeight": "{core-type-lineheight-title-md-myanmar}",
+      "letterSpacing": {
+        "value": 0,
+        "unit": "px"
+      }
+    }
+  },
+  "text-myanmar-caption1": {
+    "$type": "typography",
+    "$description": "CAPTION1  ·  Caption under an image or a figure.  ·  → body-small (Myanmar)  ·  paragraph spacing 0, indent 0",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-base}",
+      "fontSize": "{core-type-size-body-sm}",
+      "lineHeight": "{core-type-lineheight-body-sm-myanmar}",
+      "letterSpacing": {
+        "value": 0,
+        "unit": "px"
+      }
+    }
+  },
+  "text-myanmar-caption2": {
+    "$type": "typography",
+    "$description": "CAPTION2  ·  Smallest caption. Timestamps, attributions.  ·  → label-small (Myanmar)  ·  paragraph spacing 0, indent 0",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-base}",
+      "fontSize": "{core-type-size-label-sm}",
+      "lineHeight": "{core-type-lineheight-label-sm-myanmar}",
+      "letterSpacing": {
+        "value": 0,
+        "unit": "px"
+      }
+    }
+  },
+  "text-myanmar-body1": {
+    "$type": "typography",
+    "$description": "body1  ·  Lead paragraph. The largest running text.  ·  → body-large (Myanmar)  ·  paragraph spacing 16, indent 0",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-base}",
+      "fontSize": "{core-type-size-body-lg}",
+      "lineHeight": "{core-type-lineheight-body-lg-myanmar}",
+      "letterSpacing": {
+        "value": 0,
+        "unit": "px"
+      }
+    }
+  },
+  "text-myanmar-body2": {
+    "$type": "typography",
+    "$description": "body2  ·  Default running text. The workhorse.  ·  → body-medium (Myanmar)  ·  paragraph spacing 12, indent 0",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-base}",
+      "fontSize": "{core-type-size-body-md}",
+      "lineHeight": "{core-type-lineheight-body-md-myanmar}",
+      "letterSpacing": {
+        "value": 0,
+        "unit": "px"
+      }
+    }
+  },
+  "text-myanmar-body2_intense": {
+    "$type": "typography",
+    "$description": "body2_intense  ·  body2 with emphasis. For a phrase that must carry weight inside a paragraph.  ·  → body-medium (Myanmar)  ·  paragraph spacing 12, indent 0",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-bold}",
+      "fontSize": "{core-type-size-body-md}",
+      "lineHeight": "{core-type-lineheight-body-md-myanmar}",
+      "letterSpacing": {
+        "value": 0,
+        "unit": "px"
+      }
+    }
+  },
+  "text-myanmar-body2_underlined": {
+    "$type": "typography",
+    "$description": "body2_underlined  ·  body2 as an inline link inside running text.  ·  → body-medium (Myanmar)  ·  paragraph spacing 12, indent 0, underlined",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-base}",
+      "fontSize": "{core-type-size-body-md}",
+      "lineHeight": "{core-type-lineheight-body-md-myanmar}",
+      "letterSpacing": {
+        "value": 0,
+        "unit": "px"
+      }
+    }
+  },
+  "text-myanmar-body3": {
+    "$type": "typography",
+    "$description": "body3  ·  Dense running text — table cells, card meta.  ·  → body-small (Myanmar)  ·  paragraph spacing 8, indent 0",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-base}",
+      "fontSize": "{core-type-size-body-sm}",
+      "lineHeight": "{core-type-lineheight-body-sm-myanmar}",
+      "letterSpacing": {
+        "value": 0,
+        "unit": "px"
+      }
+    }
+  },
+  "text-myanmar-body3_intense": {
+    "$type": "typography",
+    "$description": "body3_intense  ·  body3 with emphasis.  ·  → body-small (Myanmar)  ·  paragraph spacing 8, indent 0",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-bold}",
+      "fontSize": "{core-type-size-body-sm}",
+      "lineHeight": "{core-type-lineheight-body-sm-myanmar}",
+      "letterSpacing": {
+        "value": 0,
+        "unit": "px"
+      }
+    }
+  },
+  "text-myanmar-body3_underlined": {
+    "$type": "typography",
+    "$description": "body3_underlined  ·  body3 as an inline link.  ·  → body-small (Myanmar)  ·  paragraph spacing 8, indent 0, underlined",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-base}",
+      "fontSize": "{core-type-size-body-sm}",
+      "lineHeight": "{core-type-lineheight-body-sm-myanmar}",
+      "letterSpacing": {
+        "value": 0,
+        "unit": "px"
+      }
+    }
+  },
+  "text-myanmar-body4": {
+    "$type": "typography",
+    "$description": "body4  ·  Smallest supported running text. 11 px is the readable floor of this system.  ·  → label-small (Myanmar)  ·  paragraph spacing 8, indent 0",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-base}",
+      "fontSize": "{core-type-size-label-sm}",
+      "lineHeight": "{core-type-lineheight-label-sm-myanmar}",
+      "letterSpacing": {
+        "value": 0,
+        "unit": "px"
+      }
+    }
+  },
+  "text-myanmar-body5": {
+    "$type": "typography",
+    "$description": "body5  ·  LEGACY ONLY — 10 px, below the 11 px floor this system sets. It exists to describe back-office text that already ships, not to be chosen for new work. Retire it once those tables are reworked.  ·  paragraph spacing 8, indent 0",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-base}",
+      "fontSize": "{core-type-size-legacy-10}",
+      "lineHeight": "{core-type-lineheight-legacy-10-myanmar}",
+      "letterSpacing": {
+        "value": 0,
+        "unit": "px"
+      }
+    }
+  },
+  "text-myanmar-label": {
+    "$type": "typography",
+    "$description": "label  ·  Field labels, chips, small UI labels.  ·  → label-medium (Myanmar)  ·  paragraph spacing 0, indent 0",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-base}",
+      "fontSize": "{core-type-size-label-md}",
+      "lineHeight": "{core-type-lineheight-label-md-myanmar}",
+      "letterSpacing": {
+        "value": 0,
+        "unit": "px"
+      }
+    }
+  },
+  "text-myanmar-button_sm": {
+    "$type": "typography",
+    "$description": "button_sm  ·  Small button label. 12 / 16.  ·  → label-medium (Myanmar)  ·  paragraph spacing 0, indent 0",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-bold}",
+      "fontSize": "{core-type-size-label-md}",
+      "lineHeight": "{core-type-lineheight-label-md-myanmar}",
+      "letterSpacing": {
+        "value": 0,
+        "unit": "px"
+      }
+    }
+  },
+  "text-myanmar-button_md": {
+    "$type": "typography",
+    "$description": "button_md  ·  Default button label. 14 / 20.  ·  → label-large (Myanmar)  ·  paragraph spacing 0, indent 0",
+    "$value": {
+      "fontFamily": "{core-type-fontfamily-myanmar}",
+      "fontWeight": "{core-type-fontweight-myanmar-bold}",
+      "fontSize": "{core-type-size-label-lg}",
+      "lineHeight": "{core-type-lineheight-label-lg-myanmar}",
+      "letterSpacing": {
+        "value": 0,
+        "unit": "px"
+      }
+    }
+  }
+}
