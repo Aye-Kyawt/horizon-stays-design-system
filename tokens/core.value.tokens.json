@@ -124,9 +124,9 @@
     "$value": {
       "colorSpace": "srgb",
       "components": [
-        0.062745101749897,
-        0.12156862765550613,
-        0.3019607961177826
+        0.05445636063814163,
+        0.11436304450035095,
+        0.29807692766189575
       ]
     },
     "$description": "Core primitive. Reference a horizon.semantic token instead of using this directly."
