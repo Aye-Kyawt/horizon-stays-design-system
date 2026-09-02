@@ -7,6 +7,8 @@
     "build:tokens": "node build-tokens.js",
     "build": "npm run build:tokens",
     "clean:tokens": "node -e \"require('fs').rmSync('build',{recursive:true,force:true})\"",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "npm run build:tokens && storybook build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -14,6 +16,9 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "style-dictionary": "^5.5.2"
+    "@storybook/html-vite": "^10.5.10",
+    "storybook": "^10.5.10",
+    "style-dictionary": "^5.5.2",
+    "vite": "^8.2.2"
   }
 }
