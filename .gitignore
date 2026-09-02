@@ -4,6 +4,9 @@ node_modules/
 # Build output — regenerate with `npm run build:tokens`
 build/
 
+# Storybook build output — regenerate with `npm run build-storybook`
+storybook-static/
+
 # Logs
 *.log
 npm-debug.log*
