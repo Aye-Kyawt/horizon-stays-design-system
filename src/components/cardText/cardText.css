@@ -1,0 +1,109 @@
+/**
+ * .cardText — Figma 37:2034
+ *
+ * Every value below is `var(--token)`. Where a value is bound in Figma to a
+ * core (base-layer) token and no semantic token in front of it resolves to
+ * the same value, the core token is used verbatim rather than substituting a
+ * near-miss semantic one, and the gap is recorded in
+ * docs/cardContainer-design-gaps.md. Nothing here is a guess.
+ */
+
+.hds-cardText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* Figma: component/input/gap/xs — an input token on a card. See design gaps. */
+  gap: var(--component-input-gap-xs);
+  inline-size: 100%;
+  word-break: break-word;
+  font-style: normal;
+}
+
+.hds-cardText__locationInfo,
+.hds-cardText__metadata {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--component-input-gap-xs);
+  inline-size: 100%;
+}
+
+.hds-cardText__metadata {
+  white-space: nowrap;
+}
+
+.hds-cardText__ratingInfo,
+.hds-cardText__priceInfo {
+  display: flex;
+  align-items: center;
+  gap: var(--semantic-spacing-gap-2xs);
+  inline-size: 100%;
+}
+
+.hds-cardText p {
+  margin: 0;
+}
+
+/* ---- Title: Figma "Body/Medium Semibold" -------------------------------
+ * size / line-height / letter-spacing / family resolve through the semantic
+ * `latin-body` tokens, which alias exactly the core tokens Figma bound.
+ * The weight does not: no semantic type token carries body-md at semibold,
+ * so the core token Figma bound is used directly. Recorded as a gap.
+ */
+.hds-cardText__title {
+  font-family: var(--semantic-type-latin-body-font-family), system-ui, sans-serif;
+  font-size: var(--semantic-type-latin-body-font-size);
+  line-height: var(--semantic-type-latin-body-line-height);
+  letter-spacing: var(--semantic-type-latin-body-letter-spacing);
+  font-weight: var(--core-type-fontweight-body-semibold-md);
+  color: var(--semantic-color-text-base);
+  inline-size: 100%;
+}
+
+/* ---- Location: Figma "Body/Small" --------------------------------------
+ * `latin-meta` aliases core body-sm exactly — family, size, line-height,
+ * letter-spacing and weight all match, so this is a true resolution.
+ */
+.hds-cardText__location {
+  font-family: var(--semantic-type-latin-meta-font-family), system-ui, sans-serif;
+  font-size: var(--semantic-type-latin-meta-font-size);
+  line-height: var(--semantic-type-latin-meta-line-height);
+  letter-spacing: var(--semantic-type-latin-meta-letter-spacing);
+  font-weight: var(--semantic-type-latin-meta-font-weight);
+  color: var(--semantic-color-text-secondary);
+  inline-size: 100%;
+}
+
+/* ---- Rating value -------------------------------------------------------
+ * Figma attaches the core label/md variables here AND a raw text style
+ * ("small/semibold": Inter 12 / 600 / lh 100 / ls 0) that disagrees with
+ * them. The bound variables are used; the raw style is reported, not copied.
+ */
+.hds-cardText__rating {
+  font-family: var(--core-type-fontfamily-brand), system-ui, sans-serif;
+  font-size: var(--core-type-size-label-md);
+  line-height: var(--core-type-lineheight-label-md);
+  letter-spacing: var(--core-type-tracking-label-md);
+  font-weight: var(--core-type-fontweight-label-md);
+  color: var(--semantic-color-icon-rating);
+}
+
+.hds-cardText__reviewCount,
+.hds-cardText__pricePeriod {
+  font-family: var(--semantic-type-latin-meta-font-family), system-ui, sans-serif;
+  font-size: var(--semantic-type-latin-meta-font-size);
+  line-height: var(--semantic-type-latin-meta-line-height);
+  letter-spacing: var(--semantic-type-latin-meta-letter-spacing);
+  font-weight: var(--semantic-type-latin-meta-font-weight);
+  color: var(--semantic-color-text-subtle);
+}
+
+/* Same binding as the title — see the note there. */
+.hds-cardText__priceAmount {
+  font-family: var(--semantic-type-latin-body-font-family), system-ui, sans-serif;
+  font-size: var(--semantic-type-latin-body-font-size);
+  line-height: var(--semantic-type-latin-body-line-height);
+  letter-spacing: var(--semantic-type-latin-body-letter-spacing);
+  font-weight: var(--core-type-fontweight-body-semibold-md);
+  color: var(--semantic-color-text-base);
+}

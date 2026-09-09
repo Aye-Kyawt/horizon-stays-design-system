@@ -1,0 +1,125 @@
+/**
+ * .iconBtn — Figma 39:2185
+ *
+ * Bound in Figma, and resolved here:
+ *   box background   semantic/color/bg/negative/subtle
+ *   heart fill       component/button/bg/negative/idle
+ *
+ * The two remaining properties of the box are raw values in Figma. Neither is
+ * guessed; each lands on the token that is the faithful translation, and the
+ * layer it sits on is noted at the point of use:
+ *
+ *   radius  Figma has a raw 16px radius on a raw 32px box — i.e. a circle.
+ *           `semantic/border/radius/full` IS "circle", so this is a resolution.
+ *   size    Figma has a raw 32px box. `core/size/icon/lg` is exactly 32px and
+ *           is documented as "Icon box 32px" — but it is a CORE token, used in
+ *           a component, which CLAUDE.md otherwise forbids. It is used anyway
+ *           because there is no `semantic/size/*` layer anywhere in this token
+ *           system: the whole `size` category stops at core, and even
+ *           `component/button/height/*` aliases `core/size/control/*` directly.
+ *           That missing layer is a design-system gap in its own right and is
+ *           reported as one. Same treatment as the core type refs in
+ *           cardText.css.
+ *
+ * The interaction states below are NOT in Figma — `.iconBtn` has no variants.
+ * They are required by CLAUDE.md and each names the token it uses.
+ * See docs/cardContainer-design-gaps.md section 4.
+ */
+
+.hds-iconBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  /* core layer: no semantic size token exists — see the note above. */
+  inline-size: var(--core-size-icon-lg);
+  block-size: var(--core-size-icon-lg);
+  padding: 0;
+  border: none;
+  /* Figma's raw 16px radius on a raw 32px box is a circle. */
+  border-radius: var(--semantic-border-radius-full);
+  background: var(--semantic-color-bg-negative-subtle);
+  color: var(--component-button-bg-negative-idle);
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/*
+ * Hovered. Figma defines no hover for this component, and there is no
+ * `semantic/color/bg/negative/subtle/hovered` for the box — so the box keeps
+ * its bound background and only the heart darkens, onto the exact systematic
+ * sibling of the token the heart is bound to.
+ */
+.hds-iconBtn:hover:not(:disabled),
+.hds-iconBtn[data-status='hovered']:not(:disabled) {
+  color: var(--component-button-bg-negative-hovered);
+}
+
+/*
+ * Focused. Figma defines no focus ring. `component/button/border/focused` is
+ * the button-layer focus colour and `semantic/border/width/strong` is
+ * documented as "Focus rings, selected states", so the ring is assembled from
+ * the two tokens the system already reserves for it.
+ */
+.hds-iconBtn:focus-visible,
+.hds-iconBtn[data-status='focused'] {
+  outline: var(--semantic-border-width-strong) solid var(--component-button-border-focused);
+}
+
+/*
+ * Pressed. NOT painted, deliberately. Figma defines no pressed variant, and
+ * the token system has no `component/button/bg/negative/pressed` and no
+ * `semantic/color/bg/negative/pressed` — the only pressed token in the system
+ * is `semantic/color/bg/primary/pressed`, which is blue. Painting this would
+ * mean inventing a colour, so `:active` and data-status='pressed' are
+ * addressable and testable but render as default, exactly as `.cardImage`
+ * status='hovered' does. Reported, not guessed. There is deliberately no
+ * `:active` / [data-status='pressed'] rule below.
+ */
+
+.hds-iconBtn:disabled,
+.hds-iconBtn[data-status='disabled'] {
+  background: var(--semantic-color-bg-disabled);
+  color: var(--semantic-color-icon-disabled);
+  cursor: not-allowed;
+}
+
+/*
+ * The glyph. `material-symbols-rounded` is the vendor class that the Google
+ * Fonts stylesheet defines — the icon font family is named there, not here,
+ * because this token system has no icon font-family token (reported).
+ *
+ * Size: `core/size/icon/xs` is 16px, which is what
+ * `semantic/spacing/padding/xs` (8px, documented as "icon buttons") leaves
+ * inside the 32px box. A Material Symbols heart at that em size renders at
+ * roughly the 13px the Figma heart measures. Core layer again, same reason as
+ * the box.
+ *
+ * `overflow: clip` on a fixed box is the offline fallback: if the icon font
+ * fails to load, the ligature text is contained and the button keeps its shape
+ * instead of reflowing the card.
+ */
+.hds-iconBtn__icon {
+  display: block;
+  inline-size: var(--core-size-icon-xs);
+  block-size: var(--core-size-icon-xs);
+  font-size: var(--core-size-icon-xs);
+  line-height: 1;
+  overflow: clip;
+  pointer-events: none;
+}
+
+/* Solid heart — the only appearance Figma shows, and the default. */
+.hds-iconBtn[data-filled='true'] .hds-iconBtn__icon {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/*
+ * Outline heart — the un-favourited half of the optional toggle. Not in the
+ * Figma file; it exists so a control carrying aria-pressed does not signal its
+ * state by nothing at all. Reported.
+ */
+.hds-iconBtn[data-filled='false'] .hds-iconBtn__icon {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}

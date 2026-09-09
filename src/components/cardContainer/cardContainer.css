@@ -1,0 +1,39 @@
+/**
+ * .cardContainer — Figma 39:2065
+ *
+ * Component set: Status (default | hovered). The only difference between the
+ * two variants in Figma is the level-2 drop shadow — the background stays
+ * component/card/bg/idle. A `component/card/bg/hovered` token exists in the
+ * system but this component set does not reach for it; that is the design's
+ * call, not an omission on our side.
+ */
+
+.hds-cardContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--semantic-spacing-gap-xs);
+  border-radius: var(--component-card-radius-lg);
+  background: var(--component-card-bg-idle);
+  inline-size: 100%;
+}
+
+/*
+ * Figma effect "horizon/semantic/elevation/shadow/level2":
+ * DROP_SHADOW, offset (0, semantic/elevation/y/level2),
+ * radius semantic/elevation/blur/level2, spread 0, colour semantic/color/shadow.
+ */
+.hds-cardContainer:hover,
+.hds-cardContainer[data-status='hovered'] {
+  box-shadow: 0 var(--semantic-elevation-y-level2) var(--semantic-elevation-blur-level2)
+    var(--semantic-color-shadow);
+}
+
+.hds-cardContainer__items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--semantic-spacing-gap-xs);
+  padding: var(--semantic-spacing-padding-xs);
+  inline-size: 100%;
+}
