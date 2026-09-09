@@ -6,6 +6,8 @@
  * specimens — if a semantic colour is wrong, this page shows it.
  */
 
+import { createElement, useEffect, useRef } from 'react';
+
 const SHEET_ID = 'hds-storybook-chrome';
 
 const CHROME_CSS = `
@@ -197,9 +199,31 @@ export function tokenName(name) {
 }
 
 /** The standard page shell: heading, intro, token count, then content. */
+/**
+ * Mounts an already-built DOM node inside a React tree.
+ *
+ * The token specimens build plain DOM nodes; the Storybook renderer is React
+ * (tools.md: React 19 with Vite). Rather than rewrite nine specimen files as
+ * React, every one of them returns through `page()` below — so hosting the
+ * node here is the single seam that keeps them all working.
+ *
+ * `display: contents` keeps the wrapper out of the layout, so the specimens
+ * lay out exactly as they did under the HTML renderer.
+ */
+function DomHost({ node }) {
+  const ref = useRef(null);
+  useEffect(() => {
+    const mount = ref.current;
+    if (!mount) return undefined;
+    mount.replaceChildren(node);
+    return () => mount.replaceChildren();
+  }, [node]);
+  return createElement('div', { ref, style: { display: 'contents' } });
+}
+
 export function page({ title, intro, count, children }) {
   ensureChrome(document);
-  return el('div', { class: 'hds-page' }, [
+  const node = el('div', { class: 'hds-page' }, [
     el('h1', { class: 'hds-title', text: title }),
     intro ? el('p', { class: 'hds-intro', text: intro }) : null,
     count !== undefined
@@ -207,6 +231,7 @@ export function page({ title, intro, count, children }) {
       : null,
     ...[].concat(children),
   ]);
+  return createElement(DomHost, { node });
 }
 
 export function group(title, children, note) {

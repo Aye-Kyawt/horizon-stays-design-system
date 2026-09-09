@@ -1,0 +1,64 @@
+/**
+ * cardLayout — Figma 39:2346
+ *
+ * "Subcomponent of the card. Use to configure the orientation of the card."
+ *
+ * Auto-layout is translated, not eyeballed: the Figma frame is a flex
+ * container whose direction is the variant, carrying gap semantic/spacing/
+ * gap/xs and align items flex-start.
+ */
+
+.hds-cardLayout {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--semantic-spacing-gap-xs);
+  inline-size: 100%;
+  overflow: clip;
+}
+
+.hds-cardLayout[data-orientation='horizontal'] {
+  flex-direction: row;
+}
+
+.hds-cardLayout[data-orientation='vertical'] {
+  flex-direction: column;
+}
+
+/* Horizontal: image and text share the row, each free to shrink. */
+.hds-cardLayout[data-orientation='horizontal'] > .hds-cardImage {
+  flex: 1 0 0;
+  min-inline-size: 0;
+}
+
+/* Vertical: image spans the card, text stacks beneath it. */
+.hds-cardLayout[data-orientation='vertical'] > .hds-cardImage {
+  flex-shrink: 0;
+  inline-size: 100%;
+}
+
+.hds-cardLayout__body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--semantic-spacing-gap-xs);
+  min-inline-size: 0;
+}
+
+.hds-cardLayout[data-orientation='horizontal'] > .hds-cardLayout__body {
+  flex: 1 0 0;
+}
+
+.hds-cardLayout[data-orientation='vertical'] > .hds-cardLayout__body {
+  flex-shrink: 0;
+  inline-size: 100%;
+}
+
+/*
+ * The Figma slot is 30px tall. That height is a loose value with no variable
+ * behind it, so it is not reproduced — the slot sizes to whatever is put in
+ * it. See docs/cardContainer-design-gaps.md.
+ */
+.hds-cardLayout__slot {
+  flex-shrink: 0;
+  inline-size: 100%;
+}

@@ -1,0 +1,77 @@
+/**
+ * .cardImage — Figma 39:2193
+ *
+ * Bound in Figma, and used here:
+ *   padding  semantic/spacing/padding/xs
+ *   gap      semantic/spacing/gap/xs
+ *   radius   component/card/radius/lg
+ *   surface  semantic/color/bg/surfacePrimary
+ *
+ * NOT bound in Figma, and therefore NOT implemented (see
+ * docs/cardContainer-design-gaps.md):
+ *   status=hovered — image opacity 0.2, a black→grey gradient scrim, and a
+ *   raw #FFFFFF "overlay" style replacing the bound surface colour. All three
+ *   are loose values with no variable behind them, so `status="hovered"`
+ *   currently renders as `default` and sets data-status for testing only.
+ */
+
+.hds-cardImage {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: var(--semantic-spacing-gap-xs);
+  padding: var(--semantic-spacing-padding-xs);
+  border-radius: var(--component-card-radius-lg);
+  background: var(--semantic-color-bg-surfaceprimary);
+  overflow: clip;
+}
+
+/*
+ * Aspect ratios are the measured frame geometry of the two Figma variants,
+ * not tokens — the design system has no ratio token. Note that neither
+ * matches its variant name: "3:2" is 278x168 (~5:3) and "1:1" is 192x182.
+ * Reported rather than corrected.
+ */
+.hds-cardImage[data-ratio='3:2'] {
+  aspect-ratio: 278 / 168;
+}
+
+.hds-cardImage[data-ratio='1:1'] {
+  aspect-ratio: 192 / 182;
+}
+
+.hds-cardImage__media {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: var(--component-card-radius-lg);
+  background: var(--semantic-color-bg-surfaceprimary);
+  overflow: clip;
+}
+
+.hds-cardImage__img {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  border-radius: var(--component-card-radius-lg);
+}
+
+/*
+ * The overlay action slot. In Figma this position is held by a nested
+ * `.iconBtn` instance (39:2185) containing a `Heart`. That component is now
+ * built at src/components/iconBtn and is what the slot renders by default;
+ * `children` still overrides it.
+ *
+ * The slot positions itself with this container's own bound padding rather
+ * than the raw 8px top/right offsets the design file carries — the padding
+ * token resolves to the same 8px and is the bound value, so no raw offset is
+ * needed here.
+ */
+.hds-cardImage__overlayAction {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}

@@ -5,20 +5,24 @@
   "main": "index.js",
   "scripts": {
     "build:tokens": "node build-tokens.js",
-    "build": "npm run build:tokens",
-    "clean:tokens": "node -e \"require('fs').rmSync('build',{recursive:true,force:true})\"",
+    "lint": "tsc --noEmit",
+    "test": "vitest run",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "npm run build:tokens && storybook build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-storybook": "storybook build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "devDependencies": {
-    "@storybook/html-vite": "^10.5.10",
-    "storybook": "^10.5.10",
+    "@storybook/react-vite": "^10.6.0",
+    "@types/node": "^22.20.1",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
     "style-dictionary": "^5.5.2",
-    "vite": "^8.2.2"
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.7"
   }
 }
