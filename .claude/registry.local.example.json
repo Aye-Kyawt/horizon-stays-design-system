@@ -1,0 +1,87 @@
+{
+  "_comment": "Committed template. Copy to .claude/registry.local.json (which is gitignored) and replace every X placeholder with the real Airtable ID. Get them from the Airtable MCP server: list_bases for the baseId, list_tables_for_base for the table and field IDs. Keep the key names exactly as they appear here — skills and agent files name a column in prose and resolve it to an ID through this file.",
+  "baseId": "appXXXXXXXXXXXXXX",
+  "baseName": "Horizon-Stays-DS",
+  "baseUrl": "https://airtable.com/appXXXXXXXXXXXXXX",
+  "tables": {
+    "Components": {
+      "id": "tblXXXXXXXXXXXXXX",
+      "fields": {
+        "Components": "fldXXXXXXXXXXXXXX",
+        "Category": "fldXXXXXXXXXXXXXX",
+        "Figma": "fldXXXXXXXXXXXXXX",
+        "Staging Storybook": "fldXXXXXXXXXXXXXX",
+        "Production Storybook": "fldXXXXXXXXXXXXXX",
+        "Astro Link": "fldXXXXXXXXXXXXXX",
+        "Design": "fldXXXXXXXXXXXXXX",
+        "Development": "fldXXXXXXXXXXXXXX",
+        "Synchronization %": "fldXXXXXXXXXXXXXX",
+        "Commit": "fldXXXXXXXXXXXXXX",
+        "Last Modified": "fldXXXXXXXXXXXXXX",
+        "[Staging] Test Records": "fldXXXXXXXXXXXXXX",
+        "Staging Testing Results Summary": "fldXXXXXXXXXXXXXX",
+        "Total Staging Tests": "fldXXXXXXXXXXXXXX",
+        "Staging Passed Count": "fldXXXXXXXXXXXXXX",
+        "[Production] Test Records": "fldXXXXXXXXXXXXXX",
+        "Staging Passed Tests": "fldXXXXXXXXXXXXXX",
+        "Semantic Tokens": "fldXXXXXXXXXXXXXX",
+        "GitHub Commits": "fldXXXXXXXXXXXXXX",
+        "Composes": "fldXXXXXXXXXXXXXX",
+        "Composed Into": "fldXXXXXXXXXXXXXX",
+        "Release Review": "fldXXXXXXXXXXXXXX",
+        "Release Verdict": "fldXXXXXXXXXXXXXX"
+      }
+    },
+    "Staging Testing": {
+      "id": "tblXXXXXXXXXXXXXX",
+      "fields": {
+        "Component/Sub Component": "fldXXXXXXXXXXXXXX",
+        "Testing Results": "fldXXXXXXXXXXXXXX",
+        "Composed In": "fldXXXXXXXXXXXXXX",
+        "Variants": "fldXXXXXXXXXXXXXX",
+        "Size": "fldXXXXXXXXXXXXXX",
+        "State": "fldXXXXXXXXXXXXXX",
+        "Context": "fldXXXXXXXXXXXXXX",
+        "Attachment": "fldXXXXXXXXXXXXXX",
+        "Expected Results": "fldXXXXXXXXXXXXXX",
+        "Suggestion for Improvement": "fldXXXXXXXXXXXXXX"
+      }
+    },
+    "DS Feedback": {
+      "id": "tblXXXXXXXXXXXXXX",
+      "fields": {
+        "Feedback": "fldXXXXXXXXXXXXXX",
+        "Components": "fldXXXXXXXXXXXXXX",
+        "Submitted By": "fldXXXXXXXXXXXXXX",
+        "Step to Reproduce": "fldXXXXXXXXXXXXXX",
+        "Suggestion": "fldXXXXXXXXXXXXXX",
+        "Urgency": "fldXXXXXXXXXXXXXX",
+        "Attachment": "fldXXXXXXXXXXXXXX",
+        "Status": "fldXXXXXXXXXXXXXX"
+      }
+    },
+    "GitHub Commits": {
+      "id": "tblXXXXXXXXXXXXXX",
+      "fields": {
+        "Commit Hash": "fldXXXXXXXXXXXXXX",
+        "Message": "fldXXXXXXXXXXXXXX",
+        "Author": "fldXXXXXXXXXXXXXX",
+        "Date Committed": "fldXXXXXXXXXXXXXX",
+        "Link to Components": "fldXXXXXXXXXXXXXX",
+        "Files Changed": "fldXXXXXXXXXXXXXX",
+        "Commit URL": "fldXXXXXXXXXXXXXX",
+        "Commit Type": "fldXXXXXXXXXXXXXX"
+      }
+    },
+    "One-Off Components": {
+      "id": "tblXXXXXXXXXXXXXX",
+      "fields": {
+        "Components": "fldXXXXXXXXXXXXXX",
+        "Project": "fldXXXXXXXXXXXXXX",
+        "Usage quantity": "fldXXXXXXXXXXXXXX",
+        "Git Repo": "fldXXXXXXXXXXXXXX",
+        "Figma": "fldXXXXXXXXXXXXXX"
+      }
+    }
+  }
+}

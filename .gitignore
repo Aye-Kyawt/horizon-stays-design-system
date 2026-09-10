@@ -21,3 +21,6 @@ npm-debug.log*
 .idea/
 .DS_Store
 Thumbs.db
+
+# Airtable registry IDs — copy .claude/registry.local.example.json and fill in real IDs
+.claude/registry.local.json
