@@ -86,8 +86,10 @@ export const parameters = {
         'Sizing',
         'Borders',
         'Elevation',
-        'Components',
+        'Component tokens',
         'All tokens',
+        // The built components, after the token specimens they are made of.
+        'Components',
       ],
     },
   },
