@@ -2,7 +2,14 @@ import { byCategory } from './lib/tokens.js';
 import { el, group, page, shortDesc, tokenName } from './lib/ui.js';
 
 export default {
-  title: 'Components',
+  // 'Component tokens', not 'Components'. This file documents the
+  // --component-* token layer; src/components/**/*.stories.tsx documents the
+  // real components, and `Components/Button` is now one of them. Sharing the
+  // 'Components' root put a leaf and a folder both named Button side by side
+  // in the sidebar. The new title also matches the per-page titles below
+  // ('Button tokens', 'Input tokens', 'Card tokens') and keeps this file at
+  // the same flat level as the other token specimens (Colour, Borders, ...).
+  title: 'Component tokens',
 };
 
 /** Every component token, with what it aliases and where it lands. */

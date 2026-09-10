@@ -1,0 +1,283 @@
+/**
+ * .Button — Figma 31:140, a 15-cell component set (Type x Status).
+ *
+ * Type   : Fill | outline | transparent
+ * Status : default | hovered | focus | disabled | error
+ *
+ * There is no size axis, no loading state and no pressed state in the node.
+ * None is invented here.
+ *
+ * ---------------------------------------------------------------------------
+ * Stand-ins for tokens the design uses but the local build does not carry
+ * ---------------------------------------------------------------------------
+ * Three variables are bound in Figma and absent from build/css/web.css. Their
+ * exact values DO exist in this system, as core primitives — so the colours
+ * below are read off the design, not chosen. Each stand-in names the semantic
+ * token that should replace it once tokens/token.json is re-exported. Deleting
+ * this block and pointing the three usages at the real names is the whole fix.
+ *
+ *   --hds-button-c-action-hover   semantic/color/text/action hover #235d93
+ *   --hds-button-c-border-hover   semantic/color/border/on hover  #17307b
+ *   --hds-button-c-icon-hover     semantic/color/icon/hover       #1b4a8f
+ *
+ * A fourth is different in kind — not missing but DRIFTED, and it is the one
+ * worth a designer's attention:
+ *
+ *   --hds-button-c-icon-disabled  semantic/color/icon/disabled    #8a94a6
+ *
+ * That token exists locally and resolves to #a9b3c0 (core neutral-500), while
+ * Figma's variable of the same name reads #8a94a6 — which is core neutral-600,
+ * exactly what text/disabled resolves to here. So in the design the disabled
+ * label, icon and border are one grey; in the local build the icon and border
+ * would come out a step lighter than the label. Figma is the source of truth,
+ * so the design's value is used and the drift is reported. Point this at
+ * --semantic-color-icon-disabled once the export is reconciled.
+ *
+ * A fifth name, `semantic/color/text/on-action` (the Fill label, #ffffff), is
+ * also absent locally — but it does NOT get a stand-in, and the reason is
+ * worth writing down because the obvious reading is backwards.
+ *
+ * The tempting move is to pin the Fill foreground to white, since that is what
+ * Figma shows and since --component-button-text-primary (-> text/onprimary ->
+ * text/inverse, web.css:1047 -> :1216) flips to near-black under
+ * [data-theme="dark"]. But bg/primary flips too, blue-700 -> blue-400, and on
+ * that lighter fill the numbers come out:
+ *
+ *   dark   #ffffff on #60a5fa   2.54:1   fails WCAG AA
+ *   dark   #1b2733 on #60a5fa   5.97:1   passes
+ *   light  #ffffff on #1d4ed8   6.70:1   passes
+ *
+ * So the flip is the token system working correctly — a light primary button
+ * with dark type in dark mode — not a trap to route around. Pinning white
+ * would have shipped a 2.54:1 button. The existing tokens are used instead:
+ * they are #ffffff in light, exactly matching the node, and stay legible in
+ * dark. Figma's `text/on-action` is a light-theme-only name for the same role.
+ */
+
+.hds-button {
+  --hds-button-c-action-hover: var(--core-color-sky-700);
+  --hds-button-c-border-hover: var(--core-color-blue-900);
+  --hds-button-c-icon-hover: var(--core-color-navy-600);
+  --hds-button-c-icon-disabled: var(--core-color-neutral-600);
+
+  /* Painted per cell further down; these are the transparent-type defaults. */
+  --hds-button-bg: transparent;
+  --hds-button-border-color: transparent;
+  --hds-button-border-width: var(--semantic-border-width-none);
+  --hds-button-label-color: var(--semantic-color-icon-primary);
+  --hds-button-icon-color: var(--semantic-color-icon-primary);
+
+  /*
+   * Focus ring offset. The ring is a detached outer ring (31:181), not the
+   * button's own border, and `inset` on this pseudo-element resolves against
+   * the PADDING box — so the offset has to absorb the border width to land the
+   * ring the same 3px outside the painted edge in every cell:
+   *   Fill / outline  1px border, Figma inset -4  ->  209x48 around 203x42
+   *   transparent     no border,  Figma inset -3  ->  207x46 around 201x40
+   * Both are a 3px gap; only the border makes the numbers differ.
+   */
+  --hds-button-ring-inset: calc(-1 * var(--core-spacing-4));
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  gap: var(--component-button-gap-md);
+  padding-inline: var(--component-button-padding-x-sm);
+
+  /*
+   * padding-y is 10px and UNBOUND in Figma — the padding scale is xs=8, sm=12
+   * and neither is 10, so there is nothing to resolve to. It is composed from
+   * two real steps rather than rounded to 8 or 12, because rounding would
+   * change the button's height and break the 203x42 / 201x40 the node
+   * measures. Open design question: the scale needs a 10 step, or the button
+   * needs a padding that exists.
+   *
+   * There is deliberately NO `height` here. --component-button-height-md is
+   * 44px (it aliases --core-size-control-md, web.css:279 -> :139) but the
+   * Figma button is 40px tall. Setting it would contradict the node. Height is
+   * left to fall out of 10 + 20 + 10 (+ 1 + 1 of border on Fill/outline),
+   * which lands on exactly 42 and 40. The 44-vs-40 conflict is reported.
+   */
+  padding-block: calc(var(--core-spacing-8) + var(--core-spacing-2));
+
+  border-radius: var(--component-button-radius-md);
+  border-style: solid;
+  border-width: var(--hds-button-border-width);
+  border-color: var(--hds-button-border-color);
+  background: var(--hds-button-bg);
+  color: var(--hds-button-label-color);
+
+  /*
+   * Label/Large: Inter 14/20, weight 500, tracking 0.1.
+   * The weight comes from --core-type-fontweight-label-lg, a core token, and
+   * that is the correct resolution rather than a shortcut: the --label-large-*
+   * set has no font-weight member at all, and Figma binds the weight straight
+   * to core/type/fontWeight/label/lg. There is no semantic layer to skip.
+   * --semantic-type-latin-button-* is deliberately NOT used: it aliases
+   * core-type-fontweight-label-semibold-lg, one step heavier than the design.
+   */
+  font-family: var(--label-large-font-family), sans-serif;
+  font-size: var(--label-large-font-size);
+  line-height: var(--label-large-line-height);
+  letter-spacing: var(--label-large-letter-spacing);
+  font-weight: var(--core-type-fontweight-label-lg);
+
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  white-space: nowrap;
+}
+
+/* The icon slots. 16x16 is the instance box; the glyph inside is the vendored
+   Simple Design System `Info`, coloured from its own token because hovered
+   outline/transparent paints icon and label DIFFERENTLY (icon/hover #1b4a8f
+   against text/action hover #235d93). One shared colour would be wrong. */
+.hds-button__icon {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  color: var(--hds-button-icon-color);
+}
+
+.hds-button__label {
+  flex: none;
+}
+
+/* ===========================================================================
+   Type = Fill
+   =========================================================================== */
+
+.hds-button[data-type='Fill'] {
+  --hds-button-border-width: var(--semantic-border-width-base);
+  --hds-button-bg: var(--semantic-color-bg-primary);
+  --hds-button-border-color: var(--semantic-color-border-primary-focused);
+  --hds-button-label-color: var(--component-button-text-primary);
+  --hds-button-icon-color: var(--semantic-color-icon-inverse);
+}
+
+.hds-button[data-type='Fill'][data-status='hovered'] {
+  --hds-button-bg: var(--semantic-color-bg-primary-hovered);
+}
+
+/* focus keeps the default fill; the ring is what changes. */
+
+.hds-button[data-type='Fill'][data-status='disabled'] {
+  --hds-button-bg: var(--semantic-color-bg-disabled);
+  --hds-button-border-color: var(--hds-button-c-icon-disabled);
+  --hds-button-label-color: var(--semantic-color-text-disabled);
+  --hds-button-icon-color: var(--hds-button-c-icon-disabled);
+}
+
+.hds-button[data-type='Fill'][data-status='error'] {
+  --hds-button-bg: var(--semantic-color-bg-negative);
+  --hds-button-border-color: var(--semantic-color-icon-negative);
+}
+
+/* ===========================================================================
+   Type = outline
+   =========================================================================== */
+
+.hds-button[data-type='outline'] {
+  --hds-button-border-width: var(--semantic-border-width-base);
+  --hds-button-bg: var(--semantic-color-bg-surfaceprimary);
+  --hds-button-border-color: var(--semantic-color-border-primary-focused);
+}
+
+.hds-button[data-type='outline'][data-status='hovered'] {
+  --hds-button-border-color: var(--hds-button-c-border-hover);
+}
+
+.hds-button[data-type='outline'][data-status='disabled'] {
+  --hds-button-border-color: var(--hds-button-c-icon-disabled);
+}
+
+.hds-button[data-type='outline'][data-status='error'] {
+  --hds-button-border-color: var(--semantic-color-icon-negative);
+}
+
+/* ===========================================================================
+   Type = transparent — no fill, no border. The base block already is that.
+   =========================================================================== */
+
+.hds-button[data-type='transparent'] {
+  --hds-button-ring-inset: calc(var(--semantic-border-width-base) - var(--core-spacing-4));
+}
+
+/* ===========================================================================
+   Foreground ladder shared by outline and transparent
+   =========================================================================== */
+
+.hds-button[data-type='outline'][data-status='hovered'],
+.hds-button[data-type='transparent'][data-status='hovered'] {
+  --hds-button-label-color: var(--hds-button-c-action-hover);
+  --hds-button-icon-color: var(--hds-button-c-icon-hover);
+}
+
+.hds-button[data-type='outline'][data-status='disabled'],
+.hds-button[data-type='transparent'][data-status='disabled'] {
+  --hds-button-label-color: var(--semantic-color-text-disabled);
+  --hds-button-icon-color: var(--hds-button-c-icon-disabled);
+}
+
+.hds-button[data-type='outline'][data-status='error'],
+.hds-button[data-type='transparent'][data-status='error'] {
+  --hds-button-label-color: var(--semantic-color-text-negative);
+  --hds-button-icon-color: var(--semantic-color-icon-negative);
+}
+
+/* ===========================================================================
+   The focus ring — node 31:181 / 31:245 / 32:304
+   ===========================================================================
+   A detached ring outside the button, radius 12 against the button's 8, drawn
+   as a pseudo-element rather than `outline` on purpose: `outline-offset`
+   derives its radius from the element (8 + 3 = 11), and the design says 12.
+   Only the ring's colour and radius are bound in Figma; its 1px width is a raw
+   value there and lands on --semantic-border-width-base, which is that 1px.
+   Ring offset itself is unbound — see --hds-button-ring-inset above. */
+
+.hds-button[data-status='focus']::after,
+.hds-button:focus-visible::after {
+  content: '';
+  position: absolute;
+  inset: var(--hds-button-ring-inset);
+  border: var(--semantic-border-width-base) solid var(--semantic-color-border-primary-focused);
+  border-radius: var(--component-card-radius-lg);
+  pointer-events: none;
+}
+
+/* The ring is the whole focus affordance; the UA outline would double it. */
+.hds-button:focus-visible {
+  outline: none;
+}
+
+/* ===========================================================================
+   Live interaction
+   ===========================================================================
+   Figma models these as variants, so a consumer pinning status='hovered' gets
+   the hovered cell. A consumer leaving status='default' — the normal case —
+   should still get a real hover, so :hover repaints the default cell only.
+   error and disabled keep their own paint under the cursor, because the node
+   defines no error-hovered or disabled-hovered cell and inventing one is not
+   this component's call. :focus-visible above is deliberately NOT scoped that
+   way: focus must be visible whatever the status. */
+
+.hds-button[data-status='default'][data-type='Fill']:hover:not(:disabled) {
+  --hds-button-bg: var(--semantic-color-bg-primary-hovered);
+}
+
+.hds-button[data-status='default'][data-type='outline']:hover:not(:disabled) {
+  --hds-button-border-color: var(--hds-button-c-border-hover);
+}
+
+.hds-button[data-status='default'][data-type='outline']:hover:not(:disabled),
+.hds-button[data-status='default'][data-type='transparent']:hover:not(:disabled) {
+  --hds-button-label-color: var(--hds-button-c-action-hover);
+  --hds-button-icon-color: var(--hds-button-c-icon-hover);
+}
+
+.hds-button:disabled {
+  cursor: not-allowed;
+}
