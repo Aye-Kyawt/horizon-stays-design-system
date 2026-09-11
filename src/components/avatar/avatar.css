@@ -1,0 +1,155 @@
+/**
+ * .avatar — Figma node 54:9211.
+ *
+ * Every colour, radius, space and font value here resolves to a token that
+ * exists in build/css/web.css. The one number the design leaves unbound is the
+ * box itself, and it is composed rather than hardcoded — see below.
+ *
+ * THE 30x30 BOX. All three variants are 30x30 in Figma and NOTHING binds that
+ * 30. `get_variable_defs` on 54:9211, 54:9215 and 54:9218 returns eight
+ * variables and not one of them is a size; the token file has no
+ * `semantic/size/*` layer at all, and `core/size/*` ramps 12/16/20/24/32/40
+ * for icons and 36/44/52 for controls — 30 is on neither. So it is built the
+ * way the node builds it, out of the parts that ARE bound:
+ *
+ *     8  component/button/padding/y/sm   (bound on Frame 2, 54:9215)
+ *  +  14  the User glyph box             (unbound — see below)
+ *  +   8  component/button/padding/y/sm
+ *  = 30
+ *
+ * That is the `generic icon` variant's own auto-layout, read off the node: the
+ * glyph sits at (8,8) at 14x14 inside a 30x30 frame. Deriving the box from the
+ * padding token means a change to that token moves the avatar with it, which a
+ * literal 30 would not.
+ *
+ * The 14 is itself unbound in Figma. It is composed from two real core steps —
+ * icon/2xs (12) + spacing/2 (2) — rather than rounded to 12 or 16, on the same
+ * reasoning `Button.css` gives for its unbound 10px padding: rounding would
+ * change the rendered box and break the 30x30 the node measures. Open design
+ * question: the avatar needs a size token, or the icon ramp needs a 14 step.
+ *
+ * THE INITIAL-NAME PADDING. 54:9218 carries px:3 / py:5, both raw and both off
+ * the spacing scale (2, 4, 8, 12, ...). Neither is reproduced and neither is
+ * guessed onto a nearby step. The box is already 30x30 and the 20px line box
+ * is centred in it, which puts the text at y 5..25 — exactly where py:3 puts
+ * it — so the value falls out of the box model instead of being invented.
+ * Reported in docs/avatar-naming.md.
+ *
+ * THE RADIUS PAIR. The variant root binds `semantic/border/radius/full` (9999)
+ * while the inner frame binds `semantic/border/radius/xl` (16). Both are kept
+ * as the node has them. On a 30px box CSS clamps a 16 radius to 15 (the corner
+ * radii would otherwise sum past the side), so the frame renders as a true
+ * circle — which is what the node's own screenshot shows. The two tokens
+ * disagreeing on one component is a design inconsistency, not a code one.
+ *
+ * box-sizing is set explicitly rather than relied upon: this build has no
+ * global border-box reset, which is what inflated `.cardImage` and
+ * `.cardContainer` past their nodes in QA's staging pass.
+ */
+
+.hds-avatar {
+  /*
+   * The node's 14px glyph box and the 30px frame it implies. Declared on the
+   * root so both live in one place and every variant is the same size.
+   */
+  --hds-avatar-glyph-size: calc(var(--core-size-icon-2xs) + var(--core-spacing-2));
+  --hds-avatar-size: calc(
+    var(--component-button-padding-y-sm) * 2 + var(--hds-avatar-glyph-size)
+  );
+
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  inline-size: var(--hds-avatar-size);
+  block-size: var(--hds-avatar-size);
+  border-radius: var(--semantic-border-radius-full);
+}
+
+.hds-avatar *,
+.hds-avatar *::before,
+.hds-avatar *::after {
+  box-sizing: border-box;
+}
+
+/* ---- Status=avatar (54:9212) ----------------------------------------
+ * An `Ellipse` 54:9213 filling the frame, with an image fill and a
+ * `semantic/color/bg/surfacePrimary` ground behind it. No border, no inner
+ * frame — the circle IS the shape, which is why this variant alone keeps
+ * radius/full as its visible corner rather than radius/xl.
+ */
+
+.hds-avatar[data-status='avatar'] {
+  background-color: var(--semantic-color-bg-surfaceprimary);
+  overflow: hidden;
+}
+
+.hds-avatar__photo {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  border-radius: var(--semantic-border-radius-full);
+  overflow: hidden;
+}
+
+.hds-avatar__img {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+}
+
+/* ---- the inner frame, shared by the two drawn variants ----------------
+ * `Frame 2` 54:9215 and its twin 54:9218: primary/subtle fill, a 1px
+ * border/strong edge, radius/xl.
+ */
+
+.hds-avatar__frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--semantic-spacing-gap-xs);
+  inline-size: 100%;
+  block-size: 100%;
+  border-radius: var(--semantic-border-radius-xl);
+  border-width: var(--semantic-border-width-base);
+  border-style: solid;
+  border-color: var(--semantic-color-border-strong);
+  background-color: var(--semantic-color-bg-primary-subtle);
+  color: var(--semantic-color-icon-primary);
+}
+
+/* ---- Status=generic icon (54:9214) -----------------------------------
+ * The padding the node binds. With border-box the 30px frame's content box is
+ * 12px, so the 14px glyph overflows it by 1px a side and centres at exactly
+ * (8, 8) — the position 54:9216 actually sits at.
+ */
+
+.hds-avatar[data-status='generic icon'] .hds-avatar__frame {
+  padding: var(--component-button-padding-y-sm);
+}
+
+.hds-avatar__glyph {
+  flex: 0 0 auto;
+  inline-size: var(--hds-avatar-glyph-size);
+  block-size: var(--hds-avatar-glyph-size);
+}
+
+/* ---- Status=initial name (54:9217) -----------------------------------
+ * Body/Medium Semibold, 14/20 with 0.25 tracking. The colour the node binds is
+ * `semantic/color/icon/primary` — an icon token on a text layer. That is what
+ * 54:9219 reads, so it is what is used; the mismatch is reported rather than
+ * silently swapped for a text token.
+ */
+
+.hds-avatar__initials {
+  font-family: var(--body-medium-semibold-font-family), sans-serif;
+  font-size: var(--body-medium-semibold-font-size);
+  font-weight: var(--body-medium-semibold-font-weight);
+  line-height: var(--body-medium-semibold-line-height);
+  letter-spacing: var(--body-medium-semibold-letter-spacing);
+  color: var(--semantic-color-icon-primary);
+  text-align: center;
+  white-space: nowrap;
+}
