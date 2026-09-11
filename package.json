@@ -8,7 +8,8 @@
     "lint": "tsc --noEmit",
     "test": "vitest run",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "registry:init": "node scripts/registry-init.mjs"
   },
   "keywords": [],
   "author": "",

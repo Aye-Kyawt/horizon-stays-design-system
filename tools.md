@@ -17,6 +17,7 @@ Stack facts and commands only. Rules about how we work live in 'CLAUDE.md'.
 | Job | Command |
 |---|---|
 |Install | `npm install` |
+|Resolve registry IDs | `AIRTABLE_PAT=pat... npm run registry:init` |
 |Build tokens | `npm run build:tokens` |
 |Run Storybook | `npm run storybook` |
 |Build Storybook | `npm run build-storybook` |

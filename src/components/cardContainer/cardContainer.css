@@ -29,7 +29,14 @@
     var(--semantic-color-shadow);
 }
 
+/*
+ * box-sizing is set here rather than assumed: this build has no global
+ * border-box reset. Without it `inline-size: 100%` resolves against the
+ * content box and the padding is then added on top, so the items column
+ * rendered 394px inside a 378px card and spilled past the rounded surface.
+ */
 .hds-cardContainer__items {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
