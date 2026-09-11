@@ -1,0 +1,130 @@
+/**
+ * .spinner — Figma node 84:33.
+ *
+ * Two colours, and both are bound in the node itself. `get_variable_defs` on
+ * 84:33 returns exactly two variables and no more:
+ *
+ *   semantic/color/bg/surfaceSecondary  #f1f4f7  ->  Track
+ *   semantic/color/bg/primary           #1d4ed8  ->  Arc
+ *
+ * Both resolve in build/css/web.css, in the light block and the dark one, so
+ * neither is substituted or guessed.
+ *
+ * The box size is the one value the design leaves unbound but which this
+ * system can still carry honestly: 16 / 24 / 40 are the exact values of
+ * core/size/icon/xs, /md and /xl. Those are core rather than semantic tokens
+ * because this token system has no semantic/size/* layer at all — the size
+ * category stops at core, which iconBtn.css established and chip.css follows.
+ *
+ * The ring thickness is NOT here. It is per-size vector geometry that Figma
+ * binds to nothing, so it lives with the rest of the vector in spinner.tsx —
+ * see the table in that file's header.
+ *
+ * box-sizing is set explicitly rather than relied upon: this build has no
+ * global border-box reset, which is what inflated .cardImage and
+ * .cardContainer past their nodes in QA's staging pass.
+ */
+
+.hds-spinner {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  line-height: 0;
+
+  /*
+   * DESIGN GAP — duration and easing are unbound.
+   *
+   * The node's description says "Three sizes rotate in prototype for motion",
+   * so the rotation is design intent, but the prototype exposes no keyframes
+   * (get_motion_context on 84:33 returns an empty node list) and the token
+   * export contains no motion, duration or easing collection to bind to.
+   *
+   * A spinner that does not spin is a broken component, so the rotation is
+   * implemented — but the two invented numbers are quarantined on these two
+   * custom properties rather than spread through the file, so that when a
+   * motion token lands there is exactly one line to change. Reported, not
+   * silently absorbed.
+   */
+  --hds-spinner-duration: 1s;
+  --hds-spinner-timing: linear;
+}
+
+.hds-spinner,
+.hds-spinner *,
+.hds-spinner *::before,
+.hds-spinner *::after {
+  box-sizing: border-box;
+}
+
+/* Size=sm — 84:27, 16 square */
+.hds-spinner[data-size='sm'] {
+  inline-size: var(--core-size-icon-xs);
+  block-size: var(--core-size-icon-xs);
+}
+
+/* Size=md — 84:29, 24 square */
+.hds-spinner[data-size='md'] {
+  inline-size: var(--core-size-icon-md);
+  block-size: var(--core-size-icon-md);
+}
+
+/* Size=lg — 84:31, 40 square */
+.hds-spinner[data-size='lg'] {
+  inline-size: var(--core-size-icon-xl);
+  block-size: var(--core-size-icon-xl);
+}
+
+.hds-spinner__svg {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  animation-name: hds-spinner-rotate;
+  animation-duration: var(--hds-spinner-duration);
+  animation-timing-function: var(--hds-spinner-timing);
+  animation-iteration-count: infinite;
+}
+
+/*
+ * Both rings are stroked, not filled. The node draws them as filled donuts;
+ * a stroke of the same width on the mid-radius circle is the same shape, and
+ * keeps the arc's 270 degrees expressible as a dash rather than a hand-built
+ * path per size. Butt caps are the export's own flat ends.
+ */
+.hds-spinner__track,
+.hds-spinner__arc {
+  fill: none;
+  stroke-linecap: butt;
+}
+
+/* Track — semantic/color/bg/surfaceSecondary */
+.hds-spinner__track {
+  stroke: var(--semantic-color-bg-surfacesecondary);
+}
+
+/* Arc — semantic/color/bg/primary */
+.hds-spinner__arc {
+  stroke: var(--semantic-color-bg-primary);
+}
+
+/*
+ * Reduced motion slows the rotation rather than stopping it. A frozen spinner
+ * claims the page has finished loading when it has not, so the affordance is
+ * kept and the speed is what gives way.
+ */
+@media (prefers-reduced-motion: reduce) {
+  .hds-spinner {
+    --hds-spinner-duration: 3s;
+  }
+}
+
+@keyframes hds-spinner-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
