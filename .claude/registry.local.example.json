@@ -1,5 +1,5 @@
 {
-  "_comment": "Committed template. Copy to .claude/registry.local.json (which is gitignored) and replace every X placeholder with the real Airtable ID. Get them from the Airtable MCP server: list_bases for the baseId, list_tables_for_base for the table and field IDs. Keep the key names exactly as they appear here — skills and agent files name a column in prose and resolve it to an ID through this file.",
+  "_comment": "Committed template. This file is the contract of NAMES — which tables the registry has, and which columns each one carries. The X placeholders are shape only; nothing reads them. Run `npm run registry:init` to resolve every name here against the live base and write .claude/registry.local.json, which is gitignored. Real IDs must never be committed to this file: the repo is public, git history is permanent, and the whole point of the split is that IDs exist in exactly one place, so a renamed or rebuilt base is a one-file fix. Keep the key names exactly as they appear here — skills and agent files name a column in prose and resolve it to an ID through the generated file, and a name that drifts from Airtable makes registry:init refuse rather than write a half-resolved file.",
   "baseId": "appXXXXXXXXXXXXXX",
   "baseName": "Horizon-Stays-DS",
   "baseUrl": "https://airtable.com/appXXXXXXXXXXXXXX",

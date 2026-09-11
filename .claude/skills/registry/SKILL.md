@@ -16,9 +16,23 @@ columns are, who owns each one, and where the base does not do what it says it d
 ## Resolving IDs
 
 **This file names no base, table, or field ID, and neither does any agent file.** IDs live in
-`.claude/registry.local.json`, which is gitignored. Copy `.claude/registry.local.example.json`
-to that path and fill it in once, from the Airtable MCP server (`list_bases` for the base,
-`list_tables_for_base` for tables and fields).
+`.claude/registry.local.json`, which is gitignored. Generate it:
+
+```
+AIRTABLE_PAT=pat... npm run registry:init
+```
+
+That resolves every name in `.claude/registry.local.example.json` — the committed template, which
+holds names and placeholder IDs only — against the live base, and writes the real IDs to the
+gitignored file. Add `-- --force` to overwrite an existing one. The token needs the
+`schema.bases:read` scope; make one at https://airtable.com/create/tokens and do not commit it.
+
+If a name in the template no longer matches the base, the script **refuses and writes nothing**,
+naming the table or column that drifted. That is deliberate: a half-resolved file would fail later,
+at a write, on whichever column happened to be missing.
+
+**Never put a real ID in `registry.local.example.json`.** It is tracked, the repo is public, and
+git history is permanent.
 
 Every column below is named the way it is named in Airtable. To act on one, look the name up in
 the local file and use the ID it gives you:
