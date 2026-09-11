@@ -24,3 +24,8 @@ Thumbs.db
 
 # Airtable registry IDs — copy .claude/registry.local.example.json and fill in real IDs
 .claude/registry.local.json
+
+# Agent isolation worktrees — full checkouts created under the repo when a
+# subagent builds a component in isolation. Their work is collected onto a
+# branch and merged; the checkouts themselves are scratch.
+.claude/worktrees/
