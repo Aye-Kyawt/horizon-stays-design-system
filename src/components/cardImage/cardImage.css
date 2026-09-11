@@ -15,7 +15,15 @@
  *   currently renders as `default` and sets data-status for testing only.
  */
 
+/*
+ * box-sizing is set here rather than assumed: this build has no global
+ * border-box reset. Without it `aspect-ratio` applies to the content box and
+ * the 8px padding is added afterwards, so the 3:2 variant rendered 174.33px
+ * tall against the node's 168. The ratios below were always correct; the box
+ * they were measured against was not.
+ */
 .hds-cardImage {
+  box-sizing: border-box;
   position: relative;
   display: flex;
   align-items: flex-start;
