@@ -1,0 +1,100 @@
+/**
+ * .progressBar — Figma node 84:26.
+ *
+ * Every colour, space and type value resolves to a semantic token. One value
+ * sits on the core layer and is called out where it is used: the 8px track
+ * height. Figma has a raw 8px there and this token system has no
+ * `semantic/size/*` layer at all — the size category stops at core, which
+ * iconBtn.css already established and documented. Reported as a system gap
+ * rather than papered over with a raw px.
+ *
+ * box-sizing is set explicitly rather than relied upon: this build has no
+ * global border-box reset, which is what inflated .cardImage and
+ * .cardContainer past their nodes in QA's staging pass. A track with a
+ * percentage-width fill inside it is exactly the shape that breaks that way.
+ */
+
+.hds-progressBar {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--semantic-spacing-gap-2xs);
+  inline-size: 100%;
+}
+
+.hds-progressBar *,
+.hds-progressBar *::before,
+.hds-progressBar *::after {
+  box-sizing: border-box;
+}
+
+/* Meta row (84:3) — Body/Small, label flexes, value hugs. */
+.hds-progressBar__meta {
+  display: flex;
+  align-items: flex-start;
+  inline-size: 100%;
+  overflow: clip;
+
+  font-family: var(--body-small-font-family), sans-serif;
+  font-size: var(--body-small-font-size);
+  font-weight: var(--body-small-font-weight);
+  line-height: var(--body-small-line-height);
+  letter-spacing: var(--body-small-letter-spacing);
+}
+
+/*
+ * `min-inline-size: 0` is the flexbox min-size guard that lets a long label
+ * shrink and wrap instead of forcing the row wider. Figma's export writes it
+ * as `min-w-px`; 1px there is an arbitrary non-zero, not a design value, and
+ * 0 is both the correct guard and free of a raw length.
+ */
+.hds-progressBar__label {
+  flex: 1 0 0;
+  min-inline-size: 0;
+  word-break: break-word;
+  color: var(--semantic-color-text-secondary);
+}
+
+.hds-progressBar__value {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  color: var(--semantic-color-text-subtle);
+}
+
+/*
+ * Track (84:6). `overflow: clip` is the node's own setting and is what keeps
+ * the fill's rounded end inside the track at low percentages.
+ * core layer on the height — see the note above.
+ */
+.hds-progressBar__track {
+  display: flex;
+  align-items: flex-start;
+  inline-size: 100%;
+  block-size: var(--core-spacing-8);
+  border-radius: var(--semantic-border-radius-full);
+  background-color: var(--semantic-color-bg-surfacesecondary);
+  overflow: clip;
+}
+
+/*
+ * Fill (84:7). Width is set inline from the value prop — it is data, not
+ * styling, and the node sets it by resizing the layer.
+ */
+.hds-progressBar__fill {
+  block-size: 100%;
+  border-radius: var(--semantic-border-radius-full);
+  background-color: var(--semantic-color-bg-primary);
+}
+
+.hds-progressBar[data-tone='positive'] .hds-progressBar__fill {
+  background-color: var(--semantic-color-bg-positive);
+}
+
+.hds-progressBar[data-tone='negative'] .hds-progressBar__fill {
+  background-color: var(--semantic-color-bg-negative);
+}
+
+.hds-progressBar[data-tone='warning'] .hds-progressBar__fill {
+  background-color: var(--semantic-color-bg-warning);
+}
