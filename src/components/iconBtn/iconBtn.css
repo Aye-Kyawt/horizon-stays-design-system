@@ -51,9 +51,17 @@
  * its bound background and only the heart darkens, onto the exact systematic
  * sibling of the token the heart is bound to.
  */
+/*
+ * Hovered. The node does NOT change the heart's colour on hover — it keeps
+ * `component/button/bg/negative/idle` and adds `elevation/shadow/level3`.
+ * This previously did the opposite: swapped the colour to the hovered token
+ * and painted no shadow, which QA failed against node 39:2284. All three
+ * shadow tokens generate correctly, so the fix is a straight substitution.
+ */
 .hds-iconBtn:hover:not(:disabled),
 .hds-iconBtn[data-status='hovered']:not(:disabled) {
-  color: var(--component-button-bg-negative-hovered);
+  box-shadow: 0 var(--semantic-elevation-y-level3) var(--semantic-elevation-blur-level3)
+    var(--semantic-color-shadow);
 }
 
 /*
