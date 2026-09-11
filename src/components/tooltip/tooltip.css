@@ -1,0 +1,115 @@
+/**
+ * .tooltip — Figma node 74:20.
+ *
+ * Every value resolves to a token. Two deliberate landings on `core/*`, both
+ * for the same reason `chip.css` and `iconBtn.css` already recorded: this
+ * token system has no `semantic/size/*` layer, so artwork geometry that is not
+ * spacing has nowhere semantic to land.
+ *
+ *   - the arrow's 8 x 4 box (top/bottom) and 4 x 8 box (left/right) are the
+ *     vector's own frame as the node reports it, not a spacing decision, so
+ *     they use `core/spacing/8` and `core/spacing/4`.
+ *
+ * The arrow's fill is the one value the node does not hand over bound. The
+ * Figma SVG export bakes it as #0F2F6B, which is exactly what
+ * `semantic/color/bg/inverse` resolves to — the bubble's own background. It is
+ * bound to that token here rather than reproduced as a hex, and reported as
+ * unbound-in-Figma rather than passed over in silence.
+ *
+ * box-sizing is set explicitly rather than relied upon: this build has no
+ * global border-box reset, which is what inflated `.cardImage` and
+ * `.cardContainer` past their nodes in QA's staging pass.
+ */
+
+.hds-tooltip {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  /* Placement=top (74:2) — bubble, then arrow beneath it. */
+  flex-direction: column;
+}
+
+.hds-tooltip *,
+.hds-tooltip *::before,
+.hds-tooltip *::after {
+  box-sizing: border-box;
+}
+
+/*
+ * The four cells. DOM order is always bubble-then-arrow; the axis does the
+ * flipping, so the label is read first whatever the placement.
+ */
+
+/* Placement=bottom (74:8) — arrow above the bubble. */
+.hds-tooltip[data-placement='bottom'] {
+  flex-direction: column-reverse;
+}
+
+/* Placement=left (74:12) — arrow to the right of the bubble. */
+.hds-tooltip[data-placement='left'] {
+  flex-direction: row;
+}
+
+/* Placement=right (74:16) — arrow to the left of the bubble. */
+.hds-tooltip[data-placement='right'] {
+  flex-direction: row-reverse;
+}
+
+/*
+ * The bubble (74:3). 12 inline / 8 block padding, 4 radius, navy ground.
+ * `overflow: hidden` is the node's own `overflow-clip` — the arrow is a
+ * sibling, not a child, so nothing of it is lost to the clip.
+ */
+.hds-tooltip__bubble {
+  display: flex;
+  align-items: flex-start;
+  flex: 0 0 auto;
+  overflow: hidden;
+  padding-inline: var(--semantic-spacing-padding-sm);
+  padding-block: var(--semantic-spacing-padding-xs);
+  border-radius: var(--semantic-border-radius-sm);
+  background-color: var(--semantic-color-bg-inverse);
+}
+
+/* The label (74:6). Body/Small, the type style the node binds. */
+.hds-tooltip__label {
+  margin: 0;
+  flex: 0 0 auto;
+  font-family: var(--body-small-font-family), sans-serif;
+  font-size: var(--body-small-font-size);
+  font-weight: var(--body-small-font-weight);
+  line-height: var(--body-small-line-height);
+  letter-spacing: var(--body-small-letter-spacing);
+  font-style: normal;
+  color: var(--semantic-color-text-inverse);
+  white-space: nowrap;
+  word-break: break-word;
+}
+
+/*
+ * The arrow (74:7 / 74:11 / 74:15 / 74:19). Flush against the bubble — the
+ * node puts the vector's edge exactly on the bubble's, with no gap — and
+ * centred on the bubble's long side, which the flex `align-items: center`
+ * above already does (the node reads x=42.5 on a 93-wide bubble, dead centre).
+ *
+ * `currentColor` on the path means this one declaration colours all four.
+ */
+.hds-tooltip__arrow {
+  display: block;
+  flex: 0 0 auto;
+  color: var(--semantic-color-bg-inverse);
+}
+
+/* top / bottom: the arrow lies down — 8 across, 4 deep. */
+.hds-tooltip[data-placement='top'] .hds-tooltip__arrow,
+.hds-tooltip[data-placement='bottom'] .hds-tooltip__arrow {
+  inline-size: var(--core-spacing-8);
+  block-size: var(--core-spacing-4);
+}
+
+/* left / right: it stands up — 4 across, 8 deep. */
+.hds-tooltip[data-placement='left'] .hds-tooltip__arrow,
+.hds-tooltip[data-placement='right'] .hds-tooltip__arrow {
+  inline-size: var(--core-spacing-4);
+  block-size: var(--core-spacing-8);
+}
