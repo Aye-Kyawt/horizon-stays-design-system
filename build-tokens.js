@@ -18,12 +18,13 @@
  * Component and effect tokens are not repeated in the dark block: they
  * reference semantic colours via var(), so they follow the override for free.
  *
- * Style Dictionary v5 is ESM-only, so it is pulled in with a dynamic import
- * to stay compatible with this package's "type": "commonjs".
+ * Style Dictionary v5 is ESM-only. This package is "type": "module", so the
+ * dynamic import below is no longer load-bearing — it is kept because the
+ * build reads config before it needs the library.
  */
 
-const fs = require('node:fs');
-const path = require('node:path');
+import fs from 'node:fs';
+import path from 'node:path';
 
 const TOKENS = 'tokens';
 const OUT_DIR = path.join('build', 'css');
