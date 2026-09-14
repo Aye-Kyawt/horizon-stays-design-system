@@ -77,7 +77,7 @@ export function IconBtn({
       {...rest}
       type={type}
       className={className ? `hds-iconBtn ${className}` : 'hds-iconBtn'}
-      data-name=".iconBtn"
+      data-name="iconBtn"
       data-status={status}
       data-filled={filled ? 'true' : 'false'}
       disabled={disabled ?? status === 'disabled'}

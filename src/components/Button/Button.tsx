@@ -90,7 +90,7 @@ export function Button({
       // eslint-disable-next-line react/button-has-type
       type={htmlType}
       className={className ? `hds-button ${className}` : 'hds-button'}
-      data-name=".Button"
+      data-name="button"
       data-type={type}
       data-status={status}
       disabled={isDisabled}
