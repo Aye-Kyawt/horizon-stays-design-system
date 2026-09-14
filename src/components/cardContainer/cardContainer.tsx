@@ -42,7 +42,7 @@ export function CardContainer({
   return (
     <div
       className={className ? `hds-cardContainer ${className}` : 'hds-cardContainer'}
-      data-name=".cardContainer"
+      data-name="cardContainer"
       data-status={status}
     >
       <div className="hds-cardContainer__items" data-name="carditems">

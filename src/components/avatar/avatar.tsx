@@ -66,7 +66,7 @@ export function Avatar({
   return (
     <span
       className={className ? `hds-avatar ${className}` : 'hds-avatar'}
-      data-name=".avatar"
+      data-name="avatar"
       data-status={status}
       {...rest}
     >

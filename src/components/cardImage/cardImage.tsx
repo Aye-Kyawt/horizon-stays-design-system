@@ -50,7 +50,7 @@ export function CardImage({
   return (
     <div
       className={className ? `hds-cardImage ${className}` : 'hds-cardImage'}
-      data-name=".cardImage"
+      data-name="cardImage"
       data-status={status}
       data-ratio={ratio}
     >

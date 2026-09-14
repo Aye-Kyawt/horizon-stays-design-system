@@ -88,7 +88,7 @@ export function Spinner({ size = 'sm', label = 'Loading', ...rest }: SpinnerProp
   return (
     <span
       className="hds-spinner"
-      data-name=".spinner"
+      data-name="spinner"
       data-size={size}
       role="status"
       aria-label={label}

@@ -55,7 +55,7 @@ export function CardText({
   return (
     <div
       className={className ? `hds-cardText ${className}` : 'hds-cardText'}
-      data-name=".cardText"
+      data-name="cardText"
     >
       <div className="hds-cardText__locationInfo" data-name="Location Info">
         <p className="hds-cardText__title">{title}</p>
