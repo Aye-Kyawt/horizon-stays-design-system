@@ -27,7 +27,6 @@
 
 import type { HTMLAttributes, ReactNode } from 'react';
 import { Remove } from '../../icons/Remove';
-import './chip.css';
 
 export type ChipStatus = 'default' | 'hovered' | 'selected' | 'disabled';
 

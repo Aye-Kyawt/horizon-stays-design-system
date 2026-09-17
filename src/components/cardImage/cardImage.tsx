@@ -12,7 +12,6 @@
 
 import type { ReactNode } from 'react';
 import { IconBtn } from '../iconBtn/iconBtn';
-import './cardImage.css';
 
 export type CardImageStatus = 'default' | 'hovered';
 export type CardImageRatio = '3:2' | '1:1';

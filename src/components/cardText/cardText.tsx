@@ -11,8 +11,6 @@
  * not by the design. See docs/cardContainer-naming.md.
  */
 
-import './cardText.css';
-
 export interface CardTextProps {
   /** Figma property `metadata`. Shows the rating and price block. */
   metadata?: boolean;
