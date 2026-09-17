@@ -269,9 +269,9 @@ documented and reviewed, but never shipped to production.
 4. **`Fixed (Re-test)` does not exist.** `.claude/agents/engineer.md` names the choice that way;
    the real one is `Fixed (To re-test)`. Write the real name — the formula's `re-test` match
    happens to survive the confusion, but the write does not.
-5. **`.claude/skills/release-review/SKILL.md` does not exist.** Two field descriptions send the
-   Reviewer there for the seven release gates. Until someone writes it, `Release Verdict` has no
-   documented criteria, and a verdict written without them is an opinion in a cell.
+5. **The seven release gates live in `.claude/skills/release-review/SKILL.md`.** Two field
+   descriptions send the Reviewer there. A `Release Verdict` written without running it is an
+   opinion in a cell. There is still no Reviewer agent file, so nothing in this crew runs it yet.
 
 ## Before you write a cell
 
