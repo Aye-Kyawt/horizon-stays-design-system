@@ -1,0 +1,36 @@
+---
+title: Horizon Stays Design System
+description: Reference for the Horizon Stays design system — components, props and where each one lives in Figma and Storybook.
+template: splash
+hero:
+  tagline: One system for design and development. Every component here is read from its source, its Figma node and its Storybook stories.
+  actions:
+    - text: Browse components
+      link: /components/
+      icon: right-arrow
+    - text: Open Storybook
+      link: https://horizon-stays-storybook-production.vercel.app
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+<CardGrid>
+  <Card title="Components" icon="puzzle">
+    One page per component: summary, Figma node, props with defaults, every
+    story, and the implementation notes the build recorded.
+  </Card>
+  <Card title="Storybook" icon="seti:html">
+    The live workshop. Every variant and state renders there, and each
+    component page embeds its matrix story.
+  </Card>
+  <Card title="Tokens" icon="setting">
+    Visual values come only from tokens, exported from Figma and built with
+    Style Dictionary. Components use semantic tokens only.
+  </Card>
+  <Card title="Figma" icon="pencil">
+    Prop names match the Figma property names. Where they cannot, the reason
+    is written up in a naming report and linked from the page.
+  </Card>
+</CardGrid>

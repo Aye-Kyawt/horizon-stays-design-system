@@ -12,6 +12,18 @@
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "storybook", "--", "--no-open", "--port", "6021"],
       "port": 6021
+    },
+    {
+      "name": "reference-site",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "docs-site", "run", "dev", "--", "--port", "4321"],
+      "port": 4321
+    },
+    {
+      "name": "reference-site-build",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "docs-site", "run", "preview", "--", "--port", "4322", "--host", "127.0.0.1"],
+      "port": 4322
     }
   ]
 }

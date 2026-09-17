@@ -1,0 +1,16 @@
+{
+  "name": "horizon-stays-reference-site",
+  "private": true,
+  "type": "module",
+  "description": "Astro Starlight reference site for the Horizon Stays design system. Component pages are generated from src/components at build time.",
+  "scripts": {
+    "generate": "node scripts/generate-pages.mjs",
+    "dev": "npm run generate && astro dev",
+    "build": "npm run generate && astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/starlight": "^0.42.1",
+    "astro": "^7.3.3"
+  }
+}
