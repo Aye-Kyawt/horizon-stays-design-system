@@ -28,7 +28,6 @@
  */
 
 import type { HTMLAttributes } from 'react';
-import './progressBar.css';
 
 export type ProgressBarTone = 'primary' | 'positive' | 'negative' | 'warning';
 

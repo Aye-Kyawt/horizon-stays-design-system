@@ -8,6 +8,8 @@
  */
 
 import { PLATFORM_CSS, PLATFORMS, THEMES } from '../stories/lib/tokens.js';
+// Components do not import their own CSS; this one stylesheet carries all of it.
+import '../src/styles.css';
 
 const TOKENS_STYLE_ID = 'hds-platform-tokens';
 

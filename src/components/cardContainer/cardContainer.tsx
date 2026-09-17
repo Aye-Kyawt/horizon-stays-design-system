@@ -16,7 +16,6 @@
 
 import type { ReactNode } from 'react';
 import { CardLayout, type CardLayoutProps } from '../cardLayout/cardLayout';
-import './cardContainer.css';
 
 export type CardContainerStatus = 'default' | 'hovered';
 

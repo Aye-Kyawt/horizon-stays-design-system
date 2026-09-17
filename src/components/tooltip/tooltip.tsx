@@ -42,7 +42,6 @@
  */
 
 import type { HTMLAttributes } from 'react';
-import './tooltip.css';
 
 export type TooltipPlacement = 'top' | 'bottom' | 'left' | 'right';
 

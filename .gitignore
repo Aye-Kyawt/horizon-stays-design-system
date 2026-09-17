@@ -29,3 +29,6 @@ Thumbs.db
 # subagent builds a component in isolation. Their work is collected onto a
 # branch and merged; the checkouts themselves are scratch.
 .claude/worktrees/
+
+# Package build output — regenerate with `npm run build:package`
+dist/
