@@ -4,6 +4,7 @@
   "private": true,
   "description": "",
   "type": "module",
+  "packageManager": "npm@11.19.1",
   "exports": {
     ".": {
       "import": {

@@ -6,7 +6,7 @@ Stack facts and commands only. Rules about how we work live in 'CLAUDE.md'.
 
 - Framework : React 19 with Vite
 - Language : Typescript, strict
-- Package manager : npm
+- Package manager : npm, pinned to 11.19.1 by `packageManager` in `package.json`
 - Styling : CSS custom properties, generated from tokens
 - Tokens : Style Dictionary v5, reading the Figma "Design Tokens" plugin export
 - Component workshop : Storybook 10 (react-vite)
@@ -39,6 +39,13 @@ Stack facts and commands only. Rules about how we work live in 'CLAUDE.md'.
 
 ## Dependency rules
 - Match the package manager in this file. This project uses npm. not yarn or pnpm.
+- Use the pinned npm. `package.json` sets `"packageManager": "npm@11.19.1"`; Corepack and Vercel
+  read it, and `corepack enable` makes `npm` resolve to it locally. An older npm silently rewrites
+  `package-lock.json` on install — npm 10 drops the `libc` fields npm 11 writes, which is 90 lines
+  of deletions that look like a dependency change and are not. If you see that diff after an
+  install, you are on the wrong npm: restore the lockfile rather than committing it.
+- npm 11, not 12. npm 12 needs Node `^22.22.2 || ^24.15.0 || >=26.0.0`; 11.19.1 needs
+  `^20.17.0 || >=22.9.0`, which covers every Node this project is built on.
 - Use the existing package scripts before inventing commands.
 - Do not add a dependency without explaining why in your report.
 - Do not add a UI or component library. This repo is the component library.
