@@ -59,7 +59,8 @@ writes it, and if it does not, you do not write it even when you are sure you ar
 |---|---|---|
 | 🔨 Engineer | `.claude/agents/engineer.md` | The build side of Components, and all of GitHub Commits |
 | 🔍 QA | `.claude/agents/qa.md` | All of Staging Testing, and the test links on Components |
-| 🚀 DevOps | *none yet* | Production Storybook and Astro Link |
+| 🚀 DevOps | `.claude/agents/devops.md` | Production Storybook |
+| 📚 Doc Generator | `.claude/agents/doc-generator.md` | Astro Link, and the intent files beside each component |
 | 🧭 Reviewer | *none yet* | Release Review and Release Verdict |
 | 📋 PM | *none yet* | Feedback triage and One-Off Components |
 | 🎨 Designer | a human, not an agent | The design side of Components |
@@ -85,7 +86,7 @@ The spine of the base. One row per component.
 | Figma | URL | 🎨 Designer *inferred* | The node. Feeds precedence 8 |
 | Staging Storybook | URL | 🔨 Engineer **stated** | Written after the staging build was opened and seen to render. Feeds precedence 7 |
 | Production Storybook | URL | 🚀 DevOps **stated** | Feeds precedence 5. The Engineer is explicitly barred |
-| Astro Link | URL | 🚀 DevOps **stated** | The deployed Starlight page. Feeds precedence 4. See Flag 6 |
+| Astro Link | URL | 📚 Doc Generator **stated** | The deployed Starlight page, written only after it was fetched. Feeds precedence 4. See Flag 6 |
 | Design | Single select | 🎨 Designer **stated** | To-do · In progress · In testing · Done · To be fixed. A human's column — no agent nudges it |
 | Development | Formula | ⚙️ Airtable **stated** | Derived status. **No agent may write it.** See below |
 | Synchronization % | Formula | ⚙️ Airtable | `Staging Passed Count / Total Staging Tests`, as text |

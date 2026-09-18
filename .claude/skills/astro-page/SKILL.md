@@ -15,8 +15,12 @@ The format to match is https://horizon-docs-alpha.vercel.app — open it before 
 match its navigation, its component page layout and its embeds. It is the shape, not the content:
 nothing on it is a source for this site.
 
-Writing `Astro Link` is 🚀 DevOps's column (registry owner table). If you are not running as DevOps,
-stop after step 9 and hand DevOps the verified page URLs.
+Writing `Astro Link` is 📚 the Doc Generator's column (registry owner table). If you are not running
+as the Doc Generator, stop after step 9 and hand it the verified page URLs.
+
+**Which components get a page:** those whose `Development` reads `Completed` or `Released` **and**
+whose `Release Verdict` reads `Cleared` — the eligible list in `.claude/agents/doc-generator.md`.
+Nothing else gets a page, a sidebar entry or a place on All components.
 
 ## Where it lives
 - **Site:** Astro Starlight in `docs-site/`, its own npm package, on the `astro` branch
@@ -55,8 +59,8 @@ generate breaks the build instead of quietly disappearing from the navigation.
 | Styling | Theming | `styling/theming` |
 | Help | FAQ, Report a bug, Request a feature, Contributing, Embedding | `help/faq`, `help/bug-report`, `help/feature-request`, `help/contributing`, `help/embedding` |
 
-The per-component entries are rewritten each run from `src/components/` at the pinned commit, in
-alphabetical order. They are still written out, slug by slug.
+The per-component entries are rewritten each run from the eligible list, in alphabetical order.
+They are still written out, slug by slug.
 
 ## What is generated and what is written
 **Generated, never edited by hand:** Home, All components, every component page, Tokens,
@@ -75,8 +79,9 @@ production. Neither predicts.
 ## Steps
 
 ### 1 · Pin the commit
-Take the tip of `main`, record its full SHA, and read every repo source at that SHA — not at
-whatever `astro` happens to contain. Merge `main` into `astro` first so the site's own code is
+Beside a release, take the commit its `Release Review` report names. Otherwise take the tip of
+`main`. Record its full SHA, and read every repo source at that SHA — not at whatever `astro`
+happens to contain. Merge `main` into `astro` first so the site's own code is
 current, keeping `astro`'s `docs-site/vercel.json`.
 
 **Check:** the SHA is recorded, and the generator will be run with it (`node scripts/generate.mjs --commit <sha>`).
@@ -200,7 +205,7 @@ failed.
 **Check:** every page, tab and header link passed, and the list of what you fetched is in the report.
 
 ### 10 · Write the links
-Only now, and only as DevOps: write each component's page URL into `Astro Link`, through the
+Only now, and only as the Doc Generator: write each component's page URL into `Astro Link`, through the
 registry contract. Skip any component whose `Production Storybook` is empty — branch 4 does not
 check it, and a documented component that was never shipped would read `Released` (registry
 Flag 6). List the skipped components in the report.
@@ -228,7 +233,7 @@ Astro Link written: <n> · skipped, no Production Storybook: <components>
 - The site folder, Vercel project and production URL: `tools.md`
 - Board columns, owners and the Development formula: `.claude/skills/registry/SKILL.md`
 - The intent files the Usage tab reads: `.claude/skills/component-intent/SKILL.md`
-- What `Astro Link` means to the ladder: `.claude/agents/devops.md`
+- Who runs this, and when it may push: `.claude/agents/doc-generator.md`
 - Token and naming rules: `CLAUDE.md`
 
 ## Self-check
@@ -241,4 +246,4 @@ Astro Link written: <n> · skipped, no Production Storybook: <components>
 - [ ] The build had zero broken internal links
 - [ ] I opened home, a component page (every tab) and Tokens, in light and in dark, before pushing
 - [ ] Every live page, tab and header link was verified against production before any registry write
-- [ ] I wrote `Astro Link` only as DevOps, only after verification, and only where Production Storybook is set
+- [ ] I wrote `Astro Link` only as the Doc Generator, only after verification, and only where Production Storybook is set
