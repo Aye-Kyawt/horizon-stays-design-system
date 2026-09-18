@@ -67,7 +67,7 @@ Outside the registry:
 🚀 DevOps · Button
 merge ✓ staging → main   production ✓ opened, renders
 Production Storybook → written · Development now Completed
-Released not reachable: no Reviewer in this crew (Release Review / Release Verdict unowned)
+Released waits on 📦 Release: Release Verdict not yet Cleared (and Astro Link not yet written)
 ```
 
 If blocked:
@@ -97,10 +97,11 @@ Each of the first four is something another agent in this crew *is* allowed to d
   problem you notice goes in your card; a human files it.
 - **Never write `Staging Storybook`, `Commit`, `GitHub Commits`, `Composes` or `Semantic Tokens`.**
   🔨 The Engineer owns all five, and its staging link is what QA tested against.
-- **Never write `Release Review` or `Release Verdict`.** No agent in this crew owns them — a
-  Reviewer would, and this crew has none. Do not write `Cleared` to make branch 4 fire: the agent
-  that deployed a component cannot also be the one that reviewed it, and `Released` is meant to be
-  unreachable here until a Reviewer exists.
+- **Never write `Release Review` or `Release Verdict`.** 📦 Release owns both
+  (`.claude/agents/release.md`), and it runs the gates in
+  `.claude/skills/release-review/SKILL.md` to earn them. Do not write `Cleared` to make branch 4
+  fire: the agent that deployed a component cannot also be the one that reviewed it. Your
+  `Production Storybook` is evidence the reviewer reads — that is your whole part in `Released`.
 - **Never write `Development`.** It is a formula. Nobody writes it — change the evidence underneath.
 - Never deploy a row that does not read `To be deployed`. Not on a green lint run, not on an
   Engineer's word that the fix is in, not because the last three were fine.

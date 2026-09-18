@@ -61,15 +61,17 @@ writes it, and if it does not, you do not write it even when you are sure you ar
 | 🔍 QA | `.claude/agents/qa.md` | All of Staging Testing, and the test links on Components |
 | 🚀 DevOps | `.claude/agents/devops.md` | Production Storybook |
 | 📚 Doc Generator | `.claude/agents/doc-generator.md` | Astro Link, and the intent files beside each component |
-| 🧭 Reviewer | *none yet* | Release Review and Release Verdict |
-| 📋 PM | *none yet* | Feedback triage and One-Off Components |
+| 🧭 Reviewer — the 📦 Release agent | `.claude/agents/release.md` | Release Review and Release Verdict |
+| 📋 PM | `.claude/agents/pm.md` | Feedback triage and One-Off Components |
 | 🎨 Designer | a human, not an agent | The design side of Components |
 | 👤 Submitter | a human, not an agent | What they report into DS Feedback |
 | ⚙️ Airtable | — | Every derived column. **No agent may write these** |
 
-Two notes on that table. **📦 Release owns no column in this base** — it prepares releases and
-never performs them, so it writes nothing. And **🎛️ Token Runner owns no column either**: its
-agent file gives it `Bash` and `Read` only, so it cannot reach Airtable at all.
+Two notes on that table. **📦 Release fills the 🧭 Reviewer role** — it is the one agent that
+writes `Release Review` and `Release Verdict`, and it writes nothing else in this base. It does
+not own the build side of a release: the columns under a component's code, tests and links stay
+with the agents that produced the evidence. And **🎛️ Token Runner owns no column at all**: its
+agent file gives it `Bash` and `Read` only, so it cannot reach Airtable.
 
 Owners marked **stated** below are fixed by a field description in the base or by an existing
 agent file. Owners marked *inferred* are this contract's reading, and a human may overrule them —
@@ -102,8 +104,8 @@ The spine of the base. One row per component.
 | GitHub Commits | Linked records → GitHub Commits | 🔨 Engineer **stated** | |
 | Composes | Linked records → Components | 🔨 Engineer **stated** | The components this one imports. Build up, never sideways |
 | Composed Into | Linked records → Components | ⚙️ Airtable **stated** | The reverse of Composes. Answers "who must be re-tested". See Trap 2 |
-| Release Review | URL | 🧭 Reviewer **stated** | The report *at the commit it reviewed* — never a branch URL. Write it with the verdict or not at all |
-| Release Verdict | Single select | 🧭 Reviewer **stated** | Cleared · Blocked. Empty means not reviewed |
+| Release Review | URL | 📦 Release **stated** | The report *at the commit it reviewed* — never a branch URL. Write it with the verdict or not at all |
+| Release Verdict | Single select | 📦 Release **stated** | Cleared · Blocked. Empty means not reviewed |
 
 ## Staging Testing
 
@@ -164,7 +166,8 @@ a row appeared here.
 ## One-Off Components
 
 Components built inside a project rather than in the system — the candidate list for promotion.
-Nothing here feeds Development, and no agent file claims this table today.
+Nothing here feeds Development. 📋 PM (`.claude/agents/pm.md`) claims every column, on this
+contract's reading rather than a field description — see the *inferred* marks below.
 
 | Column | Type | Owner |
 |---|---|---|
@@ -272,7 +275,9 @@ documented and reviewed, but never shipped to production.
    happens to survive the confusion, but the write does not.
 5. **The seven release gates live in `.claude/skills/release-review/SKILL.md`.** Two field
    descriptions send the Reviewer there. A `Release Verdict` written without running it is an
-   opinion in a cell. There is still no Reviewer agent file, so nothing in this crew runs it yet.
+   opinion in a cell. 📦 Release (`.claude/agents/release.md`) is what runs it, and it writes the
+   two columns together or not at all — a verdict without its report is the half-record this
+   contract forbids.
 
 ## Before you write a cell
 
