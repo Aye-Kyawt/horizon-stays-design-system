@@ -12,7 +12,6 @@
 import type { ReactNode } from 'react';
 import { CardImage, type CardImageProps } from '../cardImage/cardImage';
 import { CardText, type CardTextProps } from '../cardText/cardText';
-import './cardLayout.css';
 
 export type CardLayoutOrientation = 'horizontal' | 'vertical';
 

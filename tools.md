@@ -12,6 +12,7 @@ Stack facts and commands only. Rules about how we work live in 'CLAUDE.md'.
 - Component workshop : Storybook 10 (react-vite)
 - Tests : Vitest
 - Accessibility : Storybook a11y addon
+- Reference site : Astro Starlight, in `docs-site/` (its own npm package), deployed on Vercel
 
 ## Commands
 | Job | Command |
@@ -23,6 +24,9 @@ Stack facts and commands only. Rules about how we work live in 'CLAUDE.md'.
 |Build Storybook | `npm run build-storybook` |
 |Test | `npm test` |
 |Type check | `npm run Lint` |
+|Install reference site | `npm install --prefix docs-site` |
+|Run reference site | `npm --prefix docs-site run dev` |
+|Build reference site | `npm --prefix docs-site run build` |
 
 ## Paths
 - Tokens souce : `tokens/token.json` (exported from Figma, commited)
@@ -31,6 +35,7 @@ Stack facts and commands only. Rules about how we work live in 'CLAUDE.md'.
 - Components : `src/components/<Name>/`
 - Agents : `.claude/agents/`
 - Skills : `.claude/skills/`
+- Reference site : `docs-site/` — component pages are generated into `docs-site/src/content/docs/components/` from `src/components/` (never edit by hand, gitignored)
 
 ## Dependency rules
 - Match the package manager in this file. This project uses npm. not yarn or pnpm.

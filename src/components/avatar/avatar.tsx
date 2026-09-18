@@ -31,7 +31,6 @@
 
 import type { HTMLAttributes } from 'react';
 import { User } from '../../icons/User';
-import './avatar.css';
 
 /** Figma property `Status`, values verbatim. */
 export type AvatarStatus = 'avatar' | 'generic icon' | 'initial name';

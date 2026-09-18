@@ -26,7 +26,6 @@
 
 import type { ButtonHTMLAttributes, ReactNode } from 'react';
 import { Info } from '../../icons/Info';
-import './Button.css';
 
 /** Figma property `Type`. Capital F on Fill is the design's own spelling. */
 export type ButtonType = 'Fill' | 'outline' | 'transparent';

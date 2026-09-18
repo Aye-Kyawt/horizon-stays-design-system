@@ -27,7 +27,6 @@
  */
 
 import type { ButtonHTMLAttributes } from 'react';
-import './iconBtn.css';
 
 export type IconBtnStatus = 'default' | 'hovered' | 'pressed' | 'focused' | 'disabled';
 

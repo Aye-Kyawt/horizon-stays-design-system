@@ -56,7 +56,6 @@
  */
 
 import type { HTMLAttributes } from 'react';
-import './spinner.css';
 
 export type SpinnerSize = 'sm' | 'md' | 'lg';
 

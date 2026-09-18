@@ -1,0 +1,33 @@
+/**
+ * Horizon Stays design system — every component stylesheet, in one place.
+ *
+ * Components no longer import their own CSS. A consumer loads this file once
+ * (the package ships it as `./styles.css`, with the @imports inlined by
+ * scripts/build-css.mjs) alongside `./tokens.css`, which carries the custom
+ * properties every rule below reads. Storybook imports this same file from
+ * .storybook/preview.mjs.
+ *
+ * Order reproduces the one the component imports used to produce: a
+ * subcomponent's stylesheet before the parent that composes it. The only
+ * cross-component rule today — cardLayout.css sizing `.hds-cardImage` — wins
+ * on specificity regardless, but keeping parents last means a future override
+ * at equal specificity still lands the way it did before.
+ *
+ * scripts/build-css.mjs fails the build if a component stylesheet exists that
+ * is not listed here, so a new component cannot ship unstyled by omission.
+ */
+
+/* The card, leaves first. */
+@import './components/iconBtn/iconBtn.css';
+@import './components/cardImage/cardImage.css';
+@import './components/cardText/cardText.css';
+@import './components/cardLayout/cardLayout.css';
+@import './components/cardContainer/cardContainer.css';
+
+/* Standalone components. None of these reaches into another's classes. */
+@import './components/Button/Button.css';
+@import './components/avatar/avatar.css';
+@import './components/chip/chip.css';
+@import './components/progressBar/progressBar.css';
+@import './components/spinner/spinner.css';
+@import './components/tooltip/tooltip.css';
