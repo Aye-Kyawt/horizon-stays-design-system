@@ -4,11 +4,13 @@
  *   "Tokens are the only source of visual values. Every color, space, radius
  *    and font value in a component references a token."
  *   "A component referencing a raw hex is wrong."
+ *   "Semantic tokens point at primitives. Components use semantic tokens only."
  *
  * This test reads every component stylesheet under src/components and fails
- * on a raw hex, a raw px/rem length, or a named font family. It is deliberately
- * cheap — no DOM, no renderer — so it can run on every commit, and it guards
- * every component this repo grows, not just the first one.
+ * on a raw hex, a raw px/rem length, a named font family, or a read of a
+ * base-layer `--core-*` token. It is deliberately cheap — no DOM, no renderer
+ * — so it can run on every commit, and it guards every component this repo
+ * grows, not just the first one.
  */
 
 import { readdirSync, readFileSync, statSync } from 'node:fs';
@@ -66,6 +68,18 @@ const GENERIC_FAMILIES = new Set([
   'fangsong',
 ]);
 
+/**
+ * Semantic tokens only. A component that reads a `--core-*` token has reached
+ * past the semantic layer into the primitives it points at, so a re-themed
+ * mode changes under the component without the semantic layer getting a say.
+ *
+ * Release gate G3 in `.claude/skills/release-review/SKILL.md` fails a
+ * component on exactly this. Until this check existed the gate was the only
+ * thing that caught it, which let a stylesheet reach `Completed` on a green
+ * test run and then block at review — the expensive end to find out.
+ */
+const BASE_LAYER_TOKEN = /var\(\s*(--core-[A-Za-z0-9-]+)/g;
+
 function badFontFamily(decl: string): boolean {
   const match = /font-family\s*:\s*([^;]+)/.exec(decl);
   if (!match) return false;
@@ -100,6 +114,13 @@ describe('component stylesheets use tokens, never raw values', () => {
     it(`${rel} names no font family outside a token`, () => {
       const bad = decls.filter((d) => badFontFamily(d.line));
       expect(bad.map((d) => `line ${d.n}: ${d.line}`)).toEqual([]);
+    });
+
+    it(`${rel} reads no base-layer --core-* token`, () => {
+      const bad = decls.flatMap((d) =>
+        [...d.line.matchAll(BASE_LAYER_TOKEN)].map((m) => `line ${d.n}: ${m[1]}`),
+      );
+      expect(bad).toEqual([]);
     });
   }
 });
