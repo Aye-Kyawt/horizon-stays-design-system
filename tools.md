@@ -43,3 +43,11 @@ Stack facts and commands only. Rules about how we work live in 'CLAUDE.md'.
 - Do not add a dependency without explaining why in your report.
 - Do not add a UI or component library. This repo is the component library.
 - If ths file disagrees with `package.json`, inspect the repo and say so.
+
+## Docs site deployment
+- Folder : `docs-site/` — its own npm package (Astro + Starlight), with its own `package.json` and `package-lock.json`
+- Vercel project : `horizon-stays-docs` (`prj_ar797IkOlHmF0Nk7RR2vSoplKsBn`, team `aye-kyawts-projects`), root directory `docs-site`
+- Production branch : `astro` — every push to it deploys production
+- Production URL : https://horizon-stays-docs.vercel.app
+- Build config : `docs-site/vercel.json` on `astro` (framework, `npm install`, `npm run build`, output `dist`). Install is `npm install`, not `npm ci`: a lockfile written on macOS can omit packages Linux needs, and `npm ci` refuses it
+- Every other branch : `docs-site/vercel.json` holds only `{"git": {"deploymentEnabled": false}}`, so pushes there do not build the docs project and leave no failing check. Keep `astro`'s own `docs-site/vercel.json` when merging `main` into it
