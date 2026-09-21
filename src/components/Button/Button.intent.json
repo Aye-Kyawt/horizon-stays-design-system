@@ -1,7 +1,7 @@
 {
   "component": "Button",
   "figma": "https://www.figma.com/design/2k87mtkZMvxQIYwjLX82pu/Horizon.Web.Component.V1.0.In-Progress?node-id=31-140",
-  "commit": "55b6da0d4aa057e640a52872772659ea5bcf5884",
+  "commit": "4247dd89afd7910debb80d347fd869ecd1e98687",
 
   "use_when": [
     {
@@ -99,36 +99,36 @@
   "placement": [],
   "pairs_with": [],
   "required_tokens": [
-    { "token": "--core-color-sky-700", "from": "src/components/Button/Button.css#L58" },
-    { "token": "--core-color-blue-900", "from": "src/components/Button/Button.css#L59" },
-    { "token": "--core-color-navy-600", "from": "src/components/Button/Button.css#L60" },
-    { "token": "--core-color-neutral-600", "from": "src/components/Button/Button.css#L61" },
-    { "token": "--semantic-border-width-none", "from": "src/components/Button/Button.css#L66" },
-    { "token": "--semantic-color-icon-primary", "from": "src/components/Button/Button.css#L67" },
-    { "token": "--core-spacing-4", "from": "src/components/Button/Button.css#L79" },
-    { "token": "--component-button-gap-md", "from": "src/components/Button/Button.css#L86" },
-    { "token": "--component-button-padding-x-sm", "from": "src/components/Button/Button.css#L87" },
-    { "token": "--core-spacing-8", "from": "src/components/Button/Button.css#L103" },
-    { "token": "--core-spacing-2", "from": "src/components/Button/Button.css#L103" },
-    { "token": "--component-button-radius-md", "from": "src/components/Button/Button.css#L105" },
-    { "token": "--label-large-font-family", "from": "src/components/Button/Button.css#L121" },
-    { "token": "--label-large-font-size", "from": "src/components/Button/Button.css#L122" },
-    { "token": "--label-large-line-height", "from": "src/components/Button/Button.css#L123" },
-    { "token": "--label-large-letter-spacing", "from": "src/components/Button/Button.css#L124" },
-    { "token": "--core-type-fontweight-label-lg", "from": "src/components/Button/Button.css#L125" },
-    { "token": "--semantic-border-width-base", "from": "src/components/Button/Button.css#L154" },
-    { "token": "--semantic-color-bg-primary", "from": "src/components/Button/Button.css#L155" },
-    { "token": "--semantic-color-border-primary-focused", "from": "src/components/Button/Button.css#L156" },
-    { "token": "--component-button-text-primary", "from": "src/components/Button/Button.css#L157" },
-    { "token": "--semantic-color-icon-inverse", "from": "src/components/Button/Button.css#L158" },
-    { "token": "--semantic-color-bg-primary-hovered", "from": "src/components/Button/Button.css#L162" },
-    { "token": "--semantic-color-bg-disabled", "from": "src/components/Button/Button.css#L168" },
-    { "token": "--semantic-color-text-disabled", "from": "src/components/Button/Button.css#L170" },
-    { "token": "--semantic-color-bg-negative", "from": "src/components/Button/Button.css#L175" },
-    { "token": "--semantic-color-icon-negative", "from": "src/components/Button/Button.css#L176" },
-    { "token": "--semantic-color-bg-surfaceprimary", "from": "src/components/Button/Button.css#L185" },
-    { "token": "--semantic-color-text-negative", "from": "src/components/Button/Button.css#L227" },
-    { "token": "--component-card-radius-lg", "from": "src/components/Button/Button.css#L247" }
+    { "token": "--semantic-color-text-action-hover", "from": "src/components/Button/Button.css#L50" },
+    { "token": "--semantic-color-border-on-hover", "from": "src/components/Button/Button.css#L51" },
+    { "token": "--semantic-color-icon-hover", "from": "src/components/Button/Button.css#L52" },
+    { "token": "--semantic-color-icon-disabled", "from": "src/components/Button/Button.css#L53" },
+    { "token": "--semantic-border-width-none", "from": "src/components/Button/Button.css#L58" },
+    { "token": "--semantic-color-icon-primary", "from": "src/components/Button/Button.css#L59" },
+    { "token": "--core-spacing-4", "from": "src/components/Button/Button.css#L71" },
+    { "token": "--component-button-gap-md", "from": "src/components/Button/Button.css#L78" },
+    { "token": "--component-button-padding-x-sm", "from": "src/components/Button/Button.css#L79" },
+    { "token": "--core-spacing-8", "from": "src/components/Button/Button.css#L95" },
+    { "token": "--core-spacing-2", "from": "src/components/Button/Button.css#L95" },
+    { "token": "--component-button-radius-md", "from": "src/components/Button/Button.css#L97" },
+    { "token": "--label-large-font-family", "from": "src/components/Button/Button.css#L112" },
+    { "token": "--label-large-font-size", "from": "src/components/Button/Button.css#L113" },
+    { "token": "--label-large-line-height", "from": "src/components/Button/Button.css#L114" },
+    { "token": "--label-large-letter-spacing", "from": "src/components/Button/Button.css#L115" },
+    { "token": "--label-large-font-weight", "from": "src/components/Button/Button.css#L116" },
+    { "token": "--semantic-border-width-base", "from": "src/components/Button/Button.css#L145" },
+    { "token": "--semantic-color-bg-primary", "from": "src/components/Button/Button.css#L146" },
+    { "token": "--semantic-color-border-primary-focused", "from": "src/components/Button/Button.css#L147" },
+    { "token": "--component-button-text-primary", "from": "src/components/Button/Button.css#L148" },
+    { "token": "--semantic-color-icon-inverse", "from": "src/components/Button/Button.css#L149" },
+    { "token": "--semantic-color-bg-primary-hovered", "from": "src/components/Button/Button.css#L153" },
+    { "token": "--semantic-color-bg-disabled", "from": "src/components/Button/Button.css#L159" },
+    { "token": "--semantic-color-text-disabled", "from": "src/components/Button/Button.css#L161" },
+    { "token": "--semantic-color-bg-negative", "from": "src/components/Button/Button.css#L166" },
+    { "token": "--semantic-color-icon-negative", "from": "src/components/Button/Button.css#L167" },
+    { "token": "--semantic-color-bg-surfaceprimary", "from": "src/components/Button/Button.css#L176" },
+    { "token": "--semantic-color-text-negative", "from": "src/components/Button/Button.css#L218" },
+    { "token": "--component-card-radius-lg", "from": "src/components/Button/Button.css#L238" }
   ],
   "a11y": [
     {
@@ -157,14 +157,13 @@
     },
     {
       "fact": "Draws the focus ring on `:focus-visible` with no `data-status` scoping, so the ring appears on keyboard focus at every status — including `error` and `hovered` — and not on a mouse click.",
-      "source": "src/components/Button/Button.css#L242"
+      "source": "src/components/Button/Button.css#L233"
     },
     {
       "fact": "Sets `outline: none` on `:focus-visible` only for the element that already draws its own ring in the rule above, so focus is never left with no visible indicator.",
-      "source": "src/components/Button/Button.css#L252"
+      "source": "src/components/Button/Button.css#L243"
     }
   ],
-
   "gaps": [
     "variant_intent.type — the code states no purpose for `Fill`, `outline` or `transparent`; the doc comments at src/components/Button/Button.tsx#L30 and #L41 say only that it is the Figma `Type` property, so every value is null.",
     "variant_intent.status — the code states a purpose only for `default` (src/components/Button/Button.tsx#L43-L47); `hovered`, `focus`, `disabled` and `error` are null.",
