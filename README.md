@@ -7,10 +7,11 @@ built from Figma nodes, tested against them variant by variant, and reviewed bef
 release — the [component registry](https://airtable.com/) tracks where each one is on
 that ladder.
 
-> **Status: not yet published.** The package is marked `"private": true` until the
-> first release, so the install command below will 404 against npm today. It is
-> published by `npm run release:publish -- <version>`, which removes the guard for the
-> length of the publish and puts it back.
+> **Status: 0.1.0 is published.** It exports `Button` only. 0.1.0 was released by the
+> owner's override while the release review was Blocked; `CHANGELOG.md` records what
+> that override skipped. `package.json` keeps `"private": true` between releases, and
+> `npm run release:publish -- <version>` removes that guard only for the length of a
+> publish.
 
 ## Install
 
@@ -29,14 +30,18 @@ npm install react@^19 react-dom@^19
 Import the components you need, and load the two stylesheets **once**, at your app root:
 
 ```jsx
-import { Button, CardContainer } from '@aye_kyawt/horizon-stays-design-system';
+import { Button } from '@aye_kyawt/horizon-stays-design-system';
 import '@aye_kyawt/horizon-stays-design-system/tokens.css';
 import '@aye_kyawt/horizon-stays-design-system/styles.css';
 
 export function Example() {
-  return <Button type="primary" status="default">Book a stay</Button>;
+  return <Button type="Fill" label="Book a stay" iconLeft={false} iconRight={false} />;
 }
 ```
+
+`Button` takes its text through `label`, not children. `type` is the Figma `Type`:
+`Fill`, `outline` or `transparent`. The DOM button type is `htmlType`, and it defaults
+to `button`.
 
 `tokens.css` carries the custom properties; `styles.css` carries every component rule
 that reads them. Load tokens first — the rules resolve against it.
@@ -49,12 +54,11 @@ change without a major version.
 | Component | Exported types |
 |---|---|
 | `Button` | `ButtonProps`, `ButtonType`, `ButtonStatus`, `ButtonIconSlot` |
-| `Avatar` | `AvatarProps`, `AvatarStatus` |
-| `CardContainer` | `CardContainerProps`, `CardContainerStatus` |
-| `Chip` | `ChipProps`, `ChipStatus` |
-| `ProgressBar` | `ProgressBarProps`, `ProgressBarTone` |
-| `Spinner` | `SpinnerProps`, `SpinnerSize` |
-| `Tooltip` | `TooltipProps`, `TooltipPlacement` |
+
+`Avatar`, `CardContainer`, `Chip`, `ProgressBar`, `Spinner` and `Tooltip` are built but
+not yet public. Each one is exported in the release whose review clears it. Their
+stylesheets already ship in `styles.css`, because the build requires every component
+stylesheet, but their classes do nothing without the component that renders them.
 
 `cardLayout`, `cardImage`, `cardText` and `iconBtn` are deliberately internal. Their
 whole prop surface is reachable through `CardContainer`'s `layout` prop, and cards are
@@ -63,11 +67,15 @@ minor release; taking one back would be a major.
 
 ## Tokens
 
-Tokens are exported from Figma into `tokens/token.json` and built with Style Dictionary
-into three platforms — web, mobile and back-office — each with a light and a dark theme.
+Tokens are exported from the Figma token library with the Design Tokens plugin into
+`tokens/*.tokens.json`. The library is the source of truth. They are built with Style
+Dictionary into three platforms (web, mobile and back-office), each with a light and a
+dark theme. `tokens.css` in the package is the web build.
 
-Components read **semantic** tokens only (`--color-surface-*`, not `--core-*`); the test
-suite fails a stylesheet that reaches into the base layer.
+Components are meant to read **semantic** tokens only (`--semantic-*`, `--component-*`
+and the text-style tokens such as `--label-large-*`), never the base `--core-*` layer.
+The test suite fails a stylesheet that reads a base-layer token. At 0.1.0, 7 stylesheets
+still do, and `CHANGELOG.md` lists them.
 
 ```bash
 npm run build:tokens
