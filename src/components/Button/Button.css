@@ -8,34 +8,26 @@
  * None is invented here.
  *
  * ---------------------------------------------------------------------------
- * Stand-ins for tokens the design uses but the local build does not carry
+ * Interaction colours the design binds to semantic variables
  * ---------------------------------------------------------------------------
- * Three variables are bound in Figma and absent from build/css/web.css. Their
- * exact values DO exist in this system, as core primitives — so the colours
- * below are read off the design, not chosen. Each stand-in names the semantic
- * token that should replace it once tokens/token.json is re-exported. Deleting
- * this block and pointing the three usages at the real names is the whole fix.
+ * These four once stood in for variables the local token export lacked or had
+ * drifted on, reading the matching core primitive directly. The export has
+ * since been re-synced from the Figma library (the source of truth), so each
+ * now reads the semantic token the node binds. In light mode the value is
+ * unchanged; in dark mode they take the library's dark values instead of
+ * staying pinned to the light primitive.
  *
- *   --hds-button-c-action-hover   semantic/color/text/action hover #235d93
- *   --hds-button-c-border-hover   semantic/color/border/on hover  #17307b
- *   --hds-button-c-icon-hover     semantic/color/icon/hover       #1b4a8f
+ *   --hds-button-c-action-hover   semantic/color/text/action hover  #235d93
+ *   --hds-button-c-border-hover   semantic/color/border/on hover    #17307b
+ *   --hds-button-c-icon-hover     semantic/color/icon/hover         #1b4a8f
+ *   --hds-button-c-icon-disabled  semantic/color/icon/disabled      #8a94a6
  *
- * A fourth is different in kind — not missing but DRIFTED, and it is the one
- * worth a designer's attention:
+ * The local aliases are kept so each cell below reads one name per role.
  *
- *   --hds-button-c-icon-disabled  semantic/color/icon/disabled    #8a94a6
- *
- * That token exists locally and resolves to #a9b3c0 (core neutral-500), while
- * Figma's variable of the same name reads #8a94a6 — which is core neutral-600,
- * exactly what text/disabled resolves to here. So in the design the disabled
- * label, icon and border are one grey; in the local build the icon and border
- * would come out a step lighter than the label. Figma is the source of truth,
- * so the design's value is used and the drift is reported. Point this at
- * --semantic-color-icon-disabled once the export is reconciled.
- *
- * A fifth name, `semantic/color/text/on-action` (the Fill label, #ffffff), is
- * also absent locally — but it does NOT get a stand-in, and the reason is
- * worth writing down because the obvious reading is backwards.
+ * `semantic/color/text/on-action` (the Fill label, #ffffff) now exists locally
+ * too, and --component-button-text-primary already aliases it. The Fill
+ * foreground reads that component token rather than pinning white, and the
+ * reason is worth writing down because the obvious reading is backwards.
  *
  * The tempting move is to pin the Fill foreground to white, since that is what
  * Figma shows and since --component-button-text-primary (-> text/onprimary ->
@@ -55,10 +47,10 @@
  */
 
 .hds-button {
-  --hds-button-c-action-hover: var(--core-color-sky-700);
-  --hds-button-c-border-hover: var(--core-color-blue-900);
-  --hds-button-c-icon-hover: var(--core-color-navy-600);
-  --hds-button-c-icon-disabled: var(--core-color-neutral-600);
+  --hds-button-c-action-hover: var(--semantic-color-text-action-hover);
+  --hds-button-c-border-hover: var(--semantic-color-border-on-hover);
+  --hds-button-c-icon-hover: var(--semantic-color-icon-hover);
+  --hds-button-c-icon-disabled: var(--semantic-color-icon-disabled);
 
   /* Painted per cell further down; these are the transparent-type defaults. */
   --hds-button-bg: transparent;
