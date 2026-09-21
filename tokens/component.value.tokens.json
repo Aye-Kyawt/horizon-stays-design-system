@@ -41,7 +41,7 @@
   },
   "component-button-text-primary": {
     "$type": "color",
-    "$value": "{semantic-color-text-onprimary}",
+    "$value": "{semantic-color-text-on-action}",
     "$description": "Aliases horizon.semantic.color.text.onPrimary"
   },
   "component-button-text-secondary": {

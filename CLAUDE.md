@@ -43,4 +43,8 @@ default, hovered, pressed, focused, disabled, error, loading as applicable.
 
 
 ## Icon
-- Install and import material symbols from https://fonts.google.com/icons 
+- Use "Simple Design System" icons and install and import material symbols from https://fonts.google.com/icons to be accessed.
+
+## Git
+- A component branch never merges into main.
+Main accepts PRs from staging only. 

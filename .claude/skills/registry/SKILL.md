@@ -59,16 +59,19 @@ writes it, and if it does not, you do not write it even when you are sure you ar
 |---|---|---|
 | 🔨 Engineer | `.claude/agents/engineer.md` | The build side of Components, and all of GitHub Commits |
 | 🔍 QA | `.claude/agents/qa.md` | All of Staging Testing, and the test links on Components |
-| 🚀 DevOps | *none yet* | Production Storybook and Astro Link |
-| 🧭 Reviewer | *none yet* | Release Review and Release Verdict |
-| 📋 PM | *none yet* | Feedback triage and One-Off Components |
+| 🚀 DevOps | `.claude/agents/devops.md` | Production Storybook |
+| 📚 Doc Generator | `.claude/agents/doc-generator.md` | Astro Link, and the intent files beside each component |
+| 🧭 Reviewer — the 📦 Release agent | `.claude/agents/release.md` | Release Review and Release Verdict |
+| 📋 PM | `.claude/agents/pm.md` | Feedback triage and One-Off Components |
 | 🎨 Designer | a human, not an agent | The design side of Components |
 | 👤 Submitter | a human, not an agent | What they report into DS Feedback |
 | ⚙️ Airtable | — | Every derived column. **No agent may write these** |
 
-Two notes on that table. **📦 Release owns no column in this base** — it prepares releases and
-never performs them, so it writes nothing. And **🎛️ Token Runner owns no column either**: its
-agent file gives it `Bash` and `Read` only, so it cannot reach Airtable at all.
+Two notes on that table. **📦 Release fills the 🧭 Reviewer role** — it is the one agent that
+writes `Release Review` and `Release Verdict`, and it writes nothing else in this base. It does
+not own the build side of a release: the columns under a component's code, tests and links stay
+with the agents that produced the evidence. And **🎛️ Token Runner owns no column at all**: its
+agent file gives it `Bash` and `Read` only, so it cannot reach Airtable.
 
 Owners marked **stated** below are fixed by a field description in the base or by an existing
 agent file. Owners marked *inferred* are this contract's reading, and a human may overrule them —
@@ -85,7 +88,7 @@ The spine of the base. One row per component.
 | Figma | URL | 🎨 Designer *inferred* | The node. Feeds precedence 8 |
 | Staging Storybook | URL | 🔨 Engineer **stated** | Written after the staging build was opened and seen to render. Feeds precedence 7 |
 | Production Storybook | URL | 🚀 DevOps **stated** | Feeds precedence 5. The Engineer is explicitly barred |
-| Astro Link | URL | 🚀 DevOps **stated** | The deployed Starlight page. Feeds precedence 4. See Flag 6 |
+| Astro Link | URL | 📚 Doc Generator **stated** | The deployed Starlight page, written only after it was fetched. Feeds precedence 4. See Flag 6 and Flag 10 |
 | Design | Single select | 🎨 Designer **stated** | To-do · In progress · In testing · Done · To be fixed. A human's column — no agent nudges it |
 | Development | Formula | ⚙️ Airtable **stated** | Derived status. **No agent may write it.** See below |
 | Synchronization % | Formula | ⚙️ Airtable | `Staging Passed Count / Total Staging Tests`, as text |
@@ -101,8 +104,8 @@ The spine of the base. One row per component.
 | GitHub Commits | Linked records → GitHub Commits | 🔨 Engineer **stated** | |
 | Composes | Linked records → Components | 🔨 Engineer **stated** | The components this one imports. Build up, never sideways |
 | Composed Into | Linked records → Components | ⚙️ Airtable **stated** | The reverse of Composes. Answers "who must be re-tested". See Trap 2 |
-| Release Review | URL | 🧭 Reviewer **stated** | The report *at the commit it reviewed* — never a branch URL. Write it with the verdict or not at all |
-| Release Verdict | Single select | 🧭 Reviewer **stated** | Cleared · Blocked. Empty means not reviewed |
+| Release Review | URL | 📦 Release **stated** | The report *at the commit it reviewed* — never a branch URL. Write it with the verdict or not at all |
+| Release Verdict | Single select | 📦 Release **stated** | Cleared · Blocked. Empty means not reviewed |
 
 ## Staging Testing
 
@@ -163,7 +166,8 @@ a row appeared here.
 ## One-Off Components
 
 Components built inside a project rather than in the system — the candidate list for promotion.
-Nothing here feeds Development, and no agent file claims this table today.
+Nothing here feeds Development. 📋 PM (`.claude/agents/pm.md`) claims every column, on this
+contract's reading rather than a field description — see the *inferred* marks below.
 
 | Column | Type | Owner |
 |---|---|---|
@@ -226,15 +230,18 @@ and about twenty more — currently reads `To-do`.
 *Consequence:* `To-do` is **not** proof that Design is `Done`. Branch 8 and branch 9 are
 indistinguishable in the cell. Before building, read the `Design` column itself.
 
-**Flag 2 · Release Review — "It does not feed Development" is false.**
-The description says the column "does not feed Development and is not part of the
+**Flag 2 · Release Review — "It does not feed Development" was false. Corrected 2026-09-21.**
+The description said the column "does not feed Development and is not part of the
 staging-to-production ladder". The formula reads it in branch 4: without it, `Released` is
-unreachable. It is on the ladder.
+unreachable. It is on the ladder. The description now says so, and records what it used to claim.
 
-**Flag 3 · Release Verdict — "Deliberately not wired into Development" is false.**
+**Flag 3 · Release Verdict — "Deliberately not wired into Development" was false. Corrected
+2026-09-21.**
 Same branch. The formula tests `Release Verdict = "Cleared"` before it will say `Released`. The
 description's reasoning — that folding this gate in would make a shipped component read
-unfinished — describes a decision that was not implemented.
+unfinished — described a decision that was never implemented. The description now says so. It also
+cited `VERSIONING.md` for why a human approves the version; no such file exists on any branch, so
+that pointer was replaced with what actually carries the gates, `npm run release:publish`.
 
 **Flag 4 · Staging Passed Tests — both halves of the description are false.**
 It says "Counts only test rows marked Passed. Feeds Synchronization %."
@@ -257,6 +264,23 @@ Branch 4 sits above branch 5 and never looks at `Production Storybook`, so a row
 link, a review and a `Cleared` verdict reads `Released` while `Production Storybook` is empty —
 documented and reviewed, but never shipped to production.
 
+**Flag 10 · Astro Link — the base said DevOps until 2026-09-21.**
+🚀 DevOps owned this column originally, and the field description said so. The commit *"Add the
+doc-generator agent and give it Astro Link"* moved it to 📚 Doc Generator — the agent that builds
+and publishes the site is the one that can fetch a page before recording it — and updated
+`devops.md` and this contract. Nobody updated the field description, so for three days the base
+and the repo named different owners, both marked **stated**. The description now names Doc
+Generator and records the change.
+
+`Release Review` and `Release Verdict` carried the same drift — both said *"🧭 Reviewer owns this"*
+in the base, a role that never had an agent file, while this contract and
+`.claude/skills/release-review/SKILL.md` name 📦 Release. Both descriptions were corrected on
+2026-09-21 too, so all three columns now name the same owner in the base and in the repo.
+
+The lesson, not the fix: when an owner moves, the field description is part of the move. A
+"stated" source that is not updated does not stop being read, and two "stated" sources that
+disagree give the next agent a coin to flip.
+
 ## Traps that are not formula disagreements
 
 1. **`[Production] Test Records` is single line text**, not a linked-record field, even though it
@@ -269,9 +293,11 @@ documented and reviewed, but never shipped to production.
 4. **`Fixed (Re-test)` does not exist.** `.claude/agents/engineer.md` names the choice that way;
    the real one is `Fixed (To re-test)`. Write the real name — the formula's `re-test` match
    happens to survive the confusion, but the write does not.
-5. **`.claude/skills/release-review/SKILL.md` does not exist.** Two field descriptions send the
-   Reviewer there for the seven release gates. Until someone writes it, `Release Verdict` has no
-   documented criteria, and a verdict written without them is an opinion in a cell.
+5. **The seven release gates live in `.claude/skills/release-review/SKILL.md`.** Two field
+   descriptions send the Reviewer there. A `Release Verdict` written without running it is an
+   opinion in a cell. 📦 Release (`.claude/agents/release.md`) is what runs it, and it writes the
+   two columns together or not at all — a verdict without its report is the half-record this
+   contract forbids.
 
 ## Before you write a cell
 
