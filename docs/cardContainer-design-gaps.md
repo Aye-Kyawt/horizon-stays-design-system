@@ -57,8 +57,16 @@ there is no legal token to use:
 
 For the title and the price the component therefore takes size, line-height,
 letter-spacing and family from `semantic-type-latin-body-*` (an exact alias of the
-primitives Figma bound) and the weight from `--core-type-fontweight-body-semibold-md`,
-because **no semantic type token carries body-md at semibold**.
+primitives Figma bound) and the weight from `--body-medium-semibold-font-weight`, the
+Body/Medium Semibold text-style token, which aliases
+`core/type/fontWeight/body/semibold/md` on every platform. An earlier version of this
+section said no such token existed; it does, and `avatar.css` already used it. The
+rating line likewise reads the `--label-medium-*` text-style tokens, which alias the
+core `label/md` variables Figma binds. `cardText.css` now reads no core token.
+
+The rendered values are unchanged. The mismatch below is still open: the
+`semantic-type-latin-card-title` and `-price` tokens that *mean* these roles resolve to
+16px, not the 14px the node draws.
 
 **Needed:** either add a semantic type token for "card title / price at body-md
 semibold", or re-point `type/card-title` and `type/price` at the body-md scale so the
