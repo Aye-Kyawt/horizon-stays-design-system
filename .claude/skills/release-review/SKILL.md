@@ -10,12 +10,14 @@ Use this before a version is published, to decide whether the components in it a
 the criteria behind the registry's `Release Review` and `Release Verdict` columns — a verdict
 written without this file is an opinion in a cell.
 
-Only the 🧭 Reviewer runs it (registry owner table). Do not run it on components you built,
-tested, deployed or wrote the intent for: the reviewer who made the work cannot clear it.
+📦 Release runs it — `.claude/agents/release.md`, which the registry's owner table names for
+`Release Review` and `Release Verdict`. Do not run it on components you built, tested, deployed or
+wrote the intent for: the reviewer who made the work cannot clear it.
 
 This skill reads and reports. It **never** edits an intent file, **never** fixes a finding — not a
-typo, not a token, not a missing field — and **never** publishes, merges, tags or deploys. A
-review that repaired what it found has reviewed its own work.
+typo, not a token, not a missing field — and **never** publishes, tags or deploys. The one thing it
+merges is its own report, in step 4, which is documentation and never code. A review that repaired
+what it found has reviewed its own work.
 
 ## The verdict
 - **Blocked** — any gate fails, or any check other than check 2 fails.
@@ -117,7 +119,12 @@ link, so the evidence still reads the same after the code moves on.
 
 Commit the report on its own branch, `review/v<version>`, created at the reviewed commit. The
 report is the only file in that commit, so its tree is the reviewed tree plus the report. Push
-the branch. Do not open a PR into `staging` or `main`, and do not merge.
+the branch, open its PR into `staging`, and merge it — that merge therefore carries documentation
+and nothing else.
+
+Never open a PR into `main`, and never merge anything but the report. This is the whole of the
+merge permission: `.claude/agents/release.md` grants exactly this and no more, and the two files
+say the same thing — neither overrides the other.
 
 **Check:** the report's permalink opens, and it names the SHA you reviewed.
 
@@ -129,6 +136,12 @@ registry contract:
 
 Write both or neither. A verdict without its report, or a report link without its verdict, is the
 half-record the registry forbids.
+
+**If the registry cannot be written** — `.claude/registry.local.json` missing, an ID that does not
+resolve, Airtable unreachable — then write **neither**. State both verdicts in the report, and
+report the write as blocked, naming what stopped it and the remedy. Never write one cell to show
+progress, and never guess an ID. The report is the record; the cells catch up when the blocker
+clears. A review that ends this way is complete, not failed.
 
 Understand what the write moves: `Cleared` with an `Astro Link` present makes `Development` read
 `Released` (branch 4). That is the verdict's job. Do not withhold `Cleared` to avoid moving the
@@ -157,7 +170,9 @@ status, and do not write it to move the status.
 - [ ] Every component has a result for all 7 gates and all 6 checks, each with evidence
 - [ ] C2 findings are warnings; nothing was blocked on C2 alone
 - [ ] Anything I could not evaluate is a fail, with the reason
-- [ ] I edited no intent file, fixed nothing, and published, merged, tagged and deployed nothing
+- [ ] I edited no intent file, fixed nothing, published nothing, tagged nothing, deployed nothing,
+      and merged nothing but my own report
 - [ ] The report was pushed and opened before I wrote either registry column
-- [ ] I wrote `Release Review` and `Release Verdict` together, for every component, or not at all
+- [ ] I wrote `Release Review` and `Release Verdict` together, for every component, or not at all —
+      and if I could write neither, the report carries the verdicts and names what blocked the write
 - [ ] I did not review work I built, tested, deployed or wrote the intent for
