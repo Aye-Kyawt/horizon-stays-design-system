@@ -111,10 +111,9 @@
 
   /*
    * Label/Large: Inter 14/20, weight 500, tracking 0.1.
-   * The weight comes from --core-type-fontweight-label-lg, a core token, and
-   * that is the correct resolution rather than a shortcut: the --label-large-*
-   * set has no font-weight member at all, and Figma binds the weight straight
-   * to core/type/fontWeight/label/lg. There is no semantic layer to skip.
+   * All five properties come from the --label-large-* set. Its font-weight
+   * member aliases core/type/fontWeight/label/lg, the variable Figma binds, on
+   * every platform, so the weight is unchanged from reading the core token.
    * --semantic-type-latin-button-* is deliberately NOT used: it aliases
    * core-type-fontweight-label-semibold-lg, one step heavier than the design.
    */
@@ -122,7 +121,7 @@
   font-size: var(--label-large-font-size);
   line-height: var(--label-large-line-height);
   letter-spacing: var(--label-large-letter-spacing);
-  font-weight: var(--core-type-fontweight-label-lg);
+  font-weight: var(--label-large-font-weight);
 
   cursor: pointer;
   appearance: none;
