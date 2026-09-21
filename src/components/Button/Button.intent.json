@@ -1,0 +1,175 @@
+{
+  "component": "Button",
+  "figma": "https://www.figma.com/design/2k87mtkZMvxQIYwjLX82pu/Horizon.Web.Component.V1.0.In-Progress?node-id=31-140",
+  "commit": "4247dd89afd7910debb80d347fd869ecd1e98687",
+
+  "use_when": [
+    {
+      "text": "Use a button to trigger a single, clear action : submit, confirm, save or start a flow.",
+      "source": "figma:204:1930"
+    },
+    {
+      "text": "Use Fill for the one primary action in a screen or section.",
+      "source": "figma:204:2341"
+    },
+    {
+      "text": "Use Outline or Transparent for secondary/tertiary actions alongside a primary Fill button.",
+      "source": "figma:204:2345"
+    },
+    {
+      "text": "Use the optional iconLeft/iconRight slots when an icon reinforces the label (e.g, a trailing chevron for \"Next\").",
+      "source": "figma:204:2349"
+    },
+    {
+      "text": "Use Icon Button instead of a labeled Button for single icon-only actions (favorite, close).",
+      "source": "figma:204:2353"
+    }
+  ],
+  "dont_use_when": [
+    {
+      "text": "Don't use a button to open an external link - >use a link/anchor style instead.",
+      "alternative": "a link/anchor style",
+      "source": "figma:204:1952"
+    },
+    {
+      "text": "Don't enable both iconLeft and iconRight unless both icons add real meaning —> it crowds the label.",
+      "alternative": null,
+      "source": "figma:204:2354"
+    },
+    {
+      "text": "Don't use the error status as a generic \"danger\" style — > reserve it for a validation problem tied to the button's own action.",
+      "alternative": null,
+      "source": "figma:204:2355"
+    },
+    {
+      "text": "Don't ship a button without its focus variant — > it's required for keyboard accessibility, not optional polish.",
+      "alternative": null,
+      "source": "figma:204:2356"
+    }
+  ],
+  "variant_intent": {
+    "type": {
+      "values": {
+        "Fill": null,
+        "outline": null,
+        "transparent": null
+      },
+      "default": "Fill",
+      "source": "src/components/Button/Button.tsx#L31"
+    },
+    "status": {
+      "values": {
+        "default": "Pins a cell of the matrix on so a story can show it standing still. `default` additionally lets the live :hover and :focus-visible states apply on their own.",
+        "hovered": null,
+        "focus": null,
+        "disabled": null,
+        "error": null
+      },
+      "default": "default",
+      "source": "src/components/Button/Button.tsx#L34"
+    },
+    "iconLeft": {
+      "values": {
+        "true": "`true` for the designed Info glyph",
+        "false": "`false` for none",
+        "ReactNode": "a node to swap in"
+      },
+      "default": "true",
+      "source": "src/components/Button/Button.tsx#L36"
+    },
+    "iconRight": {
+      "values": {
+        "true": "`true` for the designed Info glyph",
+        "false": "`false` for none",
+        "ReactNode": "a node to swap in"
+      },
+      "default": "true",
+      "source": "src/components/Button/Button.tsx#L36"
+    },
+    "htmlType": {
+      "values": {
+        "button": null,
+        "submit": null,
+        "reset": null
+      },
+      "default": "button",
+      "source": "src/components/Button/Button.tsx#L56"
+    }
+  },
+  "placement": [],
+  "pairs_with": [],
+  "required_tokens": [
+    { "token": "--semantic-color-text-action-hover", "from": "src/components/Button/Button.css#L50" },
+    { "token": "--semantic-color-border-on-hover", "from": "src/components/Button/Button.css#L51" },
+    { "token": "--semantic-color-icon-hover", "from": "src/components/Button/Button.css#L52" },
+    { "token": "--semantic-color-icon-disabled", "from": "src/components/Button/Button.css#L53" },
+    { "token": "--semantic-border-width-none", "from": "src/components/Button/Button.css#L58" },
+    { "token": "--semantic-color-icon-primary", "from": "src/components/Button/Button.css#L59" },
+    { "token": "--core-spacing-4", "from": "src/components/Button/Button.css#L71" },
+    { "token": "--component-button-gap-md", "from": "src/components/Button/Button.css#L78" },
+    { "token": "--component-button-padding-x-sm", "from": "src/components/Button/Button.css#L79" },
+    { "token": "--core-spacing-8", "from": "src/components/Button/Button.css#L95" },
+    { "token": "--core-spacing-2", "from": "src/components/Button/Button.css#L95" },
+    { "token": "--component-button-radius-md", "from": "src/components/Button/Button.css#L97" },
+    { "token": "--label-large-font-family", "from": "src/components/Button/Button.css#L112" },
+    { "token": "--label-large-font-size", "from": "src/components/Button/Button.css#L113" },
+    { "token": "--label-large-line-height", "from": "src/components/Button/Button.css#L114" },
+    { "token": "--label-large-letter-spacing", "from": "src/components/Button/Button.css#L115" },
+    { "token": "--label-large-font-weight", "from": "src/components/Button/Button.css#L116" },
+    { "token": "--semantic-border-width-base", "from": "src/components/Button/Button.css#L145" },
+    { "token": "--semantic-color-bg-primary", "from": "src/components/Button/Button.css#L146" },
+    { "token": "--semantic-color-border-primary-focused", "from": "src/components/Button/Button.css#L147" },
+    { "token": "--component-button-text-primary", "from": "src/components/Button/Button.css#L148" },
+    { "token": "--semantic-color-icon-inverse", "from": "src/components/Button/Button.css#L149" },
+    { "token": "--semantic-color-bg-primary-hovered", "from": "src/components/Button/Button.css#L153" },
+    { "token": "--semantic-color-bg-disabled", "from": "src/components/Button/Button.css#L159" },
+    { "token": "--semantic-color-text-disabled", "from": "src/components/Button/Button.css#L161" },
+    { "token": "--semantic-color-bg-negative", "from": "src/components/Button/Button.css#L166" },
+    { "token": "--semantic-color-icon-negative", "from": "src/components/Button/Button.css#L167" },
+    { "token": "--semantic-color-bg-surfaceprimary", "from": "src/components/Button/Button.css#L176" },
+    { "token": "--semantic-color-text-negative", "from": "src/components/Button/Button.css#L218" },
+    { "token": "--component-card-radius-lg", "from": "src/components/Button/Button.css#L238" }
+  ],
+  "a11y": [
+    {
+      "fact": "Renders a native `<button>` element, not a div with a click handler.",
+      "source": "src/components/Button/Button.tsx#L87"
+    },
+    {
+      "fact": "Sets the DOM `type` attribute from `htmlType`, which defaults to `button`, so the element does not submit a form unless a consumer passes `submit`.",
+      "source": "src/components/Button/Button.tsx#L90"
+    },
+    {
+      "fact": "Computes `disabled` as `disabled ?? status === 'disabled'`, so the disabled cell renders a genuinely disabled control rather than a grey-looking enabled one, and an explicit `disabled` prop still wins.",
+      "source": "src/components/Button/Button.tsx#L84"
+    },
+    {
+      "fact": "Spreads the consumer's remaining props onto the `<button>` before it sets `type`, `disabled` and the data attributes, so `aria-*` attributes passed in reach the element while `type` and `disabled` cannot be overridden by them.",
+      "source": "src/components/Button/Button.tsx#L88"
+    },
+    {
+      "fact": "Renders the `label` string as the button's only text content, in `.hds-button__label`, and sets no `aria-label`, so the accessible name is the `label` prop.",
+      "source": "src/components/Button/Button.tsx#L102"
+    },
+    {
+      "fact": "The `Info` glyph rendered into the icon slots carries `aria-hidden=\"true\"` and `focusable={false}`, so the icons are not in the accessibility tree and add nothing to the accessible name.",
+      "source": "src/icons/Info.tsx#L44"
+    },
+    {
+      "fact": "Draws the focus ring on `:focus-visible` with no `data-status` scoping, so the ring appears on keyboard focus at every status — including `error` and `hovered` — and not on a mouse click.",
+      "source": "src/components/Button/Button.css#L233"
+    },
+    {
+      "fact": "Sets `outline: none` on `:focus-visible` only for the element that already draws its own ring in the rule above, so focus is never left with no visible indicator.",
+      "source": "src/components/Button/Button.css#L243"
+    }
+  ],
+  "gaps": [
+    "variant_intent.type — the code states no purpose for `Fill`, `outline` or `transparent`; the doc comments at src/components/Button/Button.tsx#L30 and #L41 say only that it is the Figma `Type` property, so every value is null.",
+    "variant_intent.status — the code states a purpose only for `default` (src/components/Button/Button.tsx#L43-L47); `hovered`, `focus`, `disabled` and `error` are null.",
+    "variant_intent.htmlType — the doc comment at src/components/Button/Button.tsx#L55 states no purpose for `button`, `submit` or `reset`; every value is null.",
+    "placement — no story in src/components/Button/Button.stories.tsx places Button in a context. Every story renders it on the meta decorator's padded canvas (#L44-L50); `matrix (all 15)` (#L163) and `icon slots` (#L189) are bare grids of Buttons, not placements.",
+    "pairs_with — no story in src/components/Button/Button.stories.tsx renders another component beside Button; the only other component in the tree is the `Info` glyph composed inside it (src/components/Button/Button.tsx#L62).",
+    "dont_use_when.alternative — three of the four Figma items name no alternative: figma:204:2354, figma:204:2355 and figma:204:2356."
+  ]
+}

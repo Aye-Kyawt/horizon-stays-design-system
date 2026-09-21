@@ -88,7 +88,7 @@ The spine of the base. One row per component.
 | Figma | URL | 🎨 Designer *inferred* | The node. Feeds precedence 8 |
 | Staging Storybook | URL | 🔨 Engineer **stated** | Written after the staging build was opened and seen to render. Feeds precedence 7 |
 | Production Storybook | URL | 🚀 DevOps **stated** | Feeds precedence 5. The Engineer is explicitly barred |
-| Astro Link | URL | 📚 Doc Generator **stated** | The deployed Starlight page, written only after it was fetched. Feeds precedence 4. See Flag 6 |
+| Astro Link | URL | 📚 Doc Generator **stated** | The deployed Starlight page, written only after it was fetched. Feeds precedence 4. See Flag 6 and Flag 10 |
 | Design | Single select | 🎨 Designer **stated** | To-do · In progress · In testing · Done · To be fixed. A human's column — no agent nudges it |
 | Development | Formula | ⚙️ Airtable **stated** | Derived status. **No agent may write it.** See below |
 | Synchronization % | Formula | ⚙️ Airtable | `Staging Passed Count / Total Staging Tests`, as text |
@@ -230,15 +230,18 @@ and about twenty more — currently reads `To-do`.
 *Consequence:* `To-do` is **not** proof that Design is `Done`. Branch 8 and branch 9 are
 indistinguishable in the cell. Before building, read the `Design` column itself.
 
-**Flag 2 · Release Review — "It does not feed Development" is false.**
-The description says the column "does not feed Development and is not part of the
+**Flag 2 · Release Review — "It does not feed Development" was false. Corrected 2026-09-21.**
+The description said the column "does not feed Development and is not part of the
 staging-to-production ladder". The formula reads it in branch 4: without it, `Released` is
-unreachable. It is on the ladder.
+unreachable. It is on the ladder. The description now says so, and records what it used to claim.
 
-**Flag 3 · Release Verdict — "Deliberately not wired into Development" is false.**
+**Flag 3 · Release Verdict — "Deliberately not wired into Development" was false. Corrected
+2026-09-21.**
 Same branch. The formula tests `Release Verdict = "Cleared"` before it will say `Released`. The
 description's reasoning — that folding this gate in would make a shipped component read
-unfinished — describes a decision that was not implemented.
+unfinished — described a decision that was never implemented. The description now says so. It also
+cited `VERSIONING.md` for why a human approves the version; no such file exists on any branch, so
+that pointer was replaced with what actually carries the gates, `npm run release:publish`.
 
 **Flag 4 · Staging Passed Tests — both halves of the description are false.**
 It says "Counts only test rows marked Passed. Feeds Synchronization %."
@@ -260,6 +263,23 @@ The description reads `Released` as "built, tested, shipped, documented, reviewe
 Branch 4 sits above branch 5 and never looks at `Production Storybook`, so a row with an Astro
 link, a review and a `Cleared` verdict reads `Released` while `Production Storybook` is empty —
 documented and reviewed, but never shipped to production.
+
+**Flag 10 · Astro Link — the base said DevOps until 2026-09-21.**
+🚀 DevOps owned this column originally, and the field description said so. The commit *"Add the
+doc-generator agent and give it Astro Link"* moved it to 📚 Doc Generator — the agent that builds
+and publishes the site is the one that can fetch a page before recording it — and updated
+`devops.md` and this contract. Nobody updated the field description, so for three days the base
+and the repo named different owners, both marked **stated**. The description now names Doc
+Generator and records the change.
+
+`Release Review` and `Release Verdict` carried the same drift — both said *"🧭 Reviewer owns this"*
+in the base, a role that never had an agent file, while this contract and
+`.claude/skills/release-review/SKILL.md` name 📦 Release. Both descriptions were corrected on
+2026-09-21 too, so all three columns now name the same owner in the base and in the repo.
+
+The lesson, not the fix: when an owner moves, the field description is part of the move. A
+"stated" source that is not updated does not stop being read, and two "stated" sources that
+disagree give the next agent a coin to flip.
 
 ## Traps that are not formula disagreements
 

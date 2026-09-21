@@ -1,11 +1,12 @@
 /**
  * .cardText — Figma 37:2034
  *
- * Every value below is `var(--token)`. Where a value is bound in Figma to a
- * core (base-layer) token and no semantic token in front of it resolves to
- * the same value, the core token is used verbatim rather than substituting a
- * near-miss semantic one, and the gap is recorded in
- * docs/cardContainer-design-gaps.md. Nothing here is a guess.
+ * Every value below is `var(--token)`, and none reads a core (base-layer)
+ * token. Where Figma binds a core variable directly, the value is read
+ * through a semantic or text-style token that aliases that same variable on
+ * every platform — a resolution, never a near-miss substitute. What remains
+ * undecided in the design is recorded in docs/cardContainer-design-gaps.md.
+ * Nothing here is a guess.
  */
 
 .hds-cardText {
@@ -47,15 +48,16 @@
 /* ---- Title: Figma "Body/Medium Semibold" -------------------------------
  * size / line-height / letter-spacing / family resolve through the semantic
  * `latin-body` tokens, which alias exactly the core tokens Figma bound.
- * The weight does not: no semantic type token carries body-md at semibold,
- * so the core token Figma bound is used directly. Recorded as a gap.
+ * The weight comes from the Body/Medium Semibold style token, whose
+ * font-weight aliases core/type/fontWeight/body/semibold/md, the variable
+ * Figma binds, on every platform.
  */
 .hds-cardText__title {
   font-family: var(--semantic-type-latin-body-font-family), system-ui, sans-serif;
   font-size: var(--semantic-type-latin-body-font-size);
   line-height: var(--semantic-type-latin-body-line-height);
   letter-spacing: var(--semantic-type-latin-body-letter-spacing);
-  font-weight: var(--core-type-fontweight-body-semibold-md);
+  font-weight: var(--body-medium-semibold-font-weight);
   color: var(--semantic-color-text-base);
   inline-size: 100%;
 }
@@ -77,14 +79,16 @@
 /* ---- Rating value -------------------------------------------------------
  * Figma attaches the core label/md variables here AND a raw text style
  * ("small/semibold": Inter 12 / 600 / lh 100 / ls 0) that disagrees with
- * them. The bound variables are used; the raw style is reported, not copied.
+ * them. The bound variables are used, through the Label/Medium style tokens,
+ * which alias exactly those core variables on every platform; the raw style
+ * is reported, not copied.
  */
 .hds-cardText__rating {
-  font-family: var(--core-type-fontfamily-brand), system-ui, sans-serif;
-  font-size: var(--core-type-size-label-md);
-  line-height: var(--core-type-lineheight-label-md);
-  letter-spacing: var(--core-type-tracking-label-md);
-  font-weight: var(--core-type-fontweight-label-md);
+  font-family: var(--label-medium-font-family), system-ui, sans-serif;
+  font-size: var(--label-medium-font-size);
+  line-height: var(--label-medium-line-height);
+  letter-spacing: var(--label-medium-letter-spacing);
+  font-weight: var(--label-medium-font-weight);
   color: var(--semantic-color-icon-rating);
 }
 
@@ -104,6 +108,6 @@
   font-size: var(--semantic-type-latin-body-font-size);
   line-height: var(--semantic-type-latin-body-line-height);
   letter-spacing: var(--semantic-type-latin-body-letter-spacing);
-  font-weight: var(--core-type-fontweight-body-semibold-md);
+  font-weight: var(--body-medium-semibold-font-weight);
   color: var(--semantic-color-text-base);
 }

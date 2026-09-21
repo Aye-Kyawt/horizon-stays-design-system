@@ -20,8 +20,15 @@
   display: inline-flex;
   align-items: center;
   gap: var(--semantic-spacing-gap-2xs);
-  padding-inline: var(--semantic-spacing-padding-sm);
-  padding-block: var(--semantic-spacing-padding-2xs);
+  /*
+   * The node's 1px stroke is INSIDE (strokeAlign on 72:2, 72:6, 72:11, 72:15),
+   * so Figma measures its padding from the outer edge and the stroke sits on
+   * top of it. A CSS border sits outside the padding instead, so each side's
+   * padding gives the border width back. That keeps the box at the node's
+   * 52x24 rather than 54x26.
+   */
+  padding-inline: calc(var(--semantic-spacing-padding-sm) - var(--semantic-border-width-base));
+  padding-block: calc(var(--semantic-spacing-padding-2xs) - var(--semantic-border-width-base));
   border-radius: var(--semantic-border-radius-full);
   border-width: var(--semantic-border-width-base);
   border-style: solid;
@@ -122,6 +129,15 @@
   color: var(--semantic-color-icon-subtle);
 }
 
+/*
+ * disabled clear control (72:18). The node binds semantic/color/icon/disabled,
+ * and so does this rule. Keep the binding even while the colour disagrees:
+ * the Semantic library the Figma file uses resolves that variable to
+ * core/color/neutral/600 (#8a94a6), but the committed token export aliases
+ * neutral/500 (#a9b3c0). The two token sources have drifted apart. See
+ * docs/token-export-drift.md. The fix is to reconcile them, not to bind a
+ * different token that happens to match.
+ */
 .hds-chip[data-status='disabled'] .hds-chip__remove {
   color: var(--semantic-color-icon-disabled);
   cursor: not-allowed;
