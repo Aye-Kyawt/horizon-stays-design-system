@@ -134,9 +134,14 @@
     "$value": "{core-color-blue-200}",
     "$description": "Primary button pressed  ·  → blue/blue-900"
   },
-  "semantic-color-text-onprimary": {
+  "semantic-color-text-on-action": {
     "$type": "color",
     "$value": "{semantic-color-text-inverse}",
+    "$description": "Label on a primary button. Aliases text/inverse."
+  },
+  "semantic-color-text-action-hover": {
+    "$type": "color",
+    "$value": "{semantic-color-text-info}",
     "$description": "Label on a primary button. Aliases text/inverse."
   },
   "semantic-color-bg-secondary": {
@@ -389,9 +394,14 @@
     "$value": "{core-color-neutral-300}",
     "$description": "Divider on a navy or dark ground."
   },
+  "semantic-color-border-on-hover": {
+    "$type": "color",
+    "$value": "{core-color-neutral-300}",
+    "$description": "Divider on a navy or dark ground."
+  },
   "semantic-color-icon-base": {
     "$type": "color",
-    "$value": "{core-color-neutral-200}",
+    "$value": "{core-color-base-white}",
     "$description": "Default icon."
   },
   "semantic-color-icon-subtle": {
@@ -431,7 +441,12 @@
   },
   "semantic-color-icon-disabled": {
     "$type": "color",
-    "$value": "{core-color-neutral-700}",
+    "$value": "{core-color-neutral-400}",
+    "$description": "Disabled icon."
+  },
+  "semantic-color-icon-hover": {
+    "$type": "color",
+    "$value": "{core-color-navy-300}",
     "$description": "Disabled icon."
   },
   "semantic-elevation-y-level1": {
