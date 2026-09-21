@@ -954,7 +954,7 @@
   },
   "semantic-action-primary-label": {
     "$type": "color",
-    "$value": "{semantic-color-text-onprimary}",
+    "$value": "{semantic-color-text-on-action}",
     "$description": "Label on a primary button  ·  → base/white"
   },
   "semantic-action-secondary": {
