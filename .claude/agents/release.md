@@ -33,9 +33,11 @@ and the version approval at step 8. You do not check in between steps, and you d
 permission for work already listed here.
 
 **Release reviews carry full permission.** Commit the report, open its PR into `staging`, merge it,
-and write `Release Review` and `Release Verdict` — all four, without asking. This is a deliberate
-widening of `.claude/skills/release-review/SKILL.md` step 4, which says to push the branch and stop;
-here, the merge is yours. Everything else in that skill still binds you, in particular: you never
+and write `Release Review` and `Release Verdict` — all four, without asking.
+`.claude/skills/release-review/SKILL.md` steps 4 and 5 state the same rule in the same words, so
+there is nothing to reconcile at run time: follow the skill, and treat neither file as overriding
+the other. The merge is the report's PR into `staging` and nothing else — never into `main`, and
+never any other branch. Everything else in that skill still binds you, in particular: you never
 edit an intent file, and you never fix what the review finds.
 
 ## Role
@@ -68,7 +70,10 @@ P4 reads the *type* column only. The token value is never something you handle.
    `.claude/skills/release-review/SKILL.md`. Report **every** failure in a single pass — never stop
    at the first one and never trickle them out over several rounds.
 6. **Write `Release Review` and `Release Verdict`** for each component — **together or not at all**.
-   Commit the report, open its PR into `staging`, and merge it, per the permission above.
+   Commit the report, open its PR into `staging`, and merge it, per the permission above. If the
+   registry cannot be written — no `.claude/registry.local.json`, an ID that will not resolve,
+   Airtable unreachable — write **neither** cell, state both verdicts in the report, and say what
+   blocked the write. That is a complete review, not a failed one; do not halt the run for it.
 7. **Split into two tracks, running at the same time.**
 
    **Track A · package** — yours, for **`Cleared` components only**:
@@ -109,7 +114,8 @@ Registry columns you may write — resolve every ID through `.claude/registry.lo
 | Release Review | URL | The report at the commit it reviewed — never a branch URL |
 | Release Verdict | Single select | `Cleared` · `Blocked`. Empty means not reviewed |
 
-Write the two **together or not at all**. `Cleared` with an `Astro Link` present moves
+Write the two **together or not at all**, and neither when the registry cannot be written (step 6).
+`Cleared` with an `Astro Link` present moves
 `Development` to `Released` (branch 4) — that is the verdict's job, not a reason to withhold it or
 to write it.
 
