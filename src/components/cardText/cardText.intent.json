@@ -1,7 +1,7 @@
 {
   "component": "cardText",
   "figma": "https://www.figma.com/design/2k87mtkZMvxQIYwjLX82pu/Horizon.Web.Component.V1.0.In-Progress?node-id=37-2034",
-  "commit": "c7db43357883449a13ade9c68cb749eea529eaee",
+  "commit": "e570ee93c3cb4cdd878e7fe8a32083fecc12baee",
 
   "use_when": [],
   "dont_use_when": [],
@@ -34,27 +34,27 @@
   "placement": [],
   "pairs_with": [],
   "required_tokens": [
-    { "token": "--component-input-gap-xs", "from": "src/components/cardText/cardText.css#L16" },
-    { "token": "--semantic-spacing-gap-2xs", "from": "src/components/cardText/cardText.css#L39" },
-    { "token": "--semantic-type-latin-body-font-family", "from": "src/components/cardText/cardText.css#L54" },
-    { "token": "--semantic-type-latin-body-font-size", "from": "src/components/cardText/cardText.css#L55" },
-    { "token": "--semantic-type-latin-body-line-height", "from": "src/components/cardText/cardText.css#L56" },
-    { "token": "--semantic-type-latin-body-letter-spacing", "from": "src/components/cardText/cardText.css#L57" },
-    { "token": "--core-type-fontweight-body-semibold-md", "from": "src/components/cardText/cardText.css#L58" },
-    { "token": "--semantic-color-text-base", "from": "src/components/cardText/cardText.css#L59" },
-    { "token": "--semantic-type-latin-meta-font-family", "from": "src/components/cardText/cardText.css#L68" },
-    { "token": "--semantic-type-latin-meta-font-size", "from": "src/components/cardText/cardText.css#L69" },
-    { "token": "--semantic-type-latin-meta-line-height", "from": "src/components/cardText/cardText.css#L70" },
-    { "token": "--semantic-type-latin-meta-letter-spacing", "from": "src/components/cardText/cardText.css#L71" },
-    { "token": "--semantic-type-latin-meta-font-weight", "from": "src/components/cardText/cardText.css#L72" },
-    { "token": "--semantic-color-text-secondary", "from": "src/components/cardText/cardText.css#L73" },
-    { "token": "--core-type-fontfamily-brand", "from": "src/components/cardText/cardText.css#L83" },
-    { "token": "--core-type-size-label-md", "from": "src/components/cardText/cardText.css#L84" },
-    { "token": "--core-type-lineheight-label-md", "from": "src/components/cardText/cardText.css#L85" },
-    { "token": "--core-type-tracking-label-md", "from": "src/components/cardText/cardText.css#L86" },
-    { "token": "--core-type-fontweight-label-md", "from": "src/components/cardText/cardText.css#L87" },
-    { "token": "--semantic-color-icon-rating", "from": "src/components/cardText/cardText.css#L88" },
-    { "token": "--semantic-color-text-subtle", "from": "src/components/cardText/cardText.css#L98" }
+    { "token": "--component-input-gap-xs", "from": "src/components/cardText/cardText.css#L17" },
+    { "token": "--semantic-spacing-gap-2xs", "from": "src/components/cardText/cardText.css#L40" },
+    { "token": "--semantic-type-latin-body-font-family", "from": "src/components/cardText/cardText.css#L56" },
+    { "token": "--semantic-type-latin-body-font-size", "from": "src/components/cardText/cardText.css#L57" },
+    { "token": "--semantic-type-latin-body-line-height", "from": "src/components/cardText/cardText.css#L58" },
+    { "token": "--semantic-type-latin-body-letter-spacing", "from": "src/components/cardText/cardText.css#L59" },
+    { "token": "--body-medium-semibold-font-weight", "from": "src/components/cardText/cardText.css#L60" },
+    { "token": "--semantic-color-text-base", "from": "src/components/cardText/cardText.css#L61" },
+    { "token": "--semantic-type-latin-meta-font-family", "from": "src/components/cardText/cardText.css#L70" },
+    { "token": "--semantic-type-latin-meta-font-size", "from": "src/components/cardText/cardText.css#L71" },
+    { "token": "--semantic-type-latin-meta-line-height", "from": "src/components/cardText/cardText.css#L72" },
+    { "token": "--semantic-type-latin-meta-letter-spacing", "from": "src/components/cardText/cardText.css#L73" },
+    { "token": "--semantic-type-latin-meta-font-weight", "from": "src/components/cardText/cardText.css#L74" },
+    { "token": "--semantic-color-text-secondary", "from": "src/components/cardText/cardText.css#L75" },
+    { "token": "--label-medium-font-family", "from": "src/components/cardText/cardText.css#L87" },
+    { "token": "--label-medium-font-size", "from": "src/components/cardText/cardText.css#L88" },
+    { "token": "--label-medium-line-height", "from": "src/components/cardText/cardText.css#L89" },
+    { "token": "--label-medium-letter-spacing", "from": "src/components/cardText/cardText.css#L90" },
+    { "token": "--label-medium-font-weight", "from": "src/components/cardText/cardText.css#L91" },
+    { "token": "--semantic-color-icon-rating", "from": "src/components/cardText/cardText.css#L92" },
+    { "token": "--semantic-color-text-subtle", "from": "src/components/cardText/cardText.css#L102" }
   ],
   "a11y": [
     {
@@ -90,7 +90,6 @@
       "source": "src/components/cardText/cardText.tsx#L73-L74"
     }
   ],
-
   "gaps": [
     "use_when and dont_use_when — no usage region on the Figma documentation page for node 37:2034. Read live over the Figma MCP connection: get_metadata on 37:2034 returns a single `<symbol>` whose children are plain frames, and get_design_context on 37:2034 reports the whole of this component's Figma documentation as the one-line description \"card information text.\", with no documentation link. Button's equivalent region — the \"How Designed?\" frame figma:204:1917, holding \"When to use:\" (figma:204:1918), \"Use an Button\" (figma:204:1924), \"Do not use an alert\" (figma:204:1946) and \"Best Practice\" (figma:204:1968) — has no counterpart for .cardText, and no component in the card family (cardContainer 39:2065, cardLayout 39:2346, cardImage 39:2193, cardText 37:2034) carries a documentation link. Both fields are therefore empty; the connection was reachable throughout.",
     "use_when — the component description \"card information text.\" (Figma, node 37:2034) is a component description, not a usage region, so it is not transposed here. Nothing in Figma states where .cardText may be used, and src/index.ts#L8-L15 names it deliberately internal, reachable only through CardContainer's `layout` prop — that is a repo decision, not design documentation, so it is not an entry either.",
@@ -100,7 +99,7 @@
     "variant_intent — `title`, `location`, `rating`, `reviewCount`, `priceAmount` and `pricePeriod` are absent because they are not variant props and Figma defines no text property behind any of them; the layers carry fixed sample content (src/components/cardText/cardText.tsx#L9-L11, docs/cardContainer-naming.md). They are named by this repo and would have to be renamed if design adds text properties.",
     "placement — no story in src/components/cardText/cardText.stories.tsx places cardText in a context. Every story renders it bare inside the meta decorator's 278px-wide padded box, which the file itself labels \"Story chrome only\" (#L20-L27). No story renders it inside cardLayout or cardContainer, which is where the component actually lives.",
     "pairs_with — no story in src/components/cardText/cardText.stories.tsx renders another component beside cardText, and src/components/cardText/cardText.tsx imports no other component, so the file composes nothing either.",
-    "required_tokens — seven of the entries above are base-layer `--core-*` reads (cardText.css #L58, #L83, #L84, #L85, #L86, #L87 and the second read of --core-type-fontweight-body-semibold-md at #L107), against CLAUDE.md's rule that components use semantic tokens only. They are recorded as the stylesheet actually reads them, not substituted. The missing semantic tokens are reported in docs/cardContainer-design-gaps.md §2 (no semantic type token carries body-md at semibold) and §3 (the rating line carries bound variables and a contradicting raw text style).",
-    "required_tokens — --component-input-gap-xs (cardText.css#L16, #L27) is an input-scoped component token used for the vertical gaps inside a card. Reported in docs/cardContainer-design-gaps.md §7; no card-scoped or semantic spacing token was substituted for it."
+    "required_tokens — no entry is a base-layer `--core-*` read. The title and price weight read `--body-medium-semibold-font-weight` and the rating line reads `--label-medium-*`, text-style tokens that alias the same core variables Figma binds on every platform (docs/release-0.1.0-token-proposal.md Part A). The rendered values did not change. Still open in docs/cardContainer-design-gaps.md: §2 (the semantic card-title and price tokens resolve to 16px, not the 14px the node draws) and §3 (the rating line carries bound variables and a contradicting raw text style).",
+    "required_tokens — --component-input-gap-xs (cardText.css#L17, #L28) is an input-scoped component token used for the vertical gaps inside a card. Reported in docs/cardContainer-design-gaps.md §7; no card-scoped or semantic spacing token was substituted for it."
   ]
 }
