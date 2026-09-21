@@ -88,7 +88,7 @@ The spine of the base. One row per component.
 | Figma | URL | 🎨 Designer *inferred* | The node. Feeds precedence 8 |
 | Staging Storybook | URL | 🔨 Engineer **stated** | Written after the staging build was opened and seen to render. Feeds precedence 7 |
 | Production Storybook | URL | 🚀 DevOps **stated** | Feeds precedence 5. The Engineer is explicitly barred |
-| Astro Link | URL | 📚 Doc Generator **stated** | The deployed Starlight page, written only after it was fetched. Feeds precedence 4. See Flag 6 |
+| Astro Link | URL | 📚 Doc Generator **stated** | The deployed Starlight page, written only after it was fetched. Feeds precedence 4. See Flag 6 and Flag 10 |
 | Design | Single select | 🎨 Designer **stated** | To-do · In progress · In testing · Done · To be fixed. A human's column — no agent nudges it |
 | Development | Formula | ⚙️ Airtable **stated** | Derived status. **No agent may write it.** See below |
 | Synchronization % | Formula | ⚙️ Airtable | `Staging Passed Count / Total Staging Tests`, as text |
@@ -260,6 +260,20 @@ The description reads `Released` as "built, tested, shipped, documented, reviewe
 Branch 4 sits above branch 5 and never looks at `Production Storybook`, so a row with an Astro
 link, a review and a `Cleared` verdict reads `Released` while `Production Storybook` is empty —
 documented and reviewed, but never shipped to production.
+
+**Flag 10 · Astro Link — the base said DevOps until 2026-09-21.**
+🚀 DevOps owned this column originally, and the field description said so. The commit *"Add the
+doc-generator agent and give it Astro Link"* moved it to 📚 Doc Generator — the agent that builds
+and publishes the site is the one that can fetch a page before recording it — and updated
+`devops.md` and this contract. Nobody updated the field description, so for three days the base
+and the repo named different owners, both marked **stated**. The description now names Doc
+Generator and records the change.
+
+Two things this leaves behind. `Release Review` and `Release Verdict` still say *"🧭 Reviewer owns
+this"* in the base, a role with no agent file; this contract and
+`.claude/skills/release-review/SKILL.md` name 📦 Release. Same class of drift, not yet corrected.
+And when an owner moves, the field description is part of the move — a "stated" source that is not
+updated does not stop being read.
 
 ## Traps that are not formula disagreements
 
