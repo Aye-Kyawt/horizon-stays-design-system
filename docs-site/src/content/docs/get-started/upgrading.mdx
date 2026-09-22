@@ -1,0 +1,25 @@
+---
+title: Upgrading
+description: Moving between versions of @aye_kyawt/horizon-stays-design-system.
+---
+
+## There is nothing to upgrade from yet
+
+0.1.0 is the first published version, so there is no earlier release to migrate from.
+Installing it is a fresh install. See [Developing](/developing/introduction/).
+
+## One thing to know about the 0.1.0 tarball
+
+The `README.md` inside the 0.1.0 package was written before the first publish. It still says the
+package is unpublished and lists seven components. Its usage example passes children to
+`Button`, which `Button` does not render.
+
+The README in the repository has since been corrected. It reaches npm with the next version. Until
+then, go by this site and by the types in the package itself (`dist/index.d.ts`).
+
+## When there is a next version
+
+Each release's entry in [CHANGELOG.md](https://github.com/Aye-Kyawt/horizon-stays-design-system/blob/main/CHANGELOG.md)
+and on the [Changelog](/get-started/changelog/) page lists what changed. A version that removes or
+renames anything exported from `src/index.ts` is a major release (see
+[Versioning](/get-started/versioning/)).

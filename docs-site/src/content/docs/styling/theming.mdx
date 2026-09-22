@@ -1,0 +1,55 @@
+---
+title: Theming
+description: Light and dark, and how a theme is applied.
+---
+
+## Switching
+
+`tokens.css` declares every token on `:root` for the light theme, and again under
+`[data-theme="dark"]` for the dark one. To switch the whole page to dark, set the attribute on the
+root element:
+
+```html
+<html data-theme="dark">
+```
+
+Remove it, or set any other value, for light.
+
+## A theme changes colour, and nothing else
+
+The dark block overrides **74 tokens, all of them `--semantic-color-*`**. Spacing, radius, borders,
+type and elevation are identical in both themes, so switching theme never moves the layout.
+
+Some of those colours change more than their brightness. On a Fill button, for example, the label
+goes from white on blue in light to dark text on a lighter blue in dark. That's the token system
+keeping the label legible, not a bug.
+
+## Scoping a theme to part of a page
+
+The dark selector is the attribute alone, `[data-theme="dark"]`, not `:root[data-theme="dark"]`. So
+putting the attribute on any element switches that element and everything inside it:
+
+```html
+<section data-theme="dark">
+  <!-- components in here render dark -->
+</section>
+```
+
+## Changing a value
+
+Every visual value in the components comes from a CSS custom property, so a value can be
+overridden by redeclaring the token in your own CSS, scoped as tightly as you need. A token's value
+is the design's decision, though: it comes from the Figma token library, which is the source of
+truth. A permanent change belongs there, re-exported, not in an app's CSS.
+
+## Contrast, stated rather than discovered
+
+The Button stylesheet records the contrast of its Fill label in both themes:
+
+| Theme | Label on fill | Ratio |
+|---|---|---|
+| Light | `#ffffff` on `#1d4ed8` | 6.70 : 1 |
+| Dark | `#1b2733` on `#60a5fa` | 5.97 : 1 |
+
+Pinning the label to white in dark mode would give `#ffffff` on `#60a5fa`, which is 2.54 : 1 and
+fails WCAG AA. That's why the label follows the theme.

@@ -1,11 +1,103 @@
-:root {
-  --sl-font: 'Inter', 'Padauk', system-ui, sans-serif;
+/**
+ * The docs site wears the design system's own tokens.
+ *
+ * Starlight's --sl-* variables are mapped onto SEMANTIC tokens only. The
+ * semantic tokens already switch on [data-theme="dark"], the same attribute
+ * Starlight's theme switch sets, so one mapping serves both themes. It is
+ * declared for :root (light) and [data-theme="dark"] so it outranks
+ * Starlight's own :root and :root[data-theme='light'] rules in either theme.
+ *
+ * Starlight's grey scale is inverted in light mode: --sl-color-white is the
+ * strongest text and --sl-color-black the page. The mapping follows its roles,
+ * not the names.
+ *
+ * No hex, rgb or px value is declared here. tokens.css (the web token build,
+ * copied from build/css/web.css at the pinned commit) is loaded before this
+ * file. Fonts are self-hosted through @fontsource, loaded in astro.config.mjs.
+ */
+
+:root,
+:root[data-theme='light'],
+:root[data-theme='dark'] {
+  --sl-font: var(--semantic-type-latin-body-font-family), var(--semantic-type-myanmar-body-font-family), system-ui, sans-serif;
+
+  --sl-color-white: var(--semantic-color-text-base);
+  --sl-color-gray-1: var(--semantic-color-text-base);
+  --sl-color-gray-2: var(--semantic-color-text-secondary);
+  --sl-color-gray-3: var(--semantic-color-text-subtle);
+  --sl-color-gray-4: var(--semantic-color-text-placeholder);
+  --sl-color-gray-5: var(--semantic-color-border-strong);
+  --sl-color-gray-6: var(--semantic-color-bg-surfacesecondary);
+  --sl-color-gray-7: var(--semantic-color-bg-base);
+  --sl-color-black: var(--semantic-color-bg-surfaceprimary);
+
+  --sl-color-accent-low: var(--semantic-color-bg-primary-subtle);
+  --sl-color-accent: var(--semantic-color-text-link);
+  --sl-color-accent-high: var(--semantic-color-text-link);
+  --sl-color-text-accent: var(--semantic-color-text-link);
+  --sl-color-text-invert: var(--semantic-color-text-inverse);
+
+  --sl-color-bg: var(--semantic-color-bg-surfaceprimary);
+  --sl-color-bg-nav: var(--semantic-color-bg-surfaceprimary);
+  --sl-color-bg-sidebar: var(--semantic-color-bg-base);
+  --sl-color-bg-inline-code: var(--semantic-color-bg-surfacesecondary);
+  --sl-color-hairline: var(--semantic-color-border-base);
+  --sl-color-hairline-light: var(--semantic-color-border-subtle);
+  --sl-color-hairline-shade: var(--semantic-color-border-strong);
+
+  --sl-color-orange-low: var(--semantic-color-bg-warning-subtle);
+  --sl-color-orange: var(--semantic-color-text-warning);
+  --sl-color-orange-high: var(--semantic-color-text-warning);
+  --sl-color-green-low: var(--semantic-color-bg-positive-subtle);
+  --sl-color-green: var(--semantic-color-text-positive);
+  --sl-color-green-high: var(--semantic-color-text-positive);
+  --sl-color-blue-low: var(--semantic-color-bg-info-subtle);
+  --sl-color-blue: var(--semantic-color-text-info);
+  --sl-color-blue-high: var(--semantic-color-text-info);
+  --sl-color-red-low: var(--semantic-color-bg-negative-subtle);
+  --sl-color-red: var(--semantic-color-text-negative);
+  --sl-color-red-high: var(--semantic-color-text-negative);
 }
 
-.hs-embed {
-  width: 100%;
-  min-height: 28rem;
-  border: 1px solid var(--sl-color-gray-5);
-  border-radius: 0.5rem;
-  background: #fff;
+/* Component page header strip: status and version. */
+.hds-pageheader {
+  margin-block-end: var(--semantic-spacing-gap-xs);
+}
+
+.hds-status {
+  display: inline-block;
+  padding-inline: var(--semantic-spacing-padding-xs);
+  padding-block: var(--semantic-spacing-padding-2xs);
+  border-radius: var(--semantic-border-radius-full);
+  background-color: var(--semantic-color-bg-primary-subtle);
+  color: var(--semantic-color-text-link);
+  font-size: var(--label-medium-font-size);
+  font-weight: var(--label-medium-font-weight);
+  line-height: var(--label-medium-line-height);
+  letter-spacing: var(--label-medium-letter-spacing);
+}
+
+/* Storybook and Figma embeds. Each story is shown twice: light, then dark. */
+.hds-embed-pair {
+  display: grid;
+  gap: var(--semantic-spacing-gap-sm);
+}
+
+.hds-embed {
+  inline-size: 100%;
+  min-block-size: calc(var(--semantic-spacing-margin-lg) * 7);
+  border: var(--semantic-border-width-base) solid var(--semantic-color-border-base);
+  border-radius: var(--semantic-border-radius-md);
+  background-color: var(--semantic-color-bg-surfaceprimary);
+}
+
+.hds-embed--figma {
+  min-block-size: calc(var(--semantic-spacing-margin-lg) * 9);
+}
+
+/* Footer line naming the commit the site was built from. */
+.hds-built {
+  margin-block-start: var(--semantic-spacing-gap-sm);
+  color: var(--semantic-color-text-subtle);
+  font-size: var(--label-medium-font-size);
 }

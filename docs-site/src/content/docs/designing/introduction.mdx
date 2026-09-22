@@ -1,0 +1,55 @@
+---
+title: Designing
+description: How the Figma files, the token library and the coded components relate.
+---
+
+## Three Figma sources
+
+- **The component file**, `Horizon.Web.Component.V1.0.In-Progress`. It has one page per
+  component, holding the component set and a documentation frame named `<Component> Usage` with
+  *When to use*, *Do not use* and *Best practice*. The **Usage** tab on each component page here
+  is read from that frame.
+- **The token library**, `Horizon.Token.V1.0.In Progress`. It holds the Core, Semantic,
+  Component, Type, Border and Spacing variable collections, in Light and Dark modes. **It is the
+  source of truth for tokens.** When it and the repo's export disagree, the export is brought in
+  line with it.
+- **Icons** come from the *Simple Design System* library and are vendored into `src/icons/`, not
+  substituted.
+
+## From a Figma node to a component
+
+A component is built from one Figma node and held to it:
+
+- **Prop names match Figma property names.** Where a name collides with something the code
+  cannot use, such as Button's `type` versus the DOM `type` attribute, the conflict and its
+  resolution are written up under `docs/`.
+- **Every variant and state has a story.** QA tests the staging build against the node, variant
+  by variant.
+- **Every visual value comes from a token.** A value the design leaves unbound is a design gap:
+  it is reported, not filled in. Each component page lists **What Figma never bound** and the
+  recorded gaps on its **Design** tab.
+
+## Where a component stands
+
+The component registry tracks each component's status from design to release. The statuses, in
+order:
+
+| Status | Meaning |
+|---|---|
+| To-do | A Figma node exists. An empty Design column also reads To-do, so To-do alone does not mean signed off. |
+| Ready for Testing | A staging build exists. |
+| To be fixed · Fixing · Fixed | QA found failures, and they are being repaired and re-tested. |
+| To be deployed | Every staging test passed. |
+| Completed | Shipped to the production Storybook. |
+| Released | Documented here, reviewed, and cleared for release. |
+
+The [Roadmap](/get-started/roadmap/) lists every component under its current status.
+
+## Changing tokens
+
+1. Change the variables in the token library.
+2. Re-export with the Design Tokens plugin into `tokens/*.tokens.json`.
+3. The token runner rebuilds and summarises the diff.
+
+Never edit the export or `build/` by hand. A token that exists in one mode and not the other is a
+design gap to report, not to fill.

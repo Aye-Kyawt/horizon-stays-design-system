@@ -1,36 +1,37 @@
 ---
-title: Horizon Stays Design System
-description: Reference for the Horizon Stays design system — components, props and where each one lives in Figma and Storybook.
-template: splash
+title: "Horizon Stays Design System"
+description: "Reference for the Horizon Stays design system: components, tokens and how to use them."
+template: "splash"
+editUrl: false
 hero:
-  tagline: One system for design and development. Every component here is read from its source, its Figma node and its Storybook stories.
+  tagline: "The React component library and design tokens behind Horizon Stays. Components are built from Figma nodes, tested against them variant by variant, and reviewed before release — the component registry tracks where each one is on that ladder."
   actions:
-    - text: Browse components
-      link: /components/
-      icon: right-arrow
-    - text: Open Storybook
-      link: https://horizon-stays-storybook-production.vercel.app
-      icon: external
-      variant: minimal
+    - text: "Start designing"
+      link: "/designing/introduction/"
+      icon: "pencil"
+    - text: "Start coding"
+      link: "/developing/introduction/"
+      icon: "seti:json"
+      variant: "secondary"
+    - text: "Open Storybook"
+      link: "https://horizon-stays-storybook-production.vercel.app"
+      icon: "external"
+      variant: "minimal"
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+## Latest release
+
+**0.1.0**, tagged 2026-09-21. [What changed](/get-started/changelog/).
+
+```bash
+npm install @aye_kyawt/horizon-stays-design-system@0.1.0
+```
 
 <CardGrid>
-  <Card title="Components" icon="puzzle">
-    One page per component: summary, Figma node, props with defaults, every
-    story, and the implementation notes the build recorded.
-  </Card>
-  <Card title="Storybook" icon="seti:html">
-    The live workshop. Every variant and state renders there, and each
-    component page embeds its matrix story.
-  </Card>
-  <Card title="Tokens" icon="setting">
-    Visual values come only from tokens, exported from Figma and built with
-    Style Dictionary. Components use semantic tokens only.
-  </Card>
-  <Card title="Figma" icon="pencil">
-    Prop names match the Figma property names. Where they cannot, the reason
-    is written up in a naming report and linked from the page.
-  </Card>
+  <LinkCard title="Designing" description="How the Figma library, the token library and the components relate." href="/designing/introduction/" />
+  <LinkCard title="Developing" description="Install the package, load the stylesheets, render a component." href="/developing/introduction/" />
+  <LinkCard title="Components" description="Every component, its status, and whether it is public." href="/core/components/overview/" />
+  <LinkCard title="Tokens" description="Every token in the build, per platform, in light and dark." href="/core/tokens/" />
 </CardGrid>

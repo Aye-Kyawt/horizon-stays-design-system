@@ -1,0 +1,42 @@
+---
+title: FAQ
+description: Common questions about the Horizon Stays design system package.
+---
+
+## Why does 0.1.0 export only Button?
+
+A component becomes public in the release whose review clears it, and Button is the only one on
+that path so far. Six more are built but not public yet. The
+[All components](/core/components/overview/) page shows where each one stands.
+
+## My Button shows "Button Component" instead of my text
+
+`Button` takes its text through `label`, not children. JSX children are not rendered, and with no
+`label` it falls back to its default, `Button Component`. Pass `label="…"`.
+
+## Why doesn't the README in the package match this site?
+
+The README inside the 0.1.0 tarball was written before the first publish. It has since been
+corrected in the repository, and the correction reaches npm with the next version. See
+[Upgrading](/get-started/upgrading/).
+
+## Where are the mobile and back-office tokens?
+
+The token build produces three platforms (web, mobile and back-office), but the package ships only
+the web build, as `tokens.css`. The [Tokens](/core/tokens/) page lists where mobile and
+back-office differ from web.
+
+## Does it work with server rendering?
+
+Yes. `Button` holds no state and renders with `react-dom/server`. See [React](/developing/react/).
+
+## What licence is it under?
+
+`package.json` says `ISC`. The repository has no separate LICENSE file.
+
+## Why did 0.1.0 ship while its review was Blocked?
+
+It was published at the owner's instruction, as an override. `CHANGELOG.md` records what the
+override skipped: 7 token-discipline tests, and the 4 base-layer token reads still in Button's
+stylesheet.
+

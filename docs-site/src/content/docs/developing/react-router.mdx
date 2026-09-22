@@ -1,0 +1,39 @@
+---
+title: React Router
+description: Using the components in an app routed with React Router.
+---
+
+The package has no dependency on React Router and nothing in it is router-specific. This page
+covers the two places a routed app meets the design system: its stylesheets and its theme.
+
+## The stylesheets
+
+Import both stylesheets once, in the module every route renders through: the root route, or your
+`root.tsx`. Import `tokens.css` before `styles.css`:
+
+```jsx
+import '@aye_kyawt/horizon-stays-design-system/tokens.css';
+import '@aye_kyawt/horizon-stays-design-system/styles.css';
+```
+
+Importing them per route instead would load them again on every route change for no gain.
+
+## Picking a theme on the server
+
+The dark theme is the attribute `data-theme="dark"`, and the light theme is its absence. When the
+server renders the document, put the attribute on `<html>` in the server output, so the first
+paint already has the right colours and doesn't flash from light to dark. See
+[Theming](/styling/theming/).
+
+## SPA mode and data mode
+
+`Button` holds no state and needs no context provider, so it renders the same whichever mode the
+router runs in, and on the server as well as the client.
+
+## What the components will not do for you
+
+- **Navigate.** `Button` renders a `<button>`, never a link. The design says not to use it to open
+  an external link. For navigation, render the router's own link component. For an action that
+  navigates afterwards, call your router's navigation from `Button`'s `onClick`.
+- **Submit a route form by default.** `htmlType` defaults to `button`. Pass `htmlType="submit"` to
+  a `Button` inside a form that should submit.

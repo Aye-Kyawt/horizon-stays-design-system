@@ -1,0 +1,825 @@
+{
+  "source": "Figma file 2k87mtkZMvxQIYwjLX82pu, read live over the Figma MCP connection",
+  "fileKey": "2k87mtkZMvxQIYwjLX82pu",
+  "readAt": "2026-09-21T09:45:00Z",
+  "method": {
+    "variants": "the children of each component set, with their frame size",
+    "bestPractice": "text nodes marked ℹ️ in the documentation page usage region (the frame named \"<Component> Usage\")",
+    "unbound": "visible layers whose solid fill, solid stroke, corner radius, auto-layout padding or gap, or text size or weight carry no variable binding. Vector artwork and the component-set frame itself (canvas decoration) are excluded."
+  },
+  "components": {
+    "Button": {
+      "node": "31:140",
+      "type": "COMPONENT_SET",
+      "page": "Button✔️",
+      "description": "Use this component when need CTA.\nDon't use it for opening external link.",
+      "properties": {
+        "Icon left": {
+          "type": "BOOLEAN",
+          "default": true
+        },
+        "↳Icon left": {
+          "type": "INSTANCE_SWAP"
+        },
+        "Icon right": {
+          "type": "BOOLEAN",
+          "default": true
+        },
+        "↳Icon right": {
+          "type": "INSTANCE_SWAP"
+        },
+        "Label": {
+          "type": "TEXT",
+          "default": "Button Component"
+        },
+        "Status": {
+          "type": "VARIANT",
+          "options": [
+            "default",
+            "hovered",
+            "focus",
+            "disabled",
+            "error"
+          ],
+          "default": "default"
+        },
+        "Type": {
+          "type": "VARIANT",
+          "options": [
+            "Fill",
+            "outline",
+            "transparent"
+          ],
+          "default": "Fill"
+        }
+      },
+      "variants": [
+        {
+          "name": "Status=default, Type=Fill",
+          "node": "30:97",
+          "width": 203,
+          "height": 42
+        },
+        {
+          "name": "Status=error, Type=Fill",
+          "node": "31:216",
+          "width": 203,
+          "height": 42
+        },
+        {
+          "name": "Status=disabled, Type=Fill",
+          "node": "31:202",
+          "width": 203,
+          "height": 42
+        },
+        {
+          "name": "Status=focus, Type=Fill",
+          "node": "31:161",
+          "width": 203,
+          "height": 42
+        },
+        {
+          "name": "Status=hovered, Type=Fill",
+          "node": "31:155",
+          "width": 203,
+          "height": 42
+        },
+        {
+          "name": "Status=default, Type=outline",
+          "node": "31:233",
+          "width": 203,
+          "height": 42
+        },
+        {
+          "name": "Status=hovered, Type=outline",
+          "node": "31:237",
+          "width": 203,
+          "height": 42
+        },
+        {
+          "name": "Status=focus, Type=outline",
+          "node": "31:241",
+          "width": 203,
+          "height": 42
+        },
+        {
+          "name": "Status=disabled, Type=outline",
+          "node": "31:246",
+          "width": 203,
+          "height": 42
+        },
+        {
+          "name": "Status=error, Type=outline",
+          "node": "31:250",
+          "width": 203,
+          "height": 42
+        },
+        {
+          "name": "Status=default, Type=transparent",
+          "node": "32:292",
+          "width": 201,
+          "height": 40
+        },
+        {
+          "name": "Status=hovered, Type=transparent",
+          "node": "32:296",
+          "width": 201,
+          "height": 40
+        },
+        {
+          "name": "Status=focus, Type=transparent",
+          "node": "32:300",
+          "width": 201,
+          "height": 40
+        },
+        {
+          "name": "Status=disabled, Type=transparent",
+          "node": "32:305",
+          "width": 201,
+          "height": 40
+        },
+        {
+          "name": "Status=error, Type=transparent",
+          "node": "32:309",
+          "width": 201,
+          "height": 40
+        }
+      ],
+      "usageRegion": {
+        "node": "204:1916",
+        "name": "Button Usage"
+      },
+      "bestPractice": [
+        {
+          "text": "Keep labels short and verb-ed (\"Save changes\", \"Create task\") — > the container padding is fixed, so long labels wrap or overflow.",
+          "source": "figma:204:1974"
+        },
+        {
+          "text": "Pair the error state with inline error messaging near the button, not the color alone.",
+          "source": "figma:204:2358"
+        },
+        {
+          "text": "Align the anatomy labels with the shipped variant names before marking this \"Design Completed\".",
+          "source": "figma:204:2359"
+        },
+        {
+          "text": "Close the Icon Button gaps (focus/error states, icon swap) before promoting its status alongside the main Button.",
+          "source": "figma:204:2360"
+        }
+      ],
+      "unbound": [
+        {
+          "layer": "every variant (15)",
+          "node": "31:140",
+          "property": "paddingTop",
+          "value": "10px"
+        },
+        {
+          "layer": "every variant (15)",
+          "node": "31:140",
+          "property": "paddingBottom",
+          "value": "10px"
+        }
+      ],
+      "figmaUrl": "https://www.figma.com/design/2k87mtkZMvxQIYwjLX82pu/Horizon.Web.Component.V1.0.In-Progress?node-id=31-140"
+    },
+    "cardContainer": {
+      "node": "39:2065",
+      "type": "COMPONENT_SET",
+      "page": "Card✔️",
+      "description": "sub container of the main card.",
+      "properties": {
+        "carditems": {
+          "type": "SLOT"
+        },
+        "Status": {
+          "type": "VARIANT",
+          "options": [
+            "default",
+            "hovered"
+          ],
+          "default": "default"
+        }
+      },
+      "variants": [
+        {
+          "name": "Status=default",
+          "node": "39:2064",
+          "width": 276,
+          "height": 141
+        },
+        {
+          "name": "Status=hovered",
+          "node": "39:2068",
+          "width": 276,
+          "height": 141
+        }
+      ],
+      "usageRegion": {
+        "node": "206:3098",
+        "name": "Card Usage"
+      },
+      "bestPractice": [
+        {
+          "text": "Adjust the card layout so content remains the main focus on large screens.",
+          "source": "figma:206:3146"
+        },
+        {
+          "text": "When designing for large screens, use multiple columns to display content.",
+          "source": "figma:206:3147"
+        },
+        {
+          "text": "Certain devices or user contexts require different components to meet platform expectations.",
+          "source": "figma:206:3148"
+        },
+        {
+          "text": "Expand a card to reveal information.",
+          "source": "figma:206:3149"
+        },
+        {
+          "text": "A card should only have one swipe action assigned to it.",
+          "source": "figma:206:3317"
+        },
+        {
+          "text": "When moving a card, increase its elevation.",
+          "source": "figma:206:3318"
+        },
+        {
+          "text": "On a mobile device, cards can expand to reveal more content, scrolling within the screen. Content within cards doesn't scroll.",
+          "source": "figma:206:3319"
+        }
+      ],
+      "unbound": [],
+      "figmaUrl": "https://www.figma.com/design/2k87mtkZMvxQIYwjLX82pu/Horizon.Web.Component.V1.0.In-Progress?node-id=39-2065"
+    },
+    "cardImage": {
+      "node": "39:2193",
+      "type": "COMPONENT_SET",
+      "page": "Card✔️",
+      "description": "Use it for image container.",
+      "properties": {
+        "overlayAction": {
+          "type": "BOOLEAN",
+          "default": true
+        },
+        "Status": {
+          "type": "VARIANT",
+          "options": [
+            "hovered",
+            "default"
+          ],
+          "default": "default"
+        },
+        "ratio": {
+          "type": "VARIANT",
+          "options": [
+            "3:2",
+            "1:1"
+          ],
+          "default": "3:2"
+        }
+      },
+      "variants": [
+        {
+          "name": "Status=hovered, ratio=3:2",
+          "node": "39:2192",
+          "width": 278,
+          "height": 168
+        },
+        {
+          "name": "Status=default, ratio=3:2",
+          "node": "39:2191",
+          "width": 278,
+          "height": 168
+        },
+        {
+          "name": "Status=default, ratio=1:1",
+          "node": "39:2194",
+          "width": 192,
+          "height": 182
+        },
+        {
+          "name": "Status=hovered, ratio=1:1",
+          "node": "39:2198",
+          "width": 192,
+          "height": 182
+        }
+      ],
+      "usageRegion": null,
+      "usageRegionNote": "No usage region of its own. The Card page usage region (206:3098) documents the card as a whole (\"Use a Card\") and is recorded against cardContainer.",
+      "bestPractice": [],
+      "unbound": [
+        {
+          "layer": "Status=hovered, ratio=3:2",
+          "node": "39:2192",
+          "property": "fill",
+          "value": "#ffffff"
+        },
+        {
+          "layer": "Status=hovered, ratio=1:1",
+          "node": "39:2198",
+          "property": "fill",
+          "value": "#ffffff"
+        },
+        {
+          "layer": ".iconBtn",
+          "node": "39:2180",
+          "property": "radius",
+          "value": "16px"
+        }
+      ],
+      "figmaUrl": "https://www.figma.com/design/2k87mtkZMvxQIYwjLX82pu/Horizon.Web.Component.V1.0.In-Progress?node-id=39-2193"
+    },
+    "cardLayout": {
+      "node": "39:2346",
+      "type": "COMPONENT_SET",
+      "page": "Card✔️",
+      "description": "Subcomponent of the card. \nUse to configure the orientation of the card.",
+      "properties": {
+        "Slot": {
+          "type": "SLOT"
+        },
+        "hasSlot": {
+          "type": "BOOLEAN",
+          "default": true
+        },
+        "Orientation": {
+          "type": "VARIANT",
+          "options": [
+            "horizontal",
+            "vertical"
+          ],
+          "default": "vertical"
+        }
+      },
+      "variants": [
+        {
+          "name": "Orientation=horizontal",
+          "node": "39:2345",
+          "width": 264,
+          "height": 149
+        },
+        {
+          "name": "Orientation=vertical",
+          "node": "39:2344",
+          "width": 264,
+          "height": 300.54
+        }
+      ],
+      "usageRegion": null,
+      "usageRegionNote": "No usage region of its own. The Card page usage region (206:3098) documents the card as a whole (\"Use a Card\") and is recorded against cardContainer.",
+      "bestPractice": [],
+      "unbound": [
+        {
+          "layer": ".iconBtn",
+          "node": "I39:2313;39:2185",
+          "property": "radius",
+          "value": "16px"
+        }
+      ],
+      "figmaUrl": "https://www.figma.com/design/2k87mtkZMvxQIYwjLX82pu/Horizon.Web.Component.V1.0.In-Progress?node-id=39-2346"
+    },
+    "cardText": {
+      "node": "37:2034",
+      "type": "COMPONENT",
+      "page": "Card✔️",
+      "description": "card information text.",
+      "properties": {
+        "metadata": {
+          "type": "BOOLEAN",
+          "default": true
+        },
+        "review": {
+          "type": "BOOLEAN",
+          "default": true
+        },
+        "price": {
+          "type": "BOOLEAN",
+          "default": true
+        }
+      },
+      "variants": [
+        {
+          "name": "cardText",
+          "node": "37:2034",
+          "width": 278,
+          "height": 95
+        }
+      ],
+      "usageRegion": null,
+      "usageRegionNote": "No usage region of its own. The Card page usage region (206:3098) documents the card as a whole (\"Use a Card\") and is recorded against cardContainer.",
+      "bestPractice": [],
+      "unbound": [],
+      "figmaUrl": "https://www.figma.com/design/2k87mtkZMvxQIYwjLX82pu/Horizon.Web.Component.V1.0.In-Progress?node-id=37-2034"
+    },
+    "iconBtn": {
+      "node": "39:2185",
+      "type": "INSTANCE",
+      "page": "Card✔️",
+      "description": "",
+      "properties": {},
+      "variants": [
+        {
+          "name": ".iconBtn",
+          "node": "39:2185",
+          "width": 32,
+          "height": 32
+        }
+      ],
+      "usageRegion": null,
+      "usageRegionNote": "No usage region of its own. The Card page usage region (206:3098) documents the card as a whole (\"Use a Card\") and is recorded against cardContainer.",
+      "bestPractice": [],
+      "unbound": [
+        {
+          "layer": ".iconBtn",
+          "node": "39:2185",
+          "property": "radius",
+          "value": "16px"
+        }
+      ],
+      "figmaUrl": "https://www.figma.com/design/2k87mtkZMvxQIYwjLX82pu/Horizon.Web.Component.V1.0.In-Progress?node-id=39-2185"
+    },
+    "avatar": {
+      "node": "54:9211",
+      "type": "COMPONENT_SET",
+      "page": "Avatar✔️",
+      "description": "Use this for current user account.",
+      "properties": {
+        "Status": {
+          "type": "VARIANT",
+          "options": [
+            "avatar",
+            "generic icon",
+            "initial name"
+          ],
+          "default": "avatar"
+        }
+      },
+      "variants": [
+        {
+          "name": "Status=avatar",
+          "node": "54:9212",
+          "width": 30,
+          "height": 30
+        },
+        {
+          "name": "Status=generic icon",
+          "node": "54:9214",
+          "width": 30,
+          "height": 30
+        },
+        {
+          "name": "Status=initial name",
+          "node": "54:9217",
+          "width": 30,
+          "height": 32
+        }
+      ],
+      "usageRegion": {
+        "node": "223:163",
+        "name": "Avatar Usage"
+      },
+      "bestPractice": [
+        {
+          "text": "Keep the fallback chain in mind: photo → initials → generic icon, in that priority order.",
+          "source": "figma:223:211"
+        },
+        {
+          "text": "Source initials from the user's actual name/org, not a placeholder — \"HS\" here is example content only.",
+          "source": "figma:223:212"
+        },
+        {
+          "text": "All three variants share the same 30px circular footprint — swapping between them shouldn't shift surrounding layout.",
+          "source": "figma:223:213"
+        },
+        {
+          "text": "This is a single small component — pair it with a name/role label nearby when identity needs to be explicit, rather than adding text inside the avatar itself.",
+          "source": "figma:223:214"
+        }
+      ],
+      "unbound": [
+        {
+          "layer": "Frame 1",
+          "node": "54:9218",
+          "property": "paddingTop",
+          "value": "5px"
+        },
+        {
+          "layer": "Frame 1",
+          "node": "54:9218",
+          "property": "paddingRight",
+          "value": "3px"
+        },
+        {
+          "layer": "Frame 1",
+          "node": "54:9218",
+          "property": "paddingBottom",
+          "value": "5px"
+        },
+        {
+          "layer": "Frame 1",
+          "node": "54:9218",
+          "property": "paddingLeft",
+          "value": "3px"
+        },
+        {
+          "layer": "Frame 1",
+          "node": "54:9218",
+          "property": "itemSpacing",
+          "value": "10px"
+        }
+      ],
+      "figmaUrl": "https://www.figma.com/design/2k87mtkZMvxQIYwjLX82pu/Horizon.Web.Component.V1.0.In-Progress?node-id=54-9211"
+    },
+    "chip": {
+      "node": "72:19",
+      "type": "COMPONENT_SET",
+      "page": "Chip✔️",
+      "description": "Filter chip. Icon slot takes any 16px icon.\nRemovable shows the trailing clear control.",
+      "properties": {
+        "Icon": {
+          "type": "BOOLEAN",
+          "default": false
+        },
+        "↳Icon": {
+          "type": "INSTANCE_SWAP"
+        },
+        "Removable": {
+          "type": "BOOLEAN",
+          "default": false
+        },
+        "Label": {
+          "type": "TEXT",
+          "default": "Chip"
+        },
+        "Status": {
+          "type": "VARIANT",
+          "options": [
+            "default",
+            "hovered",
+            "selected",
+            "disabled"
+          ],
+          "default": "default"
+        }
+      },
+      "variants": [
+        {
+          "name": "Status=default",
+          "node": "72:2",
+          "width": 52,
+          "height": 24
+        },
+        {
+          "name": "Status=hovered",
+          "node": "72:6",
+          "width": 52,
+          "height": 24
+        },
+        {
+          "name": "Status=selected",
+          "node": "72:11",
+          "width": 52,
+          "height": 24
+        },
+        {
+          "name": "Status=disabled",
+          "node": "72:15",
+          "width": 52,
+          "height": 24
+        }
+      ],
+      "usageRegion": {
+        "node": "227:2822",
+        "name": "Chip Usage"
+      },
+      "bestPractice": [
+        {
+          "text": "Give the removable control its own tap target, separate from the chip's toggle behavior, so clearing doesn't accidentally re-toggle.",
+          "source": "figma:227:2870"
+        },
+        {
+          "text": "Show an active filter count or a \"Clear all\" action alongside a row of removable chips.",
+          "source": "figma:227:2871"
+        },
+        {
+          "text": "Keep chip and badge visually distinct despite their similar pill shape — chip is always interactive, badge never is.",
+          "source": "figma:227:2872"
+        },
+        {
+          "text": "Test chip wrapping behavior with a realistic number of filters before calling this \"Development Completed.\"",
+          "source": "figma:227:2873"
+        }
+      ],
+      "unbound": [],
+      "figmaUrl": "https://www.figma.com/design/2k87mtkZMvxQIYwjLX82pu/Horizon.Web.Component.V1.0.In-Progress?node-id=72-19"
+    },
+    "progressBar": {
+      "node": "84:26",
+      "type": "COMPONENT_SET",
+      "page": "Progress Indicator✔️",
+      "description": "Determinate progress bar. Resize the Fill layer to set the value.Meta can be hidden for a bar.",
+      "properties": {
+        "Label": {
+          "type": "TEXT",
+          "default": "Uploading"
+        },
+        "Value": {
+          "type": "TEXT",
+          "default": "60%"
+        },
+        "Meta": {
+          "type": "BOOLEAN",
+          "default": true
+        },
+        "Tone": {
+          "type": "VARIANT",
+          "options": [
+            "primary",
+            "positive",
+            "negative",
+            "warning"
+          ],
+          "default": "primary"
+        }
+      },
+      "variants": [
+        {
+          "name": "Tone=primary",
+          "node": "84:2",
+          "width": 320,
+          "height": 28
+        },
+        {
+          "name": "Tone=positive",
+          "node": "84:8",
+          "width": 320,
+          "height": 28
+        },
+        {
+          "name": "Tone=negative",
+          "node": "84:14",
+          "width": 320,
+          "height": 28
+        },
+        {
+          "name": "Tone=warning",
+          "node": "84:20",
+          "width": 320,
+          "height": 28
+        }
+      ],
+      "usageRegion": {
+        "node": "228:2708",
+        "name": "Progress Indicator Usage",
+        "sharedWith": [
+          "spinner"
+        ]
+      },
+      "bestPractice": [
+        {
+          "text": "Swap a spinner for a determinate progressBar as soon as a real percentage becomes available mid-operation.",
+          "source": "figma:228:2756"
+        },
+        {
+          "text": "Resize the Fill layer smoothly (animate it) rather than snapping — per the component's own note, Fill width is literally what sets the value.",
+          "source": "figma:228:2757"
+        },
+        {
+          "text": "Keep tone semantics identical to alert/badge across the whole system.",
+          "source": "figma:228:2758"
+        }
+      ],
+      "unbound": [],
+      "figmaUrl": "https://www.figma.com/design/2k87mtkZMvxQIYwjLX82pu/Horizon.Web.Component.V1.0.In-Progress?node-id=84-26"
+    },
+    "spinner": {
+      "node": "84:33",
+      "type": "COMPONENT_SET",
+      "page": "Progress Indicator✔️",
+      "description": "Three sizes rotate in prototype for motion.",
+      "properties": {
+        "Size": {
+          "type": "VARIANT",
+          "options": [
+            "sm",
+            "md",
+            "lg"
+          ],
+          "default": "sm"
+        }
+      },
+      "variants": [
+        {
+          "name": "Size=sm",
+          "node": "84:27",
+          "width": 16,
+          "height": 16
+        },
+        {
+          "name": "Size=md",
+          "node": "84:29",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "name": "Size=lg",
+          "node": "84:31",
+          "width": 40,
+          "height": 40
+        }
+      ],
+      "usageRegion": {
+        "node": "228:2708",
+        "name": "Progress Indicator Usage",
+        "sharedWith": [
+          "progressBar"
+        ]
+      },
+      "bestPractice": [
+        {
+          "text": "Swap a spinner for a determinate progressBar as soon as a real percentage becomes available mid-operation.",
+          "source": "figma:228:2756"
+        },
+        {
+          "text": "Decide on a consistent spinner size per context (e.g. always sm inline, always lg full-page) before calling this \"Development Completed.\"",
+          "source": "figma:228:2759"
+        }
+      ],
+      "unbound": [],
+      "figmaUrl": "https://www.figma.com/design/2k87mtkZMvxQIYwjLX82pu/Horizon.Web.Component.V1.0.In-Progress?node-id=84-33"
+    },
+    "tooltip": {
+      "node": "74:20",
+      "type": "COMPONENT_SET",
+      "page": "Tooltips✔️",
+      "description": "Tooltip. Placement puts the arrow on the side facing the trigger. Keep the label to one short line.",
+      "properties": {
+        "Label": {
+          "type": "TEXT",
+          "default": "Tooltip text"
+        },
+        "Placement": {
+          "type": "VARIANT",
+          "options": [
+            "top",
+            "bottom",
+            "left",
+            "right"
+          ],
+          "default": "top"
+        }
+      },
+      "variants": [
+        {
+          "name": "Placement=top",
+          "node": "74:2",
+          "width": 93,
+          "height": 36
+        },
+        {
+          "name": "Placement=bottom",
+          "node": "74:8",
+          "width": 93,
+          "height": 36
+        },
+        {
+          "name": "Placement=left",
+          "node": "74:12",
+          "width": 97,
+          "height": 32
+        },
+        {
+          "name": "Placement=right",
+          "node": "74:16",
+          "width": 97,
+          "height": 32
+        }
+      ],
+      "usageRegion": {
+        "node": "230:3193",
+        "name": "Tooltips Usage"
+      },
+      "bestPractice": [
+        {
+          "text": "Keep tooltip text purely descriptive — no calls to action, since the tooltip itself isn't clickable.",
+          "source": "figma:230:3241"
+        },
+        {
+          "text": "Dismiss the tooltip immediately on blur/mouse-leave — don't leave it lingering.",
+          "source": "figma:230:3242"
+        },
+        {
+          "text": "Use the arrow's placement consistently so it always visually points back at the exact trigger element.",
+          "source": "figma:230:3243"
+        },
+        {
+          "text": "Confirm keyboard-focus behavior and timing before calling this \"Development Completed\" — hover-only tooltips are an accessibility gap.",
+          "source": "figma:230:3244"
+        }
+      ],
+      "unbound": [],
+      "figmaUrl": "https://www.figma.com/design/2k87mtkZMvxQIYwjLX82pu/Horizon.Web.Component.V1.0.In-Progress?node-id=74-20"
+    }
+  }
+}

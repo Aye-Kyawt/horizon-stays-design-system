@@ -1,0 +1,28 @@
+---
+title: The knowledge skill
+description: What an AI agent can read about the design system today.
+---
+
+## Not in 0.1.0
+
+There is no knowledge skill for this design system. Nothing in the 0.1.0 package teaches an agent
+how to use the components: the tarball contains `dist/` and the README, and nothing else.
+
+## What an agent can read today
+
+These sources are public and machine-readable:
+
+| Source | What it gives |
+|---|---|
+| **This site** | One page per released component: usage, examples, props, tokens, design and changelog. |
+| **The production Storybook's `index.json`** | Every story id, title and name: https://horizon-stays-storybook-production.vercel.app/index.json |
+| **The intent files** in the repository, `src/components/<Name>/<Name>.intent.json` | When to use a component and when not to, what each variant is for, the tokens it needs and its accessibility facts, each with a source. At 0.1.0, Button and cardText have one. |
+| **The package's types**, `dist/index.d.ts` | The exact props and unions of what is exported. |
+
+The intent files are the closest thing to a skill. Their use-when and don't-use-when entries are
+transposed word for word from each component's Figma documentation, never paraphrased or filled
+in, so an agent reading them gets the design's own rules.
+
+## When it ships
+
+The repo states no plan or date for a knowledge skill, so this page doesn't either.

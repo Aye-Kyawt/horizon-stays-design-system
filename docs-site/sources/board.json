@@ -1,0 +1,434 @@
+{
+  "source": "Airtable registry, Components table: Development, Design and Release Verdict columns, read live",
+  "readAt": "2026-09-21T10:21:38.286Z",
+  "note": "Names and statuses only. A Design value of null means the cell is empty; Development then renders its default (registry Flag 1).",
+  "components": [
+    {
+      "name": "accordion",
+      "category": "ORGANISMS",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "accordionItem",
+      "category": "MOLECULES",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "alert",
+      "category": "MOLECULES",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "avatar",
+      "category": "ATOMS",
+      "development": "To be deployed",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "badge",
+      "category": "ATOMS",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "button",
+      "category": "ATOMS",
+      "development": "Released",
+      "design": "Done",
+      "releaseVerdict": "Cleared"
+    },
+    {
+      "name": "buttonGroup",
+      "category": "ORGANISMS",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "buttonGroup item",
+      "category": "ATOMS",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "cardContainer",
+      "category": "MOLECULES",
+      "development": "To be fixed",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "cardImage",
+      "category": "MOLECULES",
+      "development": "To be fixed",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "cardLayout",
+      "category": "ORGANISMS",
+      "development": "To be fixed",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "cardText",
+      "category": "ATOMS",
+      "development": "Released",
+      "design": "Done",
+      "releaseVerdict": "Cleared"
+    },
+    {
+      "name": "checkBox",
+      "category": "ATOMS",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "checkBox label",
+      "category": "MOLECULES",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "chip",
+      "category": "ATOMS",
+      "development": "To be fixed",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "dropdown",
+      "category": "MOLECULES",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "dropdownItem",
+      "category": "MOLECULES",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "dropdownMenu",
+      "category": "ORGANISMS",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "field",
+      "category": "MOLECULES",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "fileUpload",
+      "category": "ORGANISMS",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "footer",
+      "category": "ORGANISMS",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "footerText",
+      "category": "ATOMS",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "header",
+      "category": "ORGANISMS",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "iconBtn",
+      "category": "ATOMS",
+      "development": "To be fixed",
+      "design": "Done",
+      "releaseVerdict": null
+    },
+    {
+      "name": "input",
+      "category": "ATOMS",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "inputField",
+      "category": "MOLECULES",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "list",
+      "category": "ORGANISMS",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "listItem",
+      "category": "MOLECULES",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "logoSet",
+      "category": "ATOMS",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "menu",
+      "category": "MOLECULES",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "menuGroup",
+      "category": "MOLECULES",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "modal",
+      "category": "ORGANISMS",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "navSection",
+      "category": "ATOMS",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "overlay",
+      "category": "ORGANISMS",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "pageItems",
+      "category": "ATOMS",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "pagination",
+      "category": "ORGANISMS",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "progressBar",
+      "category": "ATOMS",
+      "development": "To be deployed",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "radioBtn",
+      "category": "ATOMS",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "radioBtn label",
+      "category": "MOLECULES",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "roleControl",
+      "category": "MOLECULES",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "searchBar",
+      "category": "MOLECULES",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "sidebarControl",
+      "category": "ATOMS",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "sidebarControl",
+      "category": "ORGANISMS",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "sidebarFooter",
+      "category": "MOLECULES",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "spinner",
+      "category": "ATOMS",
+      "development": "To be deployed",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "step",
+      "category": "MOLECULES",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "stepper",
+      "category": "ORGANISMS",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "subMenu",
+      "category": "MOLECULES",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "subTab",
+      "category": "ATOMS",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "switch",
+      "category": "ATOMS",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "switchLabel",
+      "category": "MOLECULES",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "tab",
+      "category": "MOLECULES",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "table",
+      "category": "ORGANISMS",
+      "development": "To-do",
+      "design": "Done",
+      "releaseVerdict": null
+    },
+    {
+      "name": "tableCell",
+      "category": "MOLECULES",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "tableColumn",
+      "category": "MOLECULES",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "tablePagination",
+      "category": "MOLECULES",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "tableToolbar",
+      "category": "MOLECULES",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "tabs",
+      "category": "ORGANISMS",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "textArea",
+      "category": "ATOMS",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "tooltip",
+      "category": "ATOMS",
+      "development": "To be deployed",
+      "design": null,
+      "releaseVerdict": null
+    },
+    {
+      "name": "uploadItem",
+      "category": "MOLECULES",
+      "development": "To-do",
+      "design": null,
+      "releaseVerdict": null
+    }
+  ]
+}

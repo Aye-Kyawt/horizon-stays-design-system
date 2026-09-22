@@ -1,0 +1,48 @@
+---
+title: Contributing
+description: How work gets into the Horizon Stays design system.
+---
+
+## Set up
+
+```bash
+git clone https://github.com/Aye-Kyawt/horizon-stays-design-system.git
+cd horizon-stays-design-system
+npm install
+```
+
+Use **npm 11.19.1**, pinned through `packageManager` in `package.json`. An older npm rewrites
+`package-lock.json` on install, which produces a diff that looks like a dependency change and
+isn't.
+
+| Job | Command |
+|---|---|
+| Component workshop | `npm run storybook` |
+| Tests | `npm test` |
+| Type check | `npm run lint` |
+| Build tokens | `npm run build:tokens` |
+| Build the package | `npm run build:package` |
+
+## The rules a change is held to
+
+These come from `CLAUDE.md` in the repository:
+
+- **Tokens are the only source of visual values.** No raw hex, px or font value inside a
+  component. Components read semantic tokens only, and the test suite fails a stylesheet that
+  reads a base-layer `--core-*` token.
+- **Prop names match the Figma property names.** A naming conflict is written up under `docs/`
+  instead of being renamed quietly.
+- **Every variant and every state has a story.**
+- **A missing token is a gap to report**, never one to invent.
+- **Roles are separate.** Whoever builds a change doesn't verify it, QA doesn't repair, and a
+  human approves.
+
+## Branches
+
+A work branch never merges into `main`. Open your pull request against **`staging`**. `main`
+accepts pull requests from `staging` only.
+
+## Tokens
+
+The Figma token library is the source of truth. Change a token there, re-export it with the Design
+Tokens plugin into `tokens/`, and rebuild. Never edit `tokens/` or `build/` by hand.

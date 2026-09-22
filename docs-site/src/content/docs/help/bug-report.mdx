@@ -1,0 +1,24 @@
+---
+title: Report a bug
+description: How to report a bug in the Horizon Stays design system.
+---
+
+Open an issue on the repository:
+**https://github.com/Aye-Kyawt/horizon-stays-design-system/issues/new**
+
+## What to include
+
+- **The package version.** Check it with `npm ls @aye_kyawt/horizon-stays-design-system`.
+- **The component, and the props you passed.**
+- **The theme:** light or dark.
+- **What you expected, and what you saw.** A screenshot is best.
+- **Whether Storybook shows it too.** Find the matching story in the
+  [production Storybook](https://horizon-stays-storybook-production.vercel.app) and include its
+  URL. If the story looks right and your app doesn't, include how you load `tokens.css` and
+  `styles.css`.
+
+## Before you file
+
+- Check that both stylesheets load, **tokens first**. A component with no tokens renders without
+  its colours.
+- Check `label`: `Button` does not render children.

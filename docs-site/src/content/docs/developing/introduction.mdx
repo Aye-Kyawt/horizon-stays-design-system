@@ -1,0 +1,61 @@
+---
+title: Developing
+description: Install @aye_kyawt/horizon-stays-design-system, load its stylesheets, render a component.
+---
+
+## Install
+
+```bash
+npm install @aye_kyawt/horizon-stays-design-system
+```
+
+React is a **peer** dependency, and the package does not bundle it. It needs React 19:
+
+```bash
+npm install react@^19 react-dom@^19
+```
+
+## Load the stylesheets once
+
+Import the two stylesheets once, at your app root. **Import tokens first**, because the component
+rules read the custom properties it declares:
+
+```jsx
+import '@aye_kyawt/horizon-stays-design-system/tokens.css';
+import '@aye_kyawt/horizon-stays-design-system/styles.css';
+```
+
+- `tokens.css` is the web platform build of the tokens, in light and dark.
+- `styles.css` holds every component's rules.
+
+## Render a component
+
+0.1.0 exports [Button](/core/components/button/):
+
+```jsx
+import { Button } from '@aye_kyawt/horizon-stays-design-system';
+
+export function BookButton({ onBook }) {
+  return <Button type="Fill" label="Book a stay" iconLeft={false} iconRight={false} onClick={onBook} />;
+}
+```
+
+Button takes its text through `label`, not children. `type` is the Figma `Type`: `Fill`,
+`outline` or `transparent`. The DOM button type is `htmlType`, and it defaults to `button`.
+
+## What ships
+
+The package contains `dist/` and the README, and nothing else:
+
+| File | What it is |
+|---|---|
+| `dist/index.js`, `dist/index.cjs` | The library, as an ES module and as CommonJS |
+| `dist/index.d.ts`, `dist/index.d.cts` | Types |
+| `dist/tokens.css` | Tokens, web platform |
+| `dist/styles.css` | Component styles |
+
+## Next
+
+- [React](/developing/react/): how Button behaves in a React tree.
+- [React Router](/developing/react-router/): stylesheets and theme in a routed app.
+- [Theming](/styling/theming/): light and dark.

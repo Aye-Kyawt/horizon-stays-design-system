@@ -1,0 +1,15 @@
+---
+/**
+ * Starlight's footer, plus one line stating the commit the site was built
+ * from. The astro-page skill verifies a deploy by finding the pinned SHA on
+ * every live page, which proves it is the new build and not the old one
+ * still being served.
+ */
+import Default from '@astrojs/starlight/components/Footer.astro';
+import info from '../build-info.json';
+---
+
+<Default><slot /></Default>
+<p class="hds-built">
+  Built from{' '}<a href={`https://github.com/Aye-Kyawt/horizon-stays-design-system/tree/${info.commit}`}><code data-commit={info.commit}>main@{info.short}</code></a>{info.latest ? ` · latest release ${info.latest}` : ''}
+</p>

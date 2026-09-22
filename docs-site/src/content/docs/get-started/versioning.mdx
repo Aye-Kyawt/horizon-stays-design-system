@@ -1,0 +1,63 @@
+---
+title: Versioning
+description: What a version of @aye_kyawt/horizon-stays-design-system promises, and how a release is cut.
+---
+
+## The short version
+
+The package follows the version in `package.json`, and every release is a `v<version>` git tag
+on the commit that was published. **0.1.0** is the first and only release so far.
+
+## What 0.1.0 promises
+
+The public surface is `src/index.ts`. At 0.1.0 it exports one component:
+
+- `Button`, with the types `ButtonProps`, `ButtonType`, `ButtonStatus` and `ButtonIconSlot`.
+
+`src/index.ts` states the rule in its own header: anything not exported there is internal and may
+change without a major version. Exporting a component later is a minor release; taking one back
+would be a major.
+
+The package also ships two stylesheets, `tokens.css` (the web build of the tokens) and
+`styles.css` (the component styles). Load both once at the app root. See
+[Developing](/developing/introduction/).
+
+## What 0.1.0 does not promise
+
+- **Components that are built but not exported.** `Avatar`, `CardContainer`, `Chip`,
+  `ProgressBar`, `Spinner` and `Tooltip` exist in the repo, and their styles are in `styles.css`,
+  but they are not part of 0.1.0's API. Each is exported in the release whose review clears it.
+- **Internal subcomponents.** `cardLayout`, `cardImage`, `cardText` and `iconBtn` are internal by
+  decision. [All components](/core/components/overview/) shows where each one stands.
+- **A cleared review.** 0.1.0 was published at the owner's instruction while the release review
+  was Blocked. `CHANGELOG.md` records what that override skipped. See the
+  [Changelog](/get-started/changelog/).
+
+## How the number moves before 1.0.0
+
+The repo states only the two rules above: exporting something new is a minor release, and removing
+something public is a major one. It states nothing further about 0.x version numbers, so this page
+adds nothing either.
+
+## Where the version lives
+
+- `package.json` holds the version. It keeps `"private": true` between releases, so a stray
+  `npm publish` refuses.
+- The git tag `v<version>` marks the published commit.
+- `CHANGELOG.md` holds the release notes.
+- npm holds the published tarball: `npm view @aye_kyawt/horizon-stays-design-system versions`.
+
+## Cutting a release
+
+`npm run release:publish -- <version>` runs the whole publish, stopping at the first failure:
+
+1. **Preflight.** The version is valid, matches `package.json`, and isn't on npm yet. The
+   private guard is present, the tree is clean and the tag is free.
+2. **Gates.** Type check, tests and `build:package`.
+3. **Unguard.** `"private": true` is removed for the publish only.
+4. **Publish.** `npm publish` runs, and its `prepublishOnly` builds and tests once more.
+5. **Reguard.** `package.json` is put back byte for byte.
+6. **Tag.** `v<version>` is added on `HEAD`.
+7. **Smoke.** The published version is installed into an empty folder and renders a component.
+
+`--dry-run` runs every step with nothing leaving the machine.

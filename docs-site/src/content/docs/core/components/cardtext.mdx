@@ -1,0 +1,222 @@
+---
+title: "cardText"
+description: "cardText — usage, examples, code, design and changelog, generated from @aye_kyawt/horizon-stays-design-system at b41d1c5."
+editUrl: false
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+<p class="hds-pageheader"><span class="hds-status">Released · Unreleased · internal</span></p>
+
+[Storybook](https://horizon-stays-storybook-production.vercel.app/?path=/story/components-cardtext--default) · [Figma node 37:2034](https://www.figma.com/design/2k87mtkZMvxQIYwjLX82pu/Horizon.Web.Component.V1.0.In-Progress?node-id=37-2034) · [Source](https://github.com/Aye-Kyawt/horizon-stays-design-system/tree/b41d1c5f908b95eef6802738030f1b6c27e4a81d/src/components/cardText)
+
+<Tabs syncKey="component">
+<TabItem label="Usage">
+
+### When to use it
+
+:::note[Missing source]
+cardText.intent.json records no "use_when" entry: no usage region on the Figma documentation page for node 37:2034. Read live over the Figma MCP connection: get_metadata on 37:2034 returns a single `&lt;symbol&gt;` whose children are plain frames, and get_design_context on 37:2034 reports the whole of this component's Figma documentation as the one-line description "card information text.", with no documentation link. Button's equivalent region — the "How Designed?" frame figma:204:1917, holding "When to use:" (figma:204:1918), "Use an Button" (figma:204:1924), "Do not use an alert" (figma:204:1946) and "Best Practice" (figma:204:1968) — has no counterpart for .cardText, and no component in the card family (cardContainer 39:2065, cardLayout 39:2346, cardImage 39:2193, cardText 37:2034) carries a documentation link. Both fields are therefore empty; the connection was reachable throughout.
+:::
+
+### Where it goes
+
+:::note[Missing source]
+cardText.intent.json records no placement: no story in src/components/cardText/cardText.stories.tsx places cardText in a context. Every story renders it bare inside the meta decorator's 278px-wide padded box, which the file itself labels "Story chrome only" (#L20-L27). No story renders it inside cardLayout or cardContainer, which is where the component actually lives.
+:::
+
+### When not to use it
+
+:::note[Missing source]
+cardText.intent.json records no "dont_use_when" entry.
+:::
+
+### Best practice
+
+:::note[Missing source]
+No usage region of its own. The Card page usage region (206:3098) documents the card as a whole ("Use a Card") and is recorded against cardContainer.
+:::
+
+### What each variant is for
+
+| Property | Value | What it is for |
+|---|---|---|
+| `metadata` | `true` (default) | Shows the rating and price block. |
+| `metadata` | `false` | *The code states no purpose.* |
+| `review` | `true` (default) | Shows the rating line. Nested inside `metadata`. |
+| `review` | `false` | *The code states no purpose.* |
+| `price` | `true` (default) | Shows the price line. Nested inside `metadata`. |
+| `price` | `false` | *The code states no purpose.* |
+
+### Accessibility
+
+- Renders the root as a plain `&lt;div&gt;` carrying only `className` and `data-name`; it sets no `role`, no `tabindex` and no ARIA attribute, so the component adds no widget semantics and nothing it renders is keyboard focusable. ([src/components/cardText/cardText.tsx#L54-L57](https://github.com/Aye-Kyawt/horizon-stays-design-system/blob/e570ee93c3cb4cdd878e7fe8a32083fecc12baee/src/components/cardText/cardText.tsx#L54))
+- Renders the title as a `&lt;p&gt;`, not a heading element, so the card's name does not appear in the document's heading outline. ([src/components/cardText/cardText.tsx#L59](https://github.com/Aye-Kyawt/horizon-stays-design-system/blob/e570ee93c3cb4cdd878e7fe8a32083fecc12baee/src/components/cardText/cardText.tsx#L59))
+- Destructures a fixed prop list with no rest spread, and `CardTextProps` declares `className` as its only pass-through, so a consumer cannot put `aria-*`, `id` or `role` on the rendered element through this component's API. ([src/components/cardText/cardText.tsx#L41-L52](https://github.com/Aye-Kyawt/horizon-stays-design-system/blob/e570ee93c3cb4cdd878e7fe8a32083fecc12baee/src/components/cardText/cardText.tsx#L41))
+- `metadata=&#123;false&#125;` omits the rating and price block from the DOM entirely rather than hiding it with CSS, so it is absent from the accessibility tree, not merely invisible. ([src/components/cardText/cardText.tsx#L63](https://github.com/Aye-Kyawt/horizon-stays-design-system/blob/e570ee93c3cb4cdd878e7fe8a32083fecc12baee/src/components/cardText/cardText.tsx#L63))
+- `review=&#123;false&#125;` omits the rating line from the DOM, and because that block is nested inside the `metadata` block, `metadata=&#123;false&#125;` removes it whatever `review` is set to. ([src/components/cardText/cardText.tsx#L65](https://github.com/Aye-Kyawt/horizon-stays-design-system/blob/e570ee93c3cb4cdd878e7fe8a32083fecc12baee/src/components/cardText/cardText.tsx#L65))
+- `price=&#123;false&#125;` omits the price line from the DOM, nested inside the `metadata` block the same way. ([src/components/cardText/cardText.tsx#L71](https://github.com/Aye-Kyawt/horizon-stays-design-system/blob/e570ee93c3cb4cdd878e7fe8a32083fecc12baee/src/components/cardText/cardText.tsx#L71))
+- Renders the rating value and the review count as two adjacent `&lt;p&gt;` elements with no `aria-label` and no text identifying them as a rating, so that meaning reaches assistive technology only through the strings a consumer passes as `rating` and `reviewCount`. ([src/components/cardText/cardText.tsx#L67-L68](https://github.com/Aye-Kyawt/horizon-stays-design-system/blob/e570ee93c3cb4cdd878e7fe8a32083fecc12baee/src/components/cardText/cardText.tsx#L67))
+- Renders the price amount and the price period as two adjacent `&lt;p&gt;` elements with no accessible name joining them, so "121 EUR" and "per night" are announced as two separate paragraphs. ([src/components/cardText/cardText.tsx#L73-L74](https://github.com/Aye-Kyawt/horizon-stays-design-system/blob/e570ee93c3cb4cdd878e7fe8a32083fecc12baee/src/components/cardText/cardText.tsx#L73))
+
+### Composition
+
+cardText composes no other component.
+
+It is used inside `cardLayout`.
+
+### What this version promises
+
+CardText is **not** exported from `src/index.ts` at b41d1c5. It is internal, so no version promises anything about its API; it may change in any release. See [Versioning](/get-started/versioning/).
+
+</TabItem>
+<TabItem label="Examples">
+
+### The common case
+
+:::note[Missing source]
+The README's usage example at b41d1c5 does not use CardText, so there is no README example for it.
+:::
+
+### Worth seeing
+
+#### metadata = false
+
+<div class="hds-embed-pair">
+<iframe class="hds-embed" title="cardText — metadata = false (light)" loading="lazy" src="https://horizon-stays-storybook-production.vercel.app/iframe.html?id=components-cardtext--metadata-off&viewMode=story&globals=theme:light"></iframe>
+<iframe class="hds-embed" title="cardText — metadata = false (dark)" loading="lazy" src="https://horizon-stays-storybook-production.vercel.app/iframe.html?id=components-cardtext--metadata-off&viewMode=story&globals=theme:dark"></iframe>
+</div>
+
+#### review = false
+
+<div class="hds-embed-pair">
+<iframe class="hds-embed" title="cardText — review = false (light)" loading="lazy" src="https://horizon-stays-storybook-production.vercel.app/iframe.html?id=components-cardtext--review-off&viewMode=story&globals=theme:light"></iframe>
+<iframe class="hds-embed" title="cardText — review = false (dark)" loading="lazy" src="https://horizon-stays-storybook-production.vercel.app/iframe.html?id=components-cardtext--review-off&viewMode=story&globals=theme:dark"></iframe>
+</div>
+
+#### price = false
+
+<div class="hds-embed-pair">
+<iframe class="hds-embed" title="cardText — price = false (light)" loading="lazy" src="https://horizon-stays-storybook-production.vercel.app/iframe.html?id=components-cardtext--price-off&viewMode=story&globals=theme:light"></iframe>
+<iframe class="hds-embed" title="cardText — price = false (dark)" loading="lazy" src="https://horizon-stays-storybook-production.vercel.app/iframe.html?id=components-cardtext--price-off&viewMode=story&globals=theme:dark"></iframe>
+</div>
+
+#### review = false, price = false
+
+<div class="hds-embed-pair">
+<iframe class="hds-embed" title="cardText — review = false, price = false (light)" loading="lazy" src="https://horizon-stays-storybook-production.vercel.app/iframe.html?id=components-cardtext--review-and-price-off&viewMode=story&globals=theme:light"></iframe>
+<iframe class="hds-embed" title="cardText — review = false, price = false (dark)" loading="lazy" src="https://horizon-stays-storybook-production.vercel.app/iframe.html?id=components-cardtext--review-and-price-off&viewMode=story&globals=theme:dark"></iframe>
+</div>
+
+
+</TabItem>
+<TabItem label="Code">
+
+### Import
+
+CardText is internal at b41d1c5: it is not exported from the package, so it cannot be imported.
+
+### Props
+
+| Prop | Type | Default | What it does |
+|---|---|---|---|
+| `metadata` | `boolean` | `true` | Figma property `metadata`. Shows the rating and price block. |
+| `review` | `boolean` | `true` | Figma property `review`. Shows the rating line. Nested inside `metadata`. |
+| `price` | `boolean` | `true` | Figma property `price`. Shows the price line. Nested inside `metadata`. |
+| `title` | `string` | `'Casa do Bairro'` | Property name. Repo-named prop — Figma has no text property for it. |
+| `location` | `string` | `'Alfama` | Neighbourhood, city and distance line. Repo-named prop. |
+| `rating` | `string` | `'4.7'` | Rating value, e.g. "4.7". Repo-named prop. |
+| `reviewCount` | `string` | `'(318 reviews)'` | Review count line, e.g. "(318 reviews)". Repo-named prop. |
+| `priceAmount` | `string` | `'121 EUR'` | Price value, e.g. "121 EUR". Repo-named prop — it cannot be called `price`, which Figma already uses for the boolean above. |
+| `pricePeriod` | `string` | `'per night'` | Price qualifier, e.g. "per night". Repo-named prop. |
+| `className` | `string` | — | — |
+
+### Types
+
+src/components/cardText/cardText.tsx exports no union types.
+
+### Tokens it needs
+
+| Token | Light | Dark |
+|---|---|---|
+| `--component-input-gap-xs` | `8px` | `8px` (unchanged) |
+| `--semantic-spacing-gap-2xs` | `4px` | `4px` (unchanged) |
+| `--semantic-type-latin-body-font-family` | `Inter` | `Inter` (unchanged) |
+| `--semantic-type-latin-body-font-size` | `14px` | `14px` (unchanged) |
+| `--semantic-type-latin-body-line-height` | `20px` | `20px` (unchanged) |
+| `--semantic-type-latin-body-letter-spacing` | `0.25px` | `0.25px` (unchanged) |
+| `--body-medium-semibold-font-weight` | `600` | `600` (unchanged) |
+| `--semantic-color-text-base` | `#1b2733` | `#f7f9fb` |
+| `--semantic-type-latin-meta-font-family` | `Inter` | `Inter` (unchanged) |
+| `--semantic-type-latin-meta-font-size` | `12px` | `12px` (unchanged) |
+| `--semantic-type-latin-meta-line-height` | `16px` | `16px` (unchanged) |
+| `--semantic-type-latin-meta-letter-spacing` | `0.4000000059604645px` | `0.4000000059604645px` (unchanged) |
+| `--semantic-type-latin-meta-font-weight` | `400` | `400` (unchanged) |
+| `--semantic-color-text-secondary` | `#4a5768` | `#d7dee7` |
+| `--label-medium-font-family` | `Inter` | `Inter` (unchanged) |
+| `--label-medium-font-size` | `12px` | `12px` (unchanged) |
+| `--label-medium-line-height` | `16px` | `16px` (unchanged) |
+| `--label-medium-letter-spacing` | `0.5px` | `0.5px` (unchanged) |
+| `--label-medium-font-weight` | `500` | `500` (unchanged) |
+| `--semantic-color-icon-rating` | `#f0b429` | `#f0b429` (unchanged) |
+| `--semantic-color-text-subtle` | `#667289` | `#a9b3c0` |
+
+Values are the web platform build of the tokens at this commit, resolved through every alias.
+
+### The full API, in Storybook
+
+:::note[Missing source]
+The production Storybook has no docs entry for Components/cardText in index.json, so there is no Storybook props table to embed.
+:::
+
+</TabItem>
+<TabItem label="Design">
+
+### The Figma node
+
+<iframe class="hds-embed hds-embed--figma" title="cardText in Figma" loading="lazy" src="https://embed.figma.com/design/2k87mtkZMvxQIYwjLX82pu/?node-id=37-2034&embed-host=horizon-stays-docs"></iframe>
+
+Figma describes it as: *card information text.* · [open node 37:2034](https://www.figma.com/design/2k87mtkZMvxQIYwjLX82pu/Horizon.Web.Component.V1.0.In-Progress?node-id=37-2034) · read 2026-09-21
+
+### The variant matrix
+
+| Figma variant | Size | Story |
+|---|---|---|
+| `cardText` | 278 × 95 | [Default](https://horizon-stays-storybook-production.vercel.app/?path=/story/components-cardtext--default) |
+
+### Both themes
+
+<div class="hds-embed-pair">
+<iframe class="hds-embed" title="cardText — Default (light)" loading="lazy" src="https://horizon-stays-storybook-production.vercel.app/iframe.html?id=components-cardtext--default&viewMode=story&globals=theme:light"></iframe>
+<iframe class="hds-embed" title="cardText — Default (dark)" loading="lazy" src="https://horizon-stays-storybook-production.vercel.app/iframe.html?id=components-cardtext--default&viewMode=story&globals=theme:dark"></iframe>
+</div>
+
+### What Figma never bound
+
+Every fill, stroke, radius, padding, gap and text size in node 37:2034 is bound to a variable, as read on 2026-09-21.
+
+### Recorded design gaps
+
+| Document | About |
+|---|---|
+| [docs/button-design-gaps.md](https://github.com/Aye-Kyawt/horizon-stays-design-system/blob/b41d1c5f908b95eef6802738030f1b6c27e4a81d/docs/button-design-gaps.md) | button — design gaps (mentions cardText) |
+| [docs/cardContainer-design-gaps.md](https://github.com/Aye-Kyawt/horizon-stays-design-system/blob/b41d1c5f908b95eef6802738030f1b6c27e4a81d/docs/cardContainer-design-gaps.md) | cardContainer — design gaps (mentions cardText) |
+| [docs/cardContainer-naming.md](https://github.com/Aye-Kyawt/horizon-stays-design-system/blob/b41d1c5f908b95eef6802738030f1b6c27e4a81d/docs/cardContainer-naming.md) | cardContainer — naming suggestions (mentions cardText) |
+| [docs/release-0.1.0-token-proposal.md](https://github.com/Aye-Kyawt/horizon-stays-design-system/blob/b41d1c5f908b95eef6802738030f1b6c27e4a81d/docs/release-0.1.0-token-proposal.md) | Release 0.1.0 — token proposal (mentions cardText) |
+
+</TabItem>
+<TabItem label="Changelog">
+
+Commits at b41d1c5 that touched `src/components/cardText`, newest first. Release is the earliest tag containing the commit.
+
+| Date | Commit | Subject | Release |
+|---|---|---|---|
+| 2026-09-21 | [9ba5791](https://github.com/Aye-Kyawt/horizon-stays-design-system/commit/9ba5791db11c6f788178b2d2a0f28a57392f35e1) | Regenerate cardText.intent.json required_tokens at e570ee9 | 0.1.0 |
+| 2026-09-21 | [e570ee9](https://github.com/Aye-Kyawt/horizon-stays-design-system/commit/e570ee93c3cb4cdd878e7fe8a32083fecc12baee) | Repoint 8 core token reads at style tokens that alias them | 0.1.0 |
+| 2026-09-21 | [6a9abbb](https://github.com/Aye-Kyawt/horizon-stays-design-system/commit/6a9abbbd11f0f9a7c32447fb7fcb3fb024500dbc) | Add cardText.intent.json, clearing gate G1 | 0.1.0 |
+| 2026-09-17 | [ec2311c](https://github.com/Aye-Kyawt/horizon-stays-design-system/commit/ec2311cc5009a75779f592453a805e014dbba5e4) | Package the design system for npm | 0.1.0 |
+| 2026-09-14 | [0ec9a30](https://github.com/Aye-Kyawt/horizon-stays-design-system/commit/0ec9a30e3bfc7009811671e9bde58a08ed51fbbc) | Drop the leading dot from data-name to match the renamed Figma layers | 0.1.0 |
+| 2026-09-09 | [dec228d](https://github.com/Aye-Kyawt/horizon-stays-design-system/commit/dec228d4a70dddbec3ff7e77cbee47ab528d534d) | Add card components and scaffold the React + TypeScript stack | 0.1.0 |
+
+</TabItem>
+</Tabs>

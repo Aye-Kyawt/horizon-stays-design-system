@@ -1,0 +1,42 @@
+---
+title: Embedding
+description: The Storybook and Figma frames on this site, and how to embed them yourself.
+---
+
+## The Storybook frames
+
+Every live example on this site is a story from the
+[production Storybook](https://horizon-stays-storybook-production.vercel.app), shown in an
+`<iframe>`, once in each theme:
+
+```text
+https://horizon-stays-storybook-production.vercel.app/iframe.html?id=<story id>&viewMode=story&globals=theme:light
+https://horizon-stays-storybook-production.vercel.app/iframe.html?id=<story id>&viewMode=story&globals=theme:dark
+```
+
+- **`id`** is the story id. Storybook builds it from the title and the export name: title
+  `Components/Button` and export `FillDefault` give `components-button--fill-default`. Every id is
+  listed in the Storybook's `index.json`.
+- **`globals=theme:…`** sets the Storybook theme toolbar, which puts `data-theme` on the story's
+  document.
+
+The same URL works in your own docs or tools.
+
+### If a frame is blank
+
+- **The story may have been renamed or removed.** Check that its id is still in `index.json`.
+- **The production Storybook may be mid-deploy.** Reload after a minute.
+- **A browser extension or strict frame policy may block cross-site iframes.** Open the story
+  directly: `…/?path=/story/<story id>`.
+
+## The Figma frames
+
+Each component's **Design** tab embeds its Figma node with Figma's embed URL:
+
+```text
+https://embed.figma.com/design/<file key>/?node-id=<node id>&embed-host=horizon-stays-docs
+```
+
+The component file belongs to a team, so the embed only shows the design to people signed into
+Figma with access to it. Everyone else sees Figma's sign-in prompt. The node id and a direct link
+are always next to the frame.

@@ -1,0 +1,56 @@
+---
+title: React
+description: How the components behave in a React 19 tree.
+---
+
+## Requirements
+
+React 19 and React DOM 19, as peer dependencies. The package bundles neither.
+
+## Button is a native button
+
+`Button` renders a real `<button>` element.
+
+- **Other props pass through.** Anything `ButtonProps` does not name, such as `onClick`, `aria-*`,
+  `id` or `form`, goes onto the `<button>`.
+- **Some props always win.** They are set after the pass-through, so passed-in props cannot
+  override them: `type`, which comes from `htmlType` and defaults to `button`; `disabled`; and the
+  `data-*` attributes.
+- **It won't submit a form by accident.** Because `htmlType` defaults to `button`, pass
+  `htmlType="submit"` for a submit button.
+- **Disabled is real.** `status="disabled"` renders a disabled `<button>`, not just a grey one.
+  An explicit `disabled` prop still wins over `status`.
+
+```jsx
+<Button type="outline" label="Cancel" iconLeft={false} iconRight={false} onClick={close} />
+<Button type="Fill" label="Save" htmlType="submit" iconLeft={false} iconRight={false} />
+```
+
+## Text is a prop, not children
+
+`ButtonProps` omits `children`, so JSX children are not rendered. Pass the text as `label`.
+
+## Icons
+
+`iconLeft` and `iconRight` each take one of three values:
+
+- `true` renders the designed `Info` glyph. It is the default for both.
+- `false` renders no icon.
+- Any node renders in the slot instead.
+
+Icon slots are hidden from assistive technology, so the accessible name is the `label`.
+
+## Status is for pinning a state
+
+`status` pins one cell of the Figma matrix: `default`, `hovered`, `focus`, `disabled` or `error`.
+It exists so Storybook and tests can show a state standing still.
+
+- **Leave it at `default` in an app.** Hover and focus then apply on their own.
+- **`error`** is the design's error treatment, and nothing more. Pair it with an error message
+  near the button.
+
+## Server rendering
+
+`Button` holds no state and uses no effects. It renders with `react-dom/server`, which the 0.1.0
+smoke test does after installing the published package. Event handlers such as `onClick` still
+need to be attached on the client, as with any React element.

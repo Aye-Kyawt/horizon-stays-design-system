@@ -1,0 +1,263 @@
+---
+title: "Button"
+description: "Button — usage, examples, code, design and changelog, generated from @aye_kyawt/horizon-stays-design-system at b41d1c5."
+editUrl: false
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+<p class="hds-pageheader"><span class="hds-status">Released · since 0.1.0</span></p>
+
+[Storybook](https://horizon-stays-storybook-production.vercel.app/?path=/story/components-button--fill-default) · [Figma node 31:140](https://www.figma.com/design/2k87mtkZMvxQIYwjLX82pu/Horizon.Web.Component.V1.0.In-Progress?node-id=31-140) · [Source](https://github.com/Aye-Kyawt/horizon-stays-design-system/tree/b41d1c5f908b95eef6802738030f1b6c27e4a81d/src/components/Button)
+
+<Tabs syncKey="component">
+<TabItem label="Usage">
+
+### When to use it
+
+- Use a button to trigger a single, clear action : submit, confirm, save or start a flow. ([Figma 204:1930](https://www.figma.com/design/2k87mtkZMvxQIYwjLX82pu/?node-id=204-1930))
+- Use Fill for the one primary action in a screen or section. ([Figma 204:2341](https://www.figma.com/design/2k87mtkZMvxQIYwjLX82pu/?node-id=204-2341))
+- Use Outline or Transparent for secondary/tertiary actions alongside a primary Fill button. ([Figma 204:2345](https://www.figma.com/design/2k87mtkZMvxQIYwjLX82pu/?node-id=204-2345))
+- Use the optional iconLeft/iconRight slots when an icon reinforces the label (e.g, a trailing chevron for "Next"). ([Figma 204:2349](https://www.figma.com/design/2k87mtkZMvxQIYwjLX82pu/?node-id=204-2349))
+- Use Icon Button instead of a labeled Button for single icon-only actions (favorite, close). ([Figma 204:2353](https://www.figma.com/design/2k87mtkZMvxQIYwjLX82pu/?node-id=204-2353))
+
+### Where it goes
+
+:::note[Missing source]
+Button.intent.json records no placement: no story in src/components/Button/Button.stories.tsx places Button in a context. Every story renders it on the meta decorator's padded canvas (#L44-L50); `matrix (all 15)` (#L163) and `icon slots` (#L189) are bare grids of Buttons, not placements.
+:::
+
+### When not to use it
+
+- Don't use a button to open an external link - &gt;use a link/anchor style instead. **Instead:** a link/anchor style. ([Figma 204:1952](https://www.figma.com/design/2k87mtkZMvxQIYwjLX82pu/?node-id=204-1952))
+- Don't enable both iconLeft and iconRight unless both icons add real meaning —&gt; it crowds the label. *The design names no alternative.* ([Figma 204:2354](https://www.figma.com/design/2k87mtkZMvxQIYwjLX82pu/?node-id=204-2354))
+- Don't use the error status as a generic "danger" style — &gt; reserve it for a validation problem tied to the button's own action. *The design names no alternative.* ([Figma 204:2355](https://www.figma.com/design/2k87mtkZMvxQIYwjLX82pu/?node-id=204-2355))
+- Don't ship a button without its focus variant — &gt; it's required for keyboard accessibility, not optional polish. *The design names no alternative.* ([Figma 204:2356](https://www.figma.com/design/2k87mtkZMvxQIYwjLX82pu/?node-id=204-2356))
+
+### Best practice
+
+- Keep labels short and verb-ed ("Save changes", "Create task") — &gt; the container padding is fixed, so long labels wrap or overflow. ([Figma 204:1974](https://www.figma.com/design/2k87mtkZMvxQIYwjLX82pu/?node-id=204-1974))
+- Pair the error state with inline error messaging near the button, not the color alone. ([Figma 204:2358](https://www.figma.com/design/2k87mtkZMvxQIYwjLX82pu/?node-id=204-2358))
+- Align the anatomy labels with the shipped variant names before marking this "Design Completed". ([Figma 204:2359](https://www.figma.com/design/2k87mtkZMvxQIYwjLX82pu/?node-id=204-2359))
+- Close the Icon Button gaps (focus/error states, icon swap) before promoting its status alongside the main Button. ([Figma 204:2360](https://www.figma.com/design/2k87mtkZMvxQIYwjLX82pu/?node-id=204-2360))
+
+### What each variant is for
+
+| Property | Value | What it is for |
+|---|---|---|
+| `type` | `Fill` (default) | *The code states no purpose.* |
+| `type` | `outline` | *The code states no purpose.* |
+| `type` | `transparent` | *The code states no purpose.* |
+| `status` | `default` (default) | Pins a cell of the matrix on so a story can show it standing still. `default` additionally lets the live :hover and :focus-visible states apply on their own. |
+| `status` | `hovered` | *The code states no purpose.* |
+| `status` | `focus` | *The code states no purpose.* |
+| `status` | `disabled` | *The code states no purpose.* |
+| `status` | `error` | *The code states no purpose.* |
+| `iconLeft` | `true` (default) | `true` for the designed Info glyph |
+| `iconLeft` | `false` | `false` for none |
+| `iconLeft` | `ReactNode` | a node to swap in |
+| `iconRight` | `true` (default) | `true` for the designed Info glyph |
+| `iconRight` | `false` | `false` for none |
+| `iconRight` | `ReactNode` | a node to swap in |
+| `htmlType` | `button` (default) | *The code states no purpose.* |
+| `htmlType` | `submit` | *The code states no purpose.* |
+| `htmlType` | `reset` | *The code states no purpose.* |
+
+### Accessibility
+
+- Renders a native `&lt;button&gt;` element, not a div with a click handler. ([src/components/Button/Button.tsx#L87](https://github.com/Aye-Kyawt/horizon-stays-design-system/blob/4247dd89afd7910debb80d347fd869ecd1e98687/src/components/Button/Button.tsx#L87))
+- Sets the DOM `type` attribute from `htmlType`, which defaults to `button`, so the element does not submit a form unless a consumer passes `submit`. ([src/components/Button/Button.tsx#L90](https://github.com/Aye-Kyawt/horizon-stays-design-system/blob/4247dd89afd7910debb80d347fd869ecd1e98687/src/components/Button/Button.tsx#L90))
+- Computes `disabled` as `disabled ?? status === 'disabled'`, so the disabled cell renders a genuinely disabled control rather than a grey-looking enabled one, and an explicit `disabled` prop still wins. ([src/components/Button/Button.tsx#L84](https://github.com/Aye-Kyawt/horizon-stays-design-system/blob/4247dd89afd7910debb80d347fd869ecd1e98687/src/components/Button/Button.tsx#L84))
+- Spreads the consumer's remaining props onto the `&lt;button&gt;` before it sets `type`, `disabled` and the data attributes, so `aria-*` attributes passed in reach the element while `type` and `disabled` cannot be overridden by them. ([src/components/Button/Button.tsx#L88](https://github.com/Aye-Kyawt/horizon-stays-design-system/blob/4247dd89afd7910debb80d347fd869ecd1e98687/src/components/Button/Button.tsx#L88))
+- Renders the `label` string as the button's only text content, in `.hds-button__label`, and sets no `aria-label`, so the accessible name is the `label` prop. ([src/components/Button/Button.tsx#L102](https://github.com/Aye-Kyawt/horizon-stays-design-system/blob/4247dd89afd7910debb80d347fd869ecd1e98687/src/components/Button/Button.tsx#L102))
+- The `Info` glyph rendered into the icon slots carries `aria-hidden="true"` and `focusable=&#123;false&#125;`, so the icons are not in the accessibility tree and add nothing to the accessible name. ([src/icons/Info.tsx#L44](https://github.com/Aye-Kyawt/horizon-stays-design-system/blob/4247dd89afd7910debb80d347fd869ecd1e98687/src/icons/Info.tsx#L44))
+- Draws the focus ring on `:focus-visible` with no `data-status` scoping, so the ring appears on keyboard focus at every status — including `error` and `hovered` — and not on a mouse click. ([src/components/Button/Button.css#L233](https://github.com/Aye-Kyawt/horizon-stays-design-system/blob/4247dd89afd7910debb80d347fd869ecd1e98687/src/components/Button/Button.css#L233))
+- Sets `outline: none` on `:focus-visible` only for the element that already draws its own ring in the rule above, so focus is never left with no visible indicator. ([src/components/Button/Button.css#L243](https://github.com/Aye-Kyawt/horizon-stays-design-system/blob/4247dd89afd7910debb80d347fd869ecd1e98687/src/components/Button/Button.css#L243))
+
+### Composition
+
+Button is built from the `Info` glyph (src/icons).
+
+### What this version promises
+
+Button is exported from `src/index.ts` at b41d1c5 and has been public since 0.1.0. Its props and types are the documented API: see [Versioning](/get-started/versioning/) for what a 0.x version promises.
+
+</TabItem>
+<TabItem label="Examples">
+
+### The common case
+
+```jsx
+import { Button } from '@aye_kyawt/horizon-stays-design-system';
+import '@aye_kyawt/horizon-stays-design-system/tokens.css';
+import '@aye_kyawt/horizon-stays-design-system/styles.css';
+
+export function Example() {
+  return <Button type="Fill" label="Book a stay" iconLeft={false} iconRight={false} />;
+}
+```
+
+### Worth seeing
+
+#### matrix (all 15)
+
+<div class="hds-embed-pair">
+<iframe class="hds-embed" title="Button — matrix (all 15) (light)" loading="lazy" src="https://horizon-stays-storybook-production.vercel.app/iframe.html?id=components-button--matrix&viewMode=story&globals=theme:light"></iframe>
+<iframe class="hds-embed" title="Button — matrix (all 15) (dark)" loading="lazy" src="https://horizon-stays-storybook-production.vercel.app/iframe.html?id=components-button--matrix&viewMode=story&globals=theme:dark"></iframe>
+</div>
+
+#### icon slots
+
+<div class="hds-embed-pair">
+<iframe class="hds-embed" title="Button — icon slots (light)" loading="lazy" src="https://horizon-stays-storybook-production.vercel.app/iframe.html?id=components-button--icon-slots&viewMode=story&globals=theme:light"></iframe>
+<iframe class="hds-embed" title="Button — icon slots (dark)" loading="lazy" src="https://horizon-stays-storybook-production.vercel.app/iframe.html?id=components-button--icon-slots&viewMode=story&globals=theme:dark"></iframe>
+</div>
+
+
+</TabItem>
+<TabItem label="Code">
+
+### Import
+
+```jsx
+import { Button } from '@aye_kyawt/horizon-stays-design-system';
+import '@aye_kyawt/horizon-stays-design-system/tokens.css';
+import '@aye_kyawt/horizon-stays-design-system/styles.css';
+```
+
+### Props
+
+Also accepts `Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'type' \| 'children'>`.
+
+| Prop | Type | Default | What it does |
+|---|---|---|---|
+| `type` | `ButtonType` | `'Fill'` | Figma `Type`. |
+| `status` | `ButtonStatus` | `'default'` | Figma `Status`. Pins a cell of the matrix on so a story can show it standing still. `default` additionally lets the live :hover and :focus-visible states apply on their own. |
+| `label` | `string` | `'Button Component'` | Figma `label`. |
+| `iconLeft` | `ButtonIconSlot` | `true` | Figma `iconLeft` + `iconLeft1`, merged. |
+| `iconRight` | `ButtonIconSlot` | `true` | Figma `iconRight` + `iconRight1`, merged. |
+| `htmlType` | `'button' \| 'submit' \| 'reset'` | `'button'` | The DOM `type` attribute, displaced by the Figma property of that name. |
+| `className` | `string` | — | — |
+
+### Types
+
+| Type | Values |
+|---|---|
+| `ButtonType` | `'Fill' \| 'outline' \| 'transparent'` |
+| `ButtonStatus` | `'default' \| 'hovered' \| 'focus' \| 'disabled' \| 'error'` |
+| `ButtonIconSlot` | `boolean \| ReactNode` |
+
+### Tokens it needs
+
+| Token | Light | Dark |
+|---|---|---|
+| `--semantic-color-text-action-hover` | `#235d93` | `#93bee0` |
+| `--semantic-color-border-on-hover` | `#17307b` | `#d7dee7` |
+| `--semantic-color-icon-hover` | `#1b4a8f` | `#7fa8ee` |
+| `--semantic-color-icon-disabled` | `#8a94a6` | `#c9d3dc` |
+| `--semantic-border-width-none` | `0px` | `0px` (unchanged) |
+| `--semantic-color-icon-primary` | `#1d4ed8` | `#93c5fd` |
+| `--core-spacing-4` | `4px` | `4px` (unchanged) |
+| `--component-button-gap-md` | `8px` | `8px` (unchanged) |
+| `--component-button-padding-x-sm` | `12px` | `12px` (unchanged) |
+| `--core-spacing-8` | `8px` | `8px` (unchanged) |
+| `--core-spacing-2` | `2px` | `2px` (unchanged) |
+| `--component-button-radius-md` | `8px` | `8px` (unchanged) |
+| `--label-large-font-family` | `Inter` | `Inter` (unchanged) |
+| `--label-large-font-size` | `14px` | `14px` (unchanged) |
+| `--label-large-line-height` | `20px` | `20px` (unchanged) |
+| `--label-large-letter-spacing` | `0.10000000149011612px` | `0.10000000149011612px` (unchanged) |
+| `--label-large-font-weight` | `500` | `500` (unchanged) |
+| `--semantic-border-width-base` | `1px` | `1px` (unchanged) |
+| `--semantic-color-bg-primary` | `#1d4ed8` | `#60a5fa` |
+| `--semantic-color-border-primary-focused` | `#1d4ed8` | `#93c5fd` |
+| `--component-button-text-primary` | `#ffffff` | `#1b2733` |
+| `--semantic-color-icon-inverse` | `#ffffff` | `#1b2733` |
+| `--semantic-color-bg-primary-hovered` | `#1b3fa8` | `#93c5fd` |
+| `--semantic-color-bg-disabled` | `#f1f4f7` | `#33404f` |
+| `--semantic-color-text-disabled` | `#8a94a6` | `#8a94a6` (unchanged) |
+| `--semantic-color-bg-negative` | `#c1362f` | `#e45b54` |
+| `--semantic-color-icon-negative` | `#c1362f` | `#e88c86` |
+| `--semantic-color-bg-surfaceprimary` | `#ffffff` | `#1b2733` |
+| `--semantic-color-text-negative` | `#c1362f` | `#e88c86` |
+| `--component-card-radius-lg` | `12px` | `12px` (unchanged) |
+
+Values are the web platform build of the tokens at this commit, resolved through every alias.
+
+### The full API, in Storybook
+
+:::note[Missing source]
+The production Storybook has no docs entry for Components/Button in index.json, so there is no Storybook props table to embed.
+:::
+
+</TabItem>
+<TabItem label="Design">
+
+### The Figma node
+
+<iframe class="hds-embed hds-embed--figma" title="Button in Figma" loading="lazy" src="https://embed.figma.com/design/2k87mtkZMvxQIYwjLX82pu/?node-id=31-140&embed-host=horizon-stays-docs"></iframe>
+
+Figma describes it as: *Use this component when need CTA. Don't use it for opening external link.* · [open node 31:140](https://www.figma.com/design/2k87mtkZMvxQIYwjLX82pu/Horizon.Web.Component.V1.0.In-Progress?node-id=31-140) · read 2026-09-21
+
+### The variant matrix
+
+| Figma variant | Size | Story |
+|---|---|---|
+| `Status=default, Type=Fill` | 203 × 42 | [Fill / default](https://horizon-stays-storybook-production.vercel.app/?path=/story/components-button--fill-default) |
+| `Status=error, Type=Fill` | 203 × 42 | [Fill / error](https://horizon-stays-storybook-production.vercel.app/?path=/story/components-button--fill-error) |
+| `Status=disabled, Type=Fill` | 203 × 42 | [Fill / disabled](https://horizon-stays-storybook-production.vercel.app/?path=/story/components-button--fill-disabled) |
+| `Status=focus, Type=Fill` | 203 × 42 | [Fill / focus](https://horizon-stays-storybook-production.vercel.app/?path=/story/components-button--fill-focus) |
+| `Status=hovered, Type=Fill` | 203 × 42 | [Fill / hovered](https://horizon-stays-storybook-production.vercel.app/?path=/story/components-button--fill-hovered) |
+| `Status=default, Type=outline` | 203 × 42 | [outline / default](https://horizon-stays-storybook-production.vercel.app/?path=/story/components-button--outline-default) |
+| `Status=hovered, Type=outline` | 203 × 42 | [outline / hovered](https://horizon-stays-storybook-production.vercel.app/?path=/story/components-button--outline-hovered) |
+| `Status=focus, Type=outline` | 203 × 42 | [outline / focus](https://horizon-stays-storybook-production.vercel.app/?path=/story/components-button--outline-focus) |
+| `Status=disabled, Type=outline` | 203 × 42 | [outline / disabled](https://horizon-stays-storybook-production.vercel.app/?path=/story/components-button--outline-disabled) |
+| `Status=error, Type=outline` | 203 × 42 | [outline / error](https://horizon-stays-storybook-production.vercel.app/?path=/story/components-button--outline-error) |
+| `Status=default, Type=transparent` | 201 × 40 | [transparent / default](https://horizon-stays-storybook-production.vercel.app/?path=/story/components-button--transparent-default) |
+| `Status=hovered, Type=transparent` | 201 × 40 | [transparent / hovered](https://horizon-stays-storybook-production.vercel.app/?path=/story/components-button--transparent-hovered) |
+| `Status=focus, Type=transparent` | 201 × 40 | [transparent / focus](https://horizon-stays-storybook-production.vercel.app/?path=/story/components-button--transparent-focus) |
+| `Status=disabled, Type=transparent` | 201 × 40 | [transparent / disabled](https://horizon-stays-storybook-production.vercel.app/?path=/story/components-button--transparent-disabled) |
+| `Status=error, Type=transparent` | 201 × 40 | [transparent / error](https://horizon-stays-storybook-production.vercel.app/?path=/story/components-button--transparent-error) |
+
+### Both themes
+
+<div class="hds-embed-pair">
+<iframe class="hds-embed" title="Button — matrix (all 15) (light)" loading="lazy" src="https://horizon-stays-storybook-production.vercel.app/iframe.html?id=components-button--matrix&viewMode=story&globals=theme:light"></iframe>
+<iframe class="hds-embed" title="Button — matrix (all 15) (dark)" loading="lazy" src="https://horizon-stays-storybook-production.vercel.app/iframe.html?id=components-button--matrix&viewMode=story&globals=theme:dark"></iframe>
+</div>
+
+### What Figma never bound
+
+| Layer | Property | Value |
+|---|---|---|
+| every variant (15) | `paddingTop` | `10px` |
+| every variant (15) | `paddingBottom` | `10px` |
+
+### Recorded design gaps
+
+| Document | About |
+|---|---|
+| [docs/avatar-naming.md](https://github.com/Aye-Kyawt/horizon-stays-design-system/blob/b41d1c5f908b95eef6802738030f1b6c27e4a81d/docs/avatar-naming.md) | `.avatar` — prop naming, and what the node leaves unbound (mentions Button) |
+| [docs/button-design-gaps.md](https://github.com/Aye-Kyawt/horizon-stays-design-system/blob/b41d1c5f908b95eef6802738030f1b6c27e4a81d/docs/button-design-gaps.md) | button — design gaps |
+| [docs/cardContainer-design-gaps.md](https://github.com/Aye-Kyawt/horizon-stays-design-system/blob/b41d1c5f908b95eef6802738030f1b6c27e4a81d/docs/cardContainer-design-gaps.md) | cardContainer — design gaps (mentions Button) |
+| [docs/release-0.1.0-token-proposal.md](https://github.com/Aye-Kyawt/horizon-stays-design-system/blob/b41d1c5f908b95eef6802738030f1b6c27e4a81d/docs/release-0.1.0-token-proposal.md) | Release 0.1.0 — token proposal (mentions Button) |
+| [docs/token-export-drift.md](https://github.com/Aye-Kyawt/horizon-stays-design-system/blob/b41d1c5f908b95eef6802738030f1b6c27e4a81d/docs/token-export-drift.md) | Token export drift: Figma Semantic library vs `tokens/` (mentions Button) |
+| [docs/tooltip-naming.md](https://github.com/Aye-Kyawt/horizon-stays-design-system/blob/b41d1c5f908b95eef6802738030f1b6c27e4a81d/docs/tooltip-naming.md) | `.tooltip` — prop naming (mentions Button) |
+
+</TabItem>
+<TabItem label="Changelog">
+
+Commits at b41d1c5 that touched `src/components/Button`, newest first. Release is the earliest tag containing the commit.
+
+| Date | Commit | Subject | Release |
+|---|---|---|---|
+| 2026-09-21 | [2071026](https://github.com/Aye-Kyawt/horizon-stays-design-system/commit/2071026cfe3e7186fef87c079fd42f5d97446340) | Regenerate Button.intent.json at 4247dd8 | 0.1.0 |
+| 2026-09-21 | [4247dd8](https://github.com/Aye-Kyawt/horizon-stays-design-system/commit/4247dd89afd7910debb80d347fd869ecd1e98687) | Repoint Button's hover and disabled colours at the synced tokens | 0.1.0 |
+| 2026-09-21 | [e570ee9](https://github.com/Aye-Kyawt/horizon-stays-design-system/commit/e570ee93c3cb4cdd878e7fe8a32083fecc12baee) | Repoint 8 core token reads at style tokens that alias them | 0.1.0 |
+| 2026-09-18 | [eb938e9](https://github.com/Aye-Kyawt/horizon-stays-design-system/commit/eb938e925dc53a0dac3b4a2d5fa52c7e6b4c6056) | Add Button.intent.json | 0.1.0 |
+| 2026-09-17 | [ec2311c](https://github.com/Aye-Kyawt/horizon-stays-design-system/commit/ec2311cc5009a75779f592453a805e014dbba5e4) | Package the design system for npm | 0.1.0 |
+| 2026-09-14 | [0ec9a30](https://github.com/Aye-Kyawt/horizon-stays-design-system/commit/0ec9a30e3bfc7009811671e9bde58a08ed51fbbc) | Drop the leading dot from data-name to match the renamed Figma layers | 0.1.0 |
+| 2026-09-10 | [15f082f](https://github.com/Aye-Kyawt/horizon-stays-design-system/commit/15f082f103aa36f5a06a0231a5785ab977a92aff) | Add Button component and free the components--button story id | 0.1.0 |
+
+</TabItem>
+</Tabs>
