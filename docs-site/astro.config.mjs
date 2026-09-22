@@ -19,7 +19,7 @@ import starlightLinksValidator from 'starlight-links-validator';
  * starlight-links-validator makes a broken internal link fail the build.
  */
 export default defineConfig({
-  site: 'https://horizon-stays-reference-site.vercel.app',
+  site: 'https://horizon-stays-docs.vercel.app',
   integrations: [
     starlight({
       title: 'Horizon Stays',
